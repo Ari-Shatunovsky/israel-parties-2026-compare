@@ -1,8 +1,8 @@
 'use client';
 
 import { useMemo, useState } from 'react';
-import partiesData from '../public/parties.json';
-import candidatesData from '../public/candidates.json';
+import partiesData from '../data/parties.json';
+import candidatesData from '../data/candidates.json';
 import {
   AlertCircle, ArrowUpRight, BookOpen, CheckCircle2, ChevronRight,
   CircleHelp, Database, Filter, Search, ShieldCheck, Users
