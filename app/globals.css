@@ -522,6 +522,11 @@ main { min-height: 100vh; }
 .matrix-tip { max-width: 340px; }
 .matrix-hint { font-size: 12px; color: var(--text-subtle); margin-top: 12px; max-width: 760px; }
 
+/* Методика: карточка со сплошным текстом занимает всю ширину сетки. */
+.method-card-wide { grid-column: 1 / -1; }
+.method-card-wide p { max-width: 74ch; }
+.method-card-wide p + p { margin-top: 10px; }
+
 /* ---- Шкалы --------------------------------------------------------
    Строка вместо луча радара: у строки нет площади, поэтому шесть шкал
    не складываются в фигуру, чей размер читался бы как оценка списка. */
@@ -539,7 +544,17 @@ main { min-height: 100vh; }
 
 .scale-row { padding: 18px 0; border-bottom: 1px solid var(--border); }
 .scale-row:last-child { border-bottom: 0; }
-.scale-topic { font-size: 13px; font-weight: 700; margin: 0 0 12px; }
+.scale-topic { font-size: 13px; font-weight: 700; margin: 0 0 4px; }
+
+/* Обоснование порядка стоит у самой шкалы: утверждение и его основание
+   не должны жить в разных местах страницы. */
+.scale-note {
+  font-size: 11px;
+  line-height: 1.45;
+  color: var(--text-subtle);
+  margin: 0 0 14px;
+  max-width: 720px;
+}
 
 .scale-line { display: flex; align-items: center; gap: 14px; }
 

@@ -264,7 +264,7 @@ const LENGTH_LIMIT = {
   descriptor: 70,
   title: 90,
   label: 70,
-  note: 200,
+  note: 400,
   status: 200,
 };
 
