@@ -92,4 +92,20 @@ npm run check
 
 React 19, TypeScript, Vinext/Vite, Tailwind CSS и компоненты shadcn.
 
-Текущая развёрнутая версия: [israel-parties-2026-compare.shtarty.chatgpt.site](https://israel-parties-2026-compare.shtarty.chatgpt.site/).
+## Хостинг
+
+Сборка выдаёт воркер Cloudflare (`dist/server/index.js`) и статику к нему (`dist/client`),
+а конфиг `dist/server/wrangler.json` генерируется на каждой сборке — правил его руками не нужно.
+Готового HTML на выходе нет, поэтому раздача статики вроде GitHub Pages не подходит.
+
+Разворачивается одной командой:
+
+```bash
+npm run deploy
+```
+
+В Cloudflare через Git то же самое настраивается так: подключить репозиторий, команда сборки
+`npm run build`, команда деплоя `npx wrangler deploy --config dist/server/wrangler.json`.
+После этого каждый push в `main` разворачивается сам.
+
+Первоначальный деплой жил на OpenAI Sites; привязки к нему в коде не осталось.
