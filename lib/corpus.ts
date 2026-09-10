@@ -207,6 +207,20 @@ export const GLOSSARY: Record<string, string> = {
  * Форматирование
  * ------------------------------------------------------------------ */
 
+/**
+ * Русское числительное: 1 эпизод, 2 эпизода, 5 эпизодов.
+ * Формы собирались по месту и ломались при первом же изменении данных —
+ * количество источников и критериев меняется вместе с корпусом.
+ */
+export function plural(count: number, one: string, few: string, many: string): string {
+  const mod100 = Math.abs(count) % 100;
+  if (mod100 >= 11 && mod100 <= 14) return many;
+  const mod10 = mod100 % 10;
+  if (mod10 === 1) return one;
+  if (mod10 >= 2 && mod10 <= 4) return few;
+  return many;
+}
+
 /** Единый формат дат в интерфейсе: «10 сент. 2026». */
 export function formatDate(value: string): string {
   if (/^\d{4}-\d{2}$/.test(value)) return format(parseISO(`${value}-01`), 'LLLL yyyy', { locale: ru });

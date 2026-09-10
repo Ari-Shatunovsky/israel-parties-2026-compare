@@ -546,6 +546,16 @@
       "accessed_at": "2026-09-10",
       "type": "news",
       "date_kind": "exact"
+    },
+    {
+      "id": "lists-ru",
+      "title": "9 канал · Полный список партий на выборах в Кнессет 26",
+      "url": "https://www.9tv.co.il/item/265002",
+      "published_at": null,
+      "accessed_at": "2026-09-10",
+      "type": "media",
+      "date_kind": "accessed_only",
+      "language": "ru"
     }
   ],
   "parties": [
@@ -1136,7 +1146,7 @@
     {
       "id": "reservists",
       "name_he": "המילואימניקים והכלכלית",
-      "name_ru": "Резервисты и Экономическая",
+      "name_ru": "Резервисты и экономическая партия",
       "leaders": [
         "Йоаз Хендель",
         "Ярон Зелиха"
@@ -1413,7 +1423,8 @@
       "source_ids": [
         "lists",
         "lists-n12",
-        "list-status"
+        "list-status",
+        "lists-ru"
       ]
     },
     "poll": {

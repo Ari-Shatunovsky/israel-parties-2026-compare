@@ -18,7 +18,7 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/comp
 import {
   allCandidates, candidateMark, candidatesByParty, CONFIDENCE_LABEL, COLOR_LABEL,
   DEPTH_LABEL, distinctSourceCount, formatDate, GLOSSARY, isUnsettled, KIND_LABEL,
-  axisPosition, MAX_SEATS, meta, parties, partyById, scaledTopics, sourceById,
+  axisPosition, MAX_SEATS, meta, parties, partyById, plural, scaledTopics, sourceById,
   sourceDateLine, sources, SOURCE_TYPE_LABEL, SOURCE_TYPE_ORDER, topicById, topics,
   valueLabel, VERIFICATION_LABEL,
   type Axis, type Candidate, type Claim, type Color, type CriterionNote, type Flag,
@@ -217,7 +217,7 @@ function PartyCard({
       <div className="card-actions">
         <button type="button" className="text-button" onClick={onOpen}>
           Все {topics.length} позиций · доверие: {party.flags.length}{' '}
-          {party.flags.length === 1 ? 'отмеченный эпизод' : 'отмеченных эпизода'}
+          {plural(party.flags.length, 'эпизод', 'эпизода', 'эпизодов')}
           <ChevronRight size={14} />
         </button>
       </div>
@@ -741,7 +741,13 @@ export default function Home() {
           </div>
           <div>
             <BookOpen size={19} />
-            <span><b>{distinctSourceCount} источника</b>у каждого сохранена дата проверки</span>
+            <span>
+              <b>
+                {distinctSourceCount}{' '}
+                {plural(distinctSourceCount, 'источник', 'источника', 'источников')}
+              </b>
+              у каждого сохранена дата проверки
+            </span>
           </div>
           <div>
             <Filter size={19} />
@@ -914,7 +920,8 @@ export default function Home() {
                 Шкала показывает <b>порядок</b> позиций между двумя названными полюсами — и только
                 порядок. Расстояние между ступенями ничего не измеряет, складывать шкалы между
                 собой нельзя, суммарной оценки списка здесь нет. {topics.length - scaledTopics.length}{' '}
-                критерия шкалы не получили: по ним позиции либо не выстраиваются на одной прямой,
+                {plural(topics.length - scaledTopics.length, 'критерий', 'критерия', 'критериев')}{' '}
+                шкалы не получили: по ним позиции либо не выстраиваются на одной прямой,
                 либо совпадают у всех, либо почти не установлены.
               </p>
             )}
@@ -1067,7 +1074,8 @@ export default function Home() {
               <div className="method-card method-card-wide">
                 <b>Шкалы: что здесь утверждается, а что нет</b>
                 <p>
-                  На вкладке «Матрица» есть режим «Шкалы»: {scaledTopics.length} критериев, у каждого
+                  На вкладке «Матрица» есть режим «Шкалы»: {scaledTopics.length}{' '}
+                  {plural(scaledTopics.length, 'критерий', 'критерия', 'критериев')}, у каждого
                   названы оба полюса. <b>Утверждение здесь ровно одно — порядок позиций между
                   полюсами</b>, и у каждой шкалы написано, по какому признаку он построен. Именно это
                   и стоит оспаривать: не «правильна» ли позиция, а верно ли она стоит между соседями.
@@ -1092,9 +1100,10 @@ export default function Home() {
                   политической характеристикой. Пробелы показаны отдельной строкой, а не точкой в нуле.
                 </p>
                 <p>
-                  {topics.length - scaledTopics.length} критерия шкалы не получили осознанно: позиции
-                  по ним либо не выстраиваются на одной прямой, либо совпадают у всех, либо почти не
-                  установлены. Направление и порядок записаны в <code>topics[].axis</code> в наборе
+                  {topics.length - scaledTopics.length}{' '}
+                  {plural(topics.length - scaledTopics.length, 'критерий', 'критерия', 'критериев')}{' '}
+                  шкалы не получили осознанно: позиции по ним либо не выстраиваются на одной прямой,
+                  либо совпадают у всех, либо почти не установлены. Направление и порядок записаны в <code>topics[].axis</code> в наборе
                   данных — их видно, не читая код.
                 </p>
               </div>

@@ -381,7 +381,18 @@ main { min-height: 100vh; }
 /* Кнопка прижимается к низу, чтобы на карточках с разной длиной позиции
    действия оставались на одной линии. */
 .card-actions { margin-top: auto; padding-top: 14px; }
-.card-actions .text-button { width: 100%; justify-content: center; }
+/* Подпись длиннее одной строки на узкой карточке: у `.text-button` стоит
+   nowrap, и текст вылезал за скруглённую рамку. Здесь перенос разрешён,
+   а капсульный радиус заменён обычным — две строки в капсуле выглядят сломано. */
+.card-actions .text-button {
+  width: 100%;
+  justify-content: center;
+  white-space: normal;
+  text-align: center;
+  border-radius: 7px;
+  line-height: 1.35;
+  padding: 9px 12px;
+}
 
 .claim-footer { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-top: 12px; flex-wrap: wrap; }
 .claim-marks { display: inline-flex; align-items: center; gap: 6px; }
