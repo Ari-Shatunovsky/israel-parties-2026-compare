@@ -19,7 +19,13 @@ import {
 
 type Claim = { text:string; kind:string; source_ids:string[]; verification:string; confidence:string };
 type Flag = Claim & { color:string; title:string };
-type Candidate = { position:number; name:string; bio:string; source_ids:string[]; verification:string; confidence:string; flags:Flag[] };
+type ProfileClaim = Claim & { title:string };
+type CriterionNote = Claim & { topic:string; label:string };
+type Candidate = {
+  position:number; name:string; bio:string; summary:string; source_ids:string[]; verification:string; confidence:string;
+  flags:Flag[]; profile_depth:'substantive'|'basic'|'limited'; strengths:ProfileClaim[]; concerns:ProfileClaim[];
+  criteria:CriterionNote[]; unknowns:string[];
+};
 type Position = Claim & { topic:string; value:string };
 type Party = {
   id:string; name_he:string; name_ru:string; leaders:string[]; descriptor:string; control:boolean;
@@ -67,6 +73,14 @@ function FlagBlock({ flag }:{ flag:Flag }) {
   </div>;
 }
 
+function ProfileClaimBlock({ item, tone }:{ item:ProfileClaim; tone:'positive'|'caution' }) {
+  return <article className={'profile-claim profile-claim-' + tone}>
+    <div className="profile-claim-head"><strong>{item.title}</strong><EvidenceTag claim={item}/></div>
+    <p>{item.text}</p>
+    {item.source_ids?.length > 0 && <SourceLinks ids={item.source_ids}/>}
+  </article>;
+}
+
 function PartyCard({ party, checked, toggle, topic }:{ party:Party; checked:boolean; toggle:()=>void; topic:string }) {
   const position = party.positions.find(p => p.topic === topic)!;
   return <article className={'party-card ' + (!checked ? 'party-card-muted' : '')}>
@@ -107,11 +121,12 @@ function PartyCard({ party, checked, toggle, topic }:{ party:Party; checked:bool
 
 function CandidateSheet({ candidate, party, activeSeats }:{ candidate:Candidate; party:Party; activeSeats:number }) {
   const status = candidate.position <= activeSeats ? 'входит в сценарий' : 'за пределами сценария';
+  const depthLabel = candidate.profile_depth === 'substantive' ? 'подробное досье' : candidate.profile_depth === 'basic' ? 'базовое досье' : 'мало данных';
   return <Sheet>
     <SheetTrigger render={
       <button className="candidate-row" type="button">
         <span className="candidate-number">{candidate.position}</span>
-        <span className="candidate-main"><b>{candidate.name}</b><small>{candidate.bio}</small></span>
+        <span className="candidate-main"><span className="candidate-name-line"><b>{candidate.name}</b><em className={'depth depth-' + candidate.profile_depth}>{depthLabel}</em></span><small>{candidate.summary || candidate.bio}</small></span>
         {candidate.flags?.length > 0 && <span className={'dot dot-' + candidate.flags[0].color} aria-label="есть отмеченный эпизод"/>}
         <ChevronRight size={17}/>
       </button>
@@ -121,20 +136,35 @@ function CandidateSheet({ candidate, party, activeSeats }:{ candidate:Candidate;
         <div className="candidate-number large">{candidate.position}</div>
         <p className="hebrew" lang="he" dir="rtl">{party.name_he}</p>
         <SheetTitle className="sheet-name">{candidate.name}</SheetTitle>
-        <SheetDescription>{party.name_ru} · {status}</SheetDescription>
+        <SheetDescription>{party.name_ru} · {status} · {depthLabel}</SheetDescription>
       </SheetHeader>
       <div className="sheet-body">
         <section>
-          <p className="micro-label">Биография</p>
-          <p className="sheet-bio">{candidate.bio}</p>
+          <p className="micro-label">Кто это</p>
+          <p className="sheet-bio">{candidate.summary || candidate.bio}</p>
           <div className="claim-footer"><EvidenceTag claim={candidate as unknown as Claim}/><SourceLinks ids={candidate.source_ids}/></div>
         </section>
-        {candidate.flags?.length > 0 && <section>
-          <p className="micro-label">Эпизоды для проверки</p>
-          <div className="flags-stack">{candidate.flags.map((f,i)=><FlagBlock flag={f} key={i}/>)}</div>
+        {candidate.strengths?.length > 0 && <section>
+          <p className="micro-label">Что подтверждает заявленную линию</p>
+          <div className="profile-claims">{candidate.strengths.map((x,i)=><ProfileClaimBlock item={x} tone="positive" key={i}/>)}</div>
         </section>}
+        {candidate.concerns?.length > 0 && <section>
+          <p className="micro-label">Что требует внимания</p>
+          <div className="profile-claims">{candidate.concerns.map((x,i)=><ProfileClaimBlock item={x} tone="caution" key={i}/>)}</div>
+        </section>}
+        {candidate.criteria?.length > 0 && <section>
+          <p className="micro-label">По ключевым критериям</p>
+          <div className="criteria-notes">{candidate.criteria.map((x,i)=><article key={i}>
+            <div><span>{x.label}</span><EvidenceTag claim={x}/></div><p>{x.text}</p>
+            {x.source_ids?.length > 0 && <SourceLinks ids={x.source_ids}/>}
+          </article>)}</div>
+        </section>}
+        <section className="unknown-panel">
+          <p className="micro-label">Чего пока не знаем</p>
+          <ul>{candidate.unknowns?.map((x,i)=><li key={i}>{x}</li>)}</ul>
+        </section>
         <section className="neutral-note">
-          Цвет относится к конкретному эпизоду, а не к человеку целиком. Формулировка краткая: откройте источники перед выводом.
+          Это досье не выставляет кандидату итоговый балл. Сильный поступок, проблемный эпизод и пробел в данных показаны отдельно, чтобы вы сами определили их вес.
         </section>
       </div>
     </SheetContent>
@@ -232,7 +262,7 @@ export default function Home() {
           </aside>
           <section className="people-main">
             <div className="people-header">
-              <div><p className="hebrew" lang="he" dir="rtl">{activeParty.name_he}</p><h2>Кто входит при {activeSeats} мандатах</h2></div>
+              <div><p className="hebrew" lang="he" dir="rtl">{activeParty.name_he}</p><h2>Кто входит при {activeSeats} мандатах</h2><p className="people-deck">Откройте человека: внутри — опыт, подтверждающие поступки, спорные эпизоды, связь с критериями и пробелы.</p></div>
               <label className="search-box"><Search size={16}/><input value={query} onChange={e=>setQuery(e.target.value)} placeholder="Найти кандидата" aria-label="Найти кандидата"/></label>
             </div>
             <div className="scenario-box">

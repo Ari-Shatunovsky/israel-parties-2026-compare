@@ -399,6 +399,54 @@
       "accessed_at": "2026-09-10",
       "language": "mixed",
       "date_note": "Точная дата публикации не установлена; указана дата проверки."
+    },
+    {
+      "id": "cohen-switch",
+      "title": "Times of Israel · Мерав Коэн перешла из Кахоль-Лаван в Еш Атид",
+      "url": "https://www.timesofisrael.com/social-justice-minister-meirav-cohen-jumps-from-blue-and-white-to-yesh-atid/amp/",
+      "published_at": "2021-01-05",
+      "accessed_at": "2026-09-10",
+      "type": "news"
+    },
+    {
+      "id": "tibon-reservists",
+      "title": "Times of Israel · Ноам Тибон и протест резервистов против судебной реформы",
+      "url": "https://www.timesofisrael.com/reservists-pull-all-nighter-outside-gallants-home-hoping-hell-stop-overhaul-again/",
+      "published_at": "2023-07-08",
+      "accessed_at": "2026-09-10",
+      "type": "news"
+    },
+    {
+      "id": "benbarak-gaza",
+      "title": "Times of Israel · Инициатива Рама Бен-Барака о выезде жителей Газы",
+      "url": "https://www.timesofisrael.com/senior-cabinet-minister-trumps-gaza-migration-idea-could-save-netanyahus-government/",
+      "published_at": "2025-01-27",
+      "accessed_at": "2026-09-10",
+      "type": "news"
+    },
+    {
+      "id": "golan-remarks",
+      "title": "AP · Высказывание Яира Голана о ведении войны в Газе",
+      "url": "https://apnews.com/article/af22ee826be05daa37a73cac737f4e0c",
+      "published_at": "2025-05-22",
+      "accessed_at": "2026-09-10",
+      "type": "news"
+    },
+    {
+      "id": "hendel-coalitions",
+      "title": "Jerusalem Post · Хендель о Нетаньяху, харедим и арабских партиях",
+      "url": "https://www.jpost.com/israel-election-2026/article-906335",
+      "published_at": "2026-08-27",
+      "accessed_at": "2026-09-10",
+      "type": "news"
+    },
+    {
+      "id": "illouz-move",
+      "title": "N12 · Дан Илуз перешёл из Ликуда в НДИ",
+      "url": "https://www.mako.co.il/news-israel-elections/2026/Article-bc40304fb13df91026.htm",
+      "published_at": "2026-08-05",
+      "accessed_at": "2026-09-10",
+      "type": "news"
     }
   ],
   "parties": [
