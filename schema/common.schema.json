@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://israel-parties-2026-compare/schema/common.schema.json",
+  "title": "Общие определения корпуса",
+  "$defs": {
+    "kind": {
+      "description": "Природа утверждения. fact — проверяемый факт; position — заявленная позиция или обещание; assessment — редакционная оценка; uncertainty — установленный пробел в данных.",
+      "enum": ["fact", "position", "assessment", "uncertainty"]
+    },
+    "verification": {
+      "description": "Состояние проверки по источникам.",
+      "enum": ["verified", "partial", "unverified"]
+    },
+    "confidence": {
+      "description": "Двухступенчатая шкала: confirmed — подтверждено доступным источником; limited — подтверждение ограничено или отсутствует.",
+      "enum": ["confirmed", "limited"]
+    },
+    "color": {
+      "description": "Цвет отмеченного эпизода. Относится к эпизоду, а не к человеку целиком.",
+      "enum": ["red", "yellow", "green"]
+    },
+    "sourceId": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+    "sourceIds": { "type": "array", "items": { "$ref": "#/$defs/sourceId" } },
+    "isoDate": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+    "claim": {
+      "description": "Минимальная единица корпуса: текст плюс его эпистемический статус.",
+      "type": "object",
+      "required": ["text", "kind", "source_ids", "verification", "confidence"],
+      "properties": {
+        "text": { "type": "string", "minLength": 1 },
+        "kind": { "$ref": "#/$defs/kind" },
+        "source_ids": { "$ref": "#/$defs/sourceIds" },
+        "verification": { "$ref": "#/$defs/verification" },
+        "confidence": { "$ref": "#/$defs/confidence" }
+      }
+    }
+  }
+}

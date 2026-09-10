@@ -1,0 +1,126 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://israel-parties-2026-compare/schema/candidates.schema.json",
+  "title": "Порядок списков и досье кандидатов",
+  "type": "object",
+  "required": ["schema_version", "meta", "parties"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": { "const": "2.0" },
+    "meta": {
+      "type": "object",
+      "required": ["as_of"],
+      "additionalProperties": false,
+      "properties": { "as_of": { "$ref": "common.schema.json#/$defs/isoDate" } }
+    },
+    "parties": {
+      "description": "Ключ — id партии из parties.json. Значение — поданный порядок списка в пределах проверенной глубины.",
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {
+        "type": "array",
+        "minItems": 1,
+        "items": { "$ref": "#/$defs/candidate" }
+      }
+    }
+  },
+  "$defs": {
+    "candidate": {
+      "type": "object",
+      "required": [
+        "id", "position", "name", "bio", "summary", "profile_depth",
+        "source_ids", "verification", "confidence",
+        "strengths", "concerns", "criteria", "trust_notes", "unknowns"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "description": "Стабильный ключ вида <партия>-<фамилия>-<имя>. Не меняется при пересортировке списка.",
+          "type": "string",
+          "pattern": "^[a-z0-9-]+$"
+        },
+        "position": {
+          "description": "Место в поданном списке. Поле, а не ключ: ссылаться на кандидата следует по id.",
+          "type": "integer",
+          "minimum": 1
+        },
+        "name": { "type": "string", "minLength": 1 },
+        "name_he": { "type": "string", "minLength": 1 },
+        "bio": { "type": "string", "minLength": 1 },
+        "summary": { "type": "string", "minLength": 1 },
+        "profile_depth": {
+          "description": "substantive — подробное досье; basic — базовое; limited — публичного материала не хватило. Пробел сохраняется как результат, а не заполняется предположением.",
+          "enum": ["substantive", "basic", "limited"]
+        },
+        "source_ids": { "$ref": "common.schema.json#/$defs/sourceIds" },
+        "verification": { "$ref": "common.schema.json#/$defs/verification" },
+        "confidence": { "$ref": "common.schema.json#/$defs/confidence" },
+        "strengths": {
+          "description": "Подтверждающие поступки. Запись с color: green — это ещё и отмеченный эпизод.",
+          "type": "array",
+          "items": { "$ref": "#/$defs/profileClaim" }
+        },
+        "concerns": {
+          "description": "Спорные эпизоды и риски. Запись с color: red или yellow — отмеченный эпизод.",
+          "type": "array",
+          "items": { "$ref": "#/$defs/profileClaim" }
+        },
+        "criteria": {
+          "description": "Связь человека с политическими критериями. topic обязан существовать в topics из parties.json.",
+          "type": "array",
+          "items": { "$ref": "#/$defs/criterionNote" }
+        },
+        "trust_notes": {
+          "description": "Отдельная рубрика досье: доверие, прозрачность, согласованность союза. Не является политическим критерием и не попадает в матрицу.",
+          "type": "array",
+          "items": { "$ref": "#/$defs/trustNote" }
+        },
+        "unknowns": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "profileClaim": {
+      "type": "object",
+      "required": ["title", "text", "kind", "source_ids", "verification", "confidence"],
+      "additionalProperties": false,
+      "properties": {
+        "title": { "type": "string", "minLength": 1 },
+        "text": { "type": "string", "minLength": 1 },
+        "color": { "$ref": "common.schema.json#/$defs/color" },
+        "kind": { "$ref": "common.schema.json#/$defs/kind" },
+        "source_ids": { "$ref": "common.schema.json#/$defs/sourceIds" },
+        "verification": { "$ref": "common.schema.json#/$defs/verification" },
+        "confidence": { "$ref": "common.schema.json#/$defs/confidence" }
+      }
+    },
+    "criterionNote": {
+      "type": "object",
+      "required": ["topic", "label", "text", "kind", "source_ids", "verification", "confidence"],
+      "additionalProperties": false,
+      "properties": {
+        "topic": { "type": "string" },
+        "label": { "type": "string", "minLength": 1 },
+        "text": { "type": "string", "minLength": 1 },
+        "kind": { "$ref": "common.schema.json#/$defs/kind" },
+        "source_ids": { "$ref": "common.schema.json#/$defs/sourceIds" },
+        "verification": { "$ref": "common.schema.json#/$defs/verification" },
+        "confidence": { "$ref": "common.schema.json#/$defs/confidence" }
+      }
+    },
+    "trustNote": {
+      "type": "object",
+      "required": ["label", "text", "kind", "source_ids", "verification", "confidence"],
+      "additionalProperties": false,
+      "properties": {
+        "label": { "type": "string", "minLength": 1 },
+        "text": { "type": "string", "minLength": 1 },
+        "kind": { "$ref": "common.schema.json#/$defs/kind" },
+        "source_ids": { "$ref": "common.schema.json#/$defs/sourceIds" },
+        "verification": { "$ref": "common.schema.json#/$defs/verification" },
+        "confidence": { "$ref": "common.schema.json#/$defs/confidence" }
+      }
+    }
+  }
+}

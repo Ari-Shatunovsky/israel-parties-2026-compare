@@ -2,22 +2,891 @@
 @import 'tw-animate-css';
 @import 'shadcn/tailwind.css';
 
+/* ==================================================================
+   1. Токены
+   Ни один цвет ниже не задаётся hex-значением напрямую: палитра живёт
+   здесь, поэтому тёмную тему можно будет добавить, переопределив
+   только этот блок.
+   ================================================================== */
+
 @custom-variant dark (&:is(.dark *));
+
 @theme inline {
-  --color-background:var(--background);--color-foreground:var(--foreground);--color-card:var(--card);
-  --color-card-foreground:var(--card-foreground);--color-popover:var(--popover);--color-popover-foreground:var(--popover-foreground);
-  --color-primary:var(--primary);--color-primary-foreground:var(--primary-foreground);--color-secondary:var(--secondary);
-  --color-secondary-foreground:var(--secondary-foreground);--color-muted:var(--muted);--color-muted-foreground:var(--muted-foreground);
-  --color-accent:var(--accent);--color-accent-foreground:var(--accent-foreground);--color-destructive:var(--destructive);
-  --color-border:var(--border);--color-input:var(--input);--color-ring:var(--ring);--radius-sm:4px;--radius-md:7px;
-  --radius-lg:10px;--radius-xl:14px;--radius-2xl:18px;--radius-3xl:22px;--radius-4xl:28px;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: 4px;
+  --radius-md: 7px;
+  --radius-lg: 10px;
+  --radius-xl: 14px;
+  --radius-2xl: 18px;
+  --radius-3xl: 22px;
+  --radius-4xl: 28px;
 }
-:root{--background:#f5f6f3;--foreground:#151a23;--card:#fff;--card-foreground:#151a23;--popover:#fff;--popover-foreground:#151a23;--primary:#1d2635;--primary-foreground:#fff;--secondary:#eaede7;--secondary-foreground:#17202c;--muted:#e9ece6;--muted-foreground:#5e675f;--accent:#dfe4dc;--accent-foreground:#17202c;--destructive:#b42318;--border:#d7dcd3;--input:#cdd3cb;--ring:#607164}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--background);color:var(--foreground);font-family:Arial,"Noto Sans",sans-serif;font-size:16px;line-height:1.5}button,input{font:inherit}button{cursor:pointer}a{color:inherit}main{min-height:100vh}.site-header{height:74px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:0 4vw;border-bottom:1px solid var(--border);background:rgba(245,246,243,.94);position:sticky;top:0;z-index:20;backdrop-filter:blur(12px)}.brand{display:flex;align-items:center;gap:12px}.brand>div:last-child{display:flex;flex-direction:column;line-height:1.15}.brand span{font-size:12px;color:#687168}.mark{display:flex;gap:3px;align-items:flex-end;height:28px}.mark span{display:block;width:6px;background:#263754}.mark span:nth-child(1){height:14px}.mark span:nth-child(2){height:22px;background:#7b4f73}.mark span:nth-child(3){height:28px;background:#b16b36}.freshness{font-size:13px;color:#59625c;display:flex;align-items:center;gap:8px}.live-dot{height:7px;width:7px;border-radius:50%;background:#1c8c60}.site-header nav{display:flex;justify-content:flex-end;gap:8px}.site-header nav a{display:flex;gap:6px;align-items:center;text-decoration:none;border:1px solid var(--border);padding:7px 10px;border-radius:7px;font-size:13px;background:#fff}.intro{max-width:1440px;margin:auto;padding:58px 4vw 38px;display:grid;grid-template-columns:1.35fr .65fr;gap:6vw;align-items:end}.eyebrow,.micro-label{text-transform:uppercase;letter-spacing:.1em;font-size:12px;font-weight:700;color:#687269;margin:0 0 12px}.intro h1{font-family:Georgia,serif;font-size:clamp(42px,5.4vw,82px);line-height:.95;letter-spacing:-.045em;margin:0;font-weight:500}.intro h1 em{font-weight:400;color:#657064}.intro-copy{max-width:520px;font-size:18px;color:#555f58;margin:0 0 5px}.status-strip{max-width:calc(1440px - 8vw);margin:0 auto 32px;display:grid;grid-template-columns:1fr 1fr 1fr;background:#1d2635;color:#eef2ed}.status-strip>div{display:flex;gap:12px;padding:18px 22px;border-right:1px solid #46505c;align-items:center}.status-strip span{font-size:13px;color:#bec6bf}.status-strip b{color:#fff;display:block}.workspace{max-width:1440px;margin:auto;padding:0 4vw 70px}.main-tabs{height:auto;width:100%;justify-content:flex-start;gap:28px;border-bottom:1px solid var(--border);overflow-x:auto}.main-tabs button{font-size:15px;padding:13px 2px;flex:0 0 auto}.control-panel{display:flex;justify-content:space-between;gap:30px;padding:24px 0 20px}.topic-pills{display:flex;flex-wrap:wrap;gap:7px}.topic-pills button,.text-button{border:1px solid var(--border);background:#fff;padding:7px 10px;border-radius:999px;font-size:13px}.topic-pills button.active{background:#1d2635;color:#fff;border-color:#1d2635}.text-button{white-space:nowrap}.party-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.party-card{background:#fff;border:1px solid var(--border);min-height:430px;display:flex;flex-direction:column;position:relative;overflow:hidden;transition:.2s transform,.2s opacity}.party-card:hover{transform:translateY(-2px)}.party-card-muted{opacity:.38}.card-rule{height:6px}.party-card-top,.party-title-row,.descriptor,.leaders,.card-position,.audit-line{margin-left:22px;margin-right:22px}.party-card-top{display:flex;justify-content:space-between;min-height:48px;padding-top:15px}.party-check{display:flex;align-items:center;gap:8px;font-size:12px;color:#687269}.control-badge{font-size:11px;border:1px solid #b8bcb6;border-radius:999px;padding:3px 7px}.party-title-row{display:flex;align-items:end;justify-content:space-between}.hebrew{font-size:14px;color:#727a72}.party-title-row h2{font-family:Georgia,serif;font-size:28px;margin:0;line-height:1.1}.seats{display:flex;align-items:center;gap:6px;text-align:left}.seats b{font-family:Georgia,serif;font-size:34px;font-weight:500}.seats span{font-size:10px;text-transform:uppercase;line-height:1.15;color:#747d75}.descriptor{font-size:15px;margin-top:17px;margin-bottom:2px}.leaders{font-size:13px;color:#707970;margin-top:0}.card-position{border-top:1px solid var(--border);margin-top:18px;padding-top:16px}.card-position p{font-size:14px;margin:0}.claim-footer{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:12px}.evidence-tag{display:inline-flex;align-items:center;gap:5px;border-radius:999px;padding:4px 7px;font-size:11px;font-weight:700;white-space:nowrap}.evidence-fact{background:#e1f4e8;color:#17603f}.evidence-assessment{background:#f7e7c9;color:#774e08}.evidence-uncertain{background:#ececea;color:#5d625e}.source-row{display:inline-flex;flex-wrap:wrap;gap:5px}.source-row a{font-size:12px;text-decoration:underline;text-underline-offset:3px}.source-row.compact a{height:23px;width:23px;display:inline-grid;place-items:center;border:1px solid var(--border);border-radius:50%;text-decoration:none}.uncertain{font-size:11px;color:#6b716d;text-decoration:underline dotted}.audit-line{margin-top:auto;border-top:1px solid var(--border);padding:14px 0 18px;display:flex;justify-content:space-between;font-size:12px;color:#687269}.empty-state{padding:70px;text-align:center;border:1px dashed #b6bdb4}.matrix-head{padding:30px 0 18px;display:grid;grid-template-columns:1fr 1fr;gap:30px}.matrix-head h2,.people-header h2,.method-grid h2,.sources-section h2{font-family:Georgia,serif;font-size:34px;margin:0}.matrix-head>p{color:#667068;max-width:520px}.matrix-wrap{border:1px solid var(--border);background:#fff;max-height:70vh;overflow:auto}.matrix-table{min-width:1200px}.matrix-table th{background:#f0f2ee;position:sticky;top:0;z-index:2}.matrix-table th,.matrix-table td{min-width:245px;vertical-align:top;padding:16px;border-right:1px solid var(--border)}.matrix-table .sticky-col{position:sticky;left:0;z-index:3;min-width:170px;background:#f0f2ee}.topic-cell{font-weight:700}.matrix-table td p{font-size:13px;margin:0}.matrix-party-dot{display:inline-block;height:8px;width:8px;border-radius:50%;margin-right:7px}.people-layout{display:grid;grid-template-columns:250px 1fr;gap:34px;padding-top:28px}.party-selector{border-right:1px solid var(--border);padding-right:18px}.party-selector button{width:100%;display:flex;align-items:center;text-align:left;border:0;background:transparent;padding:11px;border-radius:7px;gap:3px}.party-selector button.active{background:#fff;box-shadow:inset 0 0 0 1px var(--border)}.party-selector button>span:nth-child(2){display:flex;flex-direction:column;flex:1}.party-selector small{font-size:11px;color:#6c756d}.people-header{display:flex;justify-content:space-between;align-items:end}.people-header p{margin:0}.search-box{display:flex;align-items:center;gap:8px;border:1px solid var(--border);background:#fff;padding:9px 11px;border-radius:7px}.search-box input{border:0;outline:0;background:transparent;width:170px}.scenario-box{margin:24px 0 14px;padding:18px 20px;background:#202a39;color:#fff}.scenario-box>div{display:flex;justify-content:space-between;align-items:center}.scenario-box b{font-family:Georgia,serif;font-size:30px}.scenario-box p{font-size:12px;color:#b9c2ba;margin:11px 0 0}.scenario-box [data-slot=slider-track]{background:#596474}.scenario-box [data-slot=slider-range]{background:#d2ddc8}.candidate-list{border:1px solid var(--border);background:#fff}.candidate-list>div{border-bottom:1px solid var(--border)}.candidate-list>div:last-child{border:0}.candidate-list .outside{opacity:.5}.candidate-row{width:100%;border:0;background:#fff;display:flex;align-items:center;gap:15px;padding:14px 16px;text-align:left}.candidate-row:hover{background:#f0f2ee}.candidate-number{height:31px;width:31px;border:1px solid #aeb6ad;border-radius:50%;display:grid;place-items:center;font-family:Georgia,serif;flex:0 0 auto}.candidate-number.large{height:54px;width:54px;font-size:23px;margin-bottom:12px}.candidate-main{display:flex;flex-direction:column;flex:1}.candidate-main small{font-size:12px;color:#687269;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:700px}.dot{height:9px;width:9px;border-radius:50%}.dot-red{background:#c3372f}.dot-yellow{background:#ce8d20}.dot-green{background:#278661}.coverage-note{font-size:13px;color:#687269}.candidate-sheet{overflow-y:auto}.sheet-header{padding:32px;border-bottom:1px solid var(--border);background:#eef0ec}.sheet-name{font-family:Georgia,serif;font-size:34px}.sheet-body{padding:28px 32px;display:flex;flex-direction:column;gap:30px}.sheet-bio{font-size:17px}.flags-stack{display:flex;flex-direction:column;gap:10px}.flag-block{border:1px solid;padding:14px}.flag-head{display:flex;justify-content:space-between;gap:10px;align-items:center}.flag-block p{font-size:13px}.neutral-note{font-size:12px;border-top:1px solid var(--border);padding-top:20px;color:#687269}.method-grid{padding:38px 0;display:grid;grid-template-columns:1.3fr .7fr;gap:16px}.method-copy,.legend-card,.method-card{background:#fff;border:1px solid var(--border);padding:28px}.method-copy{grid-row:span 2}.method-copy p:last-child{font-size:18px;color:#59635c}.legend-card{display:flex;flex-direction:column;gap:20px}.legend-card p,.method-card p{font-size:13px;color:#667068;margin-bottom:0}.method-card a{display:inline-flex;gap:5px;align-items:center;margin-top:12px;font-size:13px}.sources-section{border-top:1px solid var(--border);padding-top:38px}.sources-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:20px}.sources-grid a{position:relative;display:flex;flex-direction:column;text-decoration:none;border:1px solid var(--border);background:#fff;padding:16px;min-height:120px}.sources-grid a:hover{border-color:#7f8981}.sources-grid a>span{font-size:10px;text-transform:uppercase;color:#7a827c}.sources-grid a>b{font-size:14px;margin:6px 24px 10px 0}.sources-grid a>small{font-size:11px;color:#6d766f;margin-top:auto}.sources-grid svg{position:absolute;right:13px;top:13px}footer{border-top:1px solid var(--border);padding:22px 4vw;display:flex;justify-content:space-between;font-size:12px;color:#6d766f}
-@media(max-width:1000px){.party-grid{grid-template-columns:repeat(2,1fr)}.site-header{grid-template-columns:1fr auto}.freshness{display:none}.status-strip{grid-template-columns:1fr}.status-strip>div{border-right:0;border-bottom:1px solid #46505c}.people-layout{grid-template-columns:1fr}.party-selector{border-right:0;display:flex;overflow-x:auto;padding-bottom:8px}.party-selector .micro-label{display:none}.party-selector button{min-width:180px}.sources-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:680px){.site-header{padding:0 18px}.site-header nav a{font-size:0}.site-header nav a svg{margin:0}.intro{grid-template-columns:1fr;padding:40px 18px 28px}.intro h1{font-size:45px}.intro-copy{font-size:16px}.status-strip{margin:0 18px 24px;max-width:none}.workspace{padding:0 18px 50px}.control-panel{flex-direction:column}.party-grid{grid-template-columns:1fr}.matrix-head{grid-template-columns:1fr}.people-header{align-items:start;flex-direction:column;gap:14px}.search-box{width:100%}.search-box input{width:100%}.method-grid{grid-template-columns:1fr}.sources-grid{grid-template-columns:1fr}.method-copy{grid-row:auto}.site-header .brand span{display:none}footer{flex-direction:column;gap:5px}}
-@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
-.trust-details{margin:14px 22px 0;border-top:1px solid var(--border);padding-top:12px}.trust-details summary{font-size:12px;font-weight:700;cursor:pointer;color:#4f5952}.trust-details>p{font-size:12px;color:#626c64}.trust-details .flag-block{margin-top:8px}.trust-details .claim-footer{margin-bottom:10px}
-body{font-family:"Aptos","Segoe UI Variable Text","Noto Sans Hebrew",sans-serif;background-color:#f5f6f3;background-image:linear-gradient(rgba(29,38,53,.018) 1px,transparent 1px),linear-gradient(90deg,rgba(29,38,53,.018) 1px,transparent 1px);background-size:28px 28px}.intro h1,.status-strip{animation:rise-in .5s ease-out both}.status-strip{animation-delay:.08s}.party-card{animation:rise-in .4s ease-out both}.party-card:nth-child(2){animation-delay:.04s}.party-card:nth-child(3){animation-delay:.08s}.party-card:nth-child(4){animation-delay:.12s}.party-card:nth-child(5){animation-delay:.16s}.party-card:nth-child(6){animation-delay:.2s}@keyframes rise-in{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
-.people-header>div>p{margin:0}.people-deck{max-width:650px!important;margin-top:8px!important;color:#667068;font-size:14px}.candidate-main{min-width:0}.candidate-name-line{display:flex;align-items:center;gap:10px}.candidate-name-line b{font-size:14px}.candidate-name-line em{font-style:normal}.depth{font-size:9px;letter-spacing:.06em;text-transform:uppercase;border:1px solid;padding:2px 5px;border-radius:999px;color:#687269;white-space:nowrap}.depth-substantive{background:#e5f2e9;border-color:#b9d6c2;color:#1d6644}.depth-basic{background:#f5ecd9;border-color:#dfcca7;color:#78561a}.depth-limited{background:#eeeeeb;border-color:#d4d6d0;color:#6c716c}.sheet-bio{font-size:18px;line-height:1.55}.profile-claims{display:flex;flex-direction:column;gap:10px}.profile-claim{border-left:3px solid;padding:15px 16px;background:#fff}.profile-claim-positive{border-color:#3a8767;background:#f3f8f4}.profile-claim-caution{border-color:#bd7d2a;background:#fbf6eb}.profile-claim-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}.profile-claim p,.criteria-notes p{font-size:13px;line-height:1.55;margin:8px 0 10px}.profile-claim .source-row a,.criteria-notes .source-row a{font-size:11px}.criteria-notes{border-top:1px solid var(--border)}.criteria-notes article{padding:15px 0;border-bottom:1px solid var(--border)}.criteria-notes article>div{display:flex;justify-content:space-between;gap:12px;align-items:center}.criteria-notes article>div>span{font-size:11px;text-transform:uppercase;letter-spacing:.08em;font-weight:700;color:#626c64}.unknown-panel{background:#eef0ec;padding:18px}.unknown-panel .micro-label{margin-bottom:8px}.unknown-panel ul{margin:0;padding-left:18px}.unknown-panel li{font-size:13px;line-height:1.5;color:#586159}
-@media(max-width:680px){.candidate-name-line{align-items:flex-start;flex-direction:column;gap:3px}.depth{font-size:8px}.candidate-sheet{width:100%!important}.sheet-header,.sheet-body{padding-left:22px;padding-right:22px}}
+
+:root {
+  /* shadcn */
+  --background: #f5f6f3;
+  --foreground: #151a23;
+  --card: #ffffff;
+  --card-foreground: #151a23;
+  --popover: #ffffff;
+  --popover-foreground: #151a23;
+  --primary: #1d2635;
+  --primary-foreground: #ffffff;
+  --secondary: #eaede7;
+  --secondary-foreground: #17202c;
+  --muted: #e9ece6;
+  --muted-foreground: #5e675f;
+  --accent: #dfe4dc;
+  --accent-foreground: #17202c;
+  --destructive: #b42318;
+  --border: #d7dcd3;
+  --input: #cdd3cb;
+  --ring: #607164;
+
+  /* поверхности */
+  --surface: #ffffff;
+  --surface-tint: #f0f2ee;
+  --surface-tint-warm: #eef0ec;
+  --surface-inverse: #1d2635;
+  --surface-inverse-soft: #202a39;
+  --border-strong: #b6bdb4;
+  --border-inverse: #46505c;
+
+  /* текст */
+  --text-muted: #5e675f;
+  --text-subtle: #687269;
+  --text-faint: #7a827c;
+  --text-inverse: #eef2ed;
+  --text-inverse-muted: #bec6bf;
+
+  /* смысловые цвета: факт, оценка, пробел */
+  --tone-fact-bg: #e1f4e8;
+  --tone-fact-ink: #17603f;
+  --tone-fact-line: #3a8767;
+  --tone-fact-surface: #f3f8f4;
+  --tone-caution-bg: #f7e7c9;
+  --tone-caution-ink: #774e08;
+  --tone-caution-line: #bd7d2a;
+  --tone-caution-surface: #fbf6eb;
+  --tone-neutral-bg: #ececea;
+  --tone-neutral-ink: #5d625e;
+
+  /* цвет отмеченного эпизода */
+  --mark-red: #c3372f;
+  --mark-yellow: #ce8d20;
+  --mark-green: #278661;
+  --signal-live: #1c8c60;
+
+  /* заливка шкалы мандатов: проверенная часть списка и часть за границей аудита */
+  --track-audited: #d2ddc8;
+  --track-beyond: #d8b978;
+
+  /* фирменный знак */
+  --brand-1: #263754;
+  --brand-2: #7b4f73;
+  --brand-3: #b16b36;
+
+  /* типографика */
+  --font-sans: 'Inter', 'Noto Sans Hebrew', 'Segoe UI', system-ui, sans-serif;
+  --font-serif: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+
+  /* сетка */
+  --page-max: 1440px;
+  --page-pad: 4vw;
+}
+
+/* ==================================================================
+   2. Основа документа
+   ================================================================== */
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background-color: var(--background);
+  background-image:
+    linear-gradient(rgba(29, 38, 53, .018) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(29, 38, 53, .018) 1px, transparent 1px);
+  background-size: 28px 28px;
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+button, input { font: inherit; }
+button { cursor: pointer; }
+a { color: inherit; }
+main { min-height: 100vh; }
+
+/* Видимый фокус для клавиатуры — раньше его не было нигде. */
+:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+
+.eyebrow,
+.micro-label {
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-subtle);
+  margin: 0 0 12px;
+}
+
+/* Термин глоссария. */
+.term {
+  text-decoration: underline dotted;
+  text-underline-offset: 3px;
+  cursor: help;
+}
+
+.glossary-tip {
+  max-width: 320px;
+  line-height: 1.45;
+  text-align: left;
+  white-space: normal;
+}
+
+/* ==================================================================
+   3. Шапка, интро, статус-полоса
+   ================================================================== */
+
+.site-header {
+  height: 74px;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  padding: 0 var(--page-pad);
+  border-bottom: 1px solid var(--border);
+  background: color-mix(in srgb, var(--background) 94%, transparent);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  backdrop-filter: blur(12px);
+}
+
+.brand { display: flex; align-items: center; gap: 12px; }
+.brand > div:last-child { display: flex; flex-direction: column; line-height: 1.15; }
+.brand span { font-size: 12px; color: var(--text-subtle); }
+
+.mark { display: flex; gap: 3px; align-items: flex-end; height: 28px; }
+.mark span { display: block; width: 6px; background: var(--brand-1); }
+.mark span:nth-child(1) { height: 14px; }
+.mark span:nth-child(2) { height: 22px; background: var(--brand-2); }
+.mark span:nth-child(3) { height: 28px; background: var(--brand-3); }
+
+.freshness { font-size: 13px; color: var(--text-muted); display: flex; align-items: center; gap: 8px; }
+.live-dot { height: 7px; width: 7px; border-radius: 50%; background: var(--signal-live); }
+
+.site-header nav { display: flex; justify-content: flex-end; gap: 8px; }
+
+.site-header nav a {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  text-decoration: none;
+  border: 1px solid var(--border);
+  padding: 7px 10px;
+  border-radius: 7px;
+  font-size: 13px;
+  background: var(--surface);
+}
+
+.intro {
+  max-width: var(--page-max);
+  margin: auto;
+  padding: 58px var(--page-pad) 38px;
+  display: grid;
+  grid-template-columns: 1.35fr .65fr;
+  gap: 6vw;
+  align-items: end;
+}
+
+.intro h1 {
+  font-family: var(--font-serif);
+  font-size: clamp(38px, 5.4vw, 82px);
+  line-height: .95;
+  letter-spacing: -.045em;
+  margin: 0;
+  font-weight: 500;
+}
+
+.intro h1 em { font-weight: 400; color: var(--text-muted); font-style: italic; }
+.intro-copy { max-width: 520px; font-size: 18px; color: var(--text-muted); margin: 0 0 5px; }
+
+.status-strip {
+  max-width: calc(var(--page-max) - 2 * var(--page-pad));
+  margin: 0 auto 32px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background: var(--surface-inverse);
+  color: var(--text-inverse);
+}
+
+.status-strip > div {
+  display: flex;
+  gap: 12px;
+  padding: 18px 22px;
+  border-right: 1px solid var(--border-inverse);
+  align-items: center;
+}
+
+.status-strip > div:last-child { border-right: 0; }
+.status-strip span { font-size: 13px; color: var(--text-inverse-muted); }
+.status-strip b { color: #fff; display: block; }
+.status-strip .term { color: inherit; }
+
+/* ==================================================================
+   4. Рабочая область и вкладки
+   ================================================================== */
+
+.workspace { max-width: var(--page-max); margin: auto; padding: 0 var(--page-pad) 70px; }
+
+/* `overflow-x: auto` заставляет браузер сделать `auto` и по вертикали, а
+   подчёркивание активной вкладки торчит на 5px ниже блока — получался
+   вертикальный скроллбар. Вкладок четыре, им достаточно переноса. */
+.main-tabs {
+  height: auto;
+  width: 100%;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 6px 28px;
+  border-bottom: 1px solid var(--border);
+}
+
+.main-tabs button { font-size: 15px; padding: 13px 2px; flex: 0 0 auto; }
+
+.control-panel { display: flex; justify-content: space-between; gap: 30px; padding: 24px 0 14px; }
+.topic-pills { display: flex; flex-wrap: wrap; gap: 7px; }
+
+.topic-pills button,
+.text-button {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  padding: 7px 10px;
+  border-radius: 999px;
+  font-size: 13px;
+}
+
+.topic-pills button.active { background: var(--surface-inverse); color: #fff; border-color: var(--surface-inverse); }
+.text-button { white-space: nowrap; display: inline-flex; align-items: center; gap: 4px; }
+
+/* Полоса, объясняющая, что галочки на карточках управляют и матрицей. */
+.selection-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding: 12px 14px;
+  margin-bottom: 14px;
+  background: var(--surface-tint);
+  border: 1px solid var(--border);
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.segmented { display: flex; border: 1px solid var(--border); border-radius: 999px; overflow: hidden; }
+.segmented button { border: 0; background: var(--surface); padding: 6px 14px; font-size: 13px; }
+.segmented button.active { background: var(--surface-inverse); color: #fff; }
+
+/* ==================================================================
+   5. Карточка списка
+   ================================================================== */
+
+.party-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+
+.party-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  transition: transform .2s, opacity .2s;
+}
+
+.party-card:hover { transform: translateY(-2px); }
+.party-card-muted { opacity: .38; }
+.card-rule { height: 6px; }
+
+.party-card-top,
+.party-title-row,
+.descriptor,
+.leaders,
+.card-position,
+.card-actions,
+.audit-line { margin-left: 22px; margin-right: 22px; }
+
+.party-card-top { display: flex; justify-content: space-between; gap: 10px; min-height: 48px; padding-top: 15px; }
+.party-check { display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--text-subtle); }
+.control-badge { font-size: 11px; border: 1px solid var(--border-strong); border-radius: 999px; padding: 3px 7px; }
+
+/* Название и число мандатов раньше налезали друг на друга: теперь это
+   две колонки с собственными границами переноса. */
+.party-title-row { display: flex; align-items: flex-end; justify-content: space-between; gap: 14px; }
+.party-title { min-width: 0; flex: 1 1 auto; }
+.hebrew { font-size: 14px; color: var(--text-faint); }
+
+.party-title-row h2 {
+  font-family: var(--font-serif);
+  font-size: 26px;
+  margin: 0;
+  line-height: 1.15;
+  overflow-wrap: anywhere;
+}
+
+.seats {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-align: left;
+  text-decoration: none;
+  flex: 0 0 auto;
+  max-width: 46%;
+}
+
+.seats b { font-family: var(--font-serif); font-size: 32px; font-weight: 500; }
+.seats span { font-size: 10px; text-transform: uppercase; line-height: 1.15; color: var(--text-faint); }
+.seats-below b { font-size: 14px; font-weight: 700; line-height: 1.2; }
+.seats:hover b { text-decoration: underline; text-underline-offset: 3px; }
+
+.descriptor { font-size: 15px; margin-top: 17px; margin-bottom: 2px; }
+.leaders { font-size: 13px; color: var(--text-subtle); margin-top: 0; }
+
+.card-position { border-top: 1px solid var(--border); margin-top: 18px; padding-top: 16px; }
+.card-position p { font-size: 14px; margin: 0; }
+
+/* Кнопка прижимается к низу, чтобы на карточках с разной длиной позиции
+   действия оставались на одной линии. */
+.card-actions { margin-top: auto; padding-top: 14px; }
+.card-actions .text-button { width: 100%; justify-content: center; }
+
+.claim-footer { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-top: 12px; flex-wrap: wrap; }
+.claim-marks { display: inline-flex; align-items: center; gap: 6px; }
+
+.evidence-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  border-radius: 999px;
+  padding: 4px 7px;
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
+  border: 0;
+  cursor: help;
+}
+
+.evidence-fact { background: var(--tone-fact-bg); color: var(--tone-fact-ink); }
+.evidence-assessment { background: var(--tone-caution-bg); color: var(--tone-caution-ink); }
+.evidence-uncertain { background: var(--tone-neutral-bg); color: var(--tone-neutral-ink); }
+
+.source-row { display: inline-flex; flex-wrap: wrap; gap: 5px; }
+.source-row a { font-size: 12px; text-decoration: underline; text-underline-offset: 3px; }
+
+.source-row.compact a {
+  height: 23px;
+  width: 23px;
+  display: inline-grid;
+  place-items: center;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  text-decoration: none;
+}
+
+.uncertain { font-size: 11px; color: var(--text-subtle); text-decoration: underline dotted; }
+
+.audit-line {
+  border-top: 1px solid var(--border);
+  padding: 14px 0 18px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 12px;
+  color: var(--text-subtle);
+}
+
+.empty-state { padding: 70px 24px; text-align: center; border: 1px dashed var(--border-strong); }
+
+/* ==================================================================
+   6. Матрица
+   ================================================================== */
+
+.matrix-head { padding: 30px 0 18px; display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+
+.matrix-head h2,
+.people-header h2,
+.method-grid h2,
+.sources-section h2 { font-family: var(--font-serif); font-size: 32px; margin: 0; }
+
+.matrix-head > p { color: var(--text-muted); max-width: 520px; }
+
+.matrix-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding-bottom: 14px;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.matrix-wrap { border: 1px solid var(--border); background: var(--surface); max-height: 70vh; overflow: auto; }
+.matrix-table { min-width: 1200px; }
+.matrix-table th { background: var(--surface-tint); position: sticky; top: 0; z-index: 2; }
+
+/* У shadcn-ячеек по умолчанию `whitespace-nowrap`: в матрице он не даёт
+   тексту переноситься и содержимое выезжает на соседнюю колонку. */
+.matrix-table th,
+.matrix-table td {
+  min-width: 245px;
+  vertical-align: top;
+  padding: 16px;
+  border-right: 1px solid var(--border);
+  white-space: normal;
+}
+
+.matrix-table th:last-child,
+.matrix-table td:last-child { border-right: 0; }
+
+.matrix-table .sticky-col { position: sticky; left: 0; z-index: 3; min-width: 170px; background: var(--surface-tint); }
+.topic-cell { font-weight: 700; }
+.matrix-table td p { font-size: 13px; margin: 0; }
+.matrix-party-dot { display: inline-block; height: 8px; width: 8px; border-radius: 50%; margin-right: 7px; }
+
+/* Краткий режим: шесть списков помещаются на 1280px без прокрутки.
+   Фиксированная раскладка нужна, чтобы длинные слова в ячейке не
+   растягивали колонку до своей min-content ширины. */
+.matrix-compact .matrix-table { min-width: 0; width: 100%; table-layout: fixed; }
+.matrix-compact .matrix-table th,
+.matrix-compact .matrix-table td { min-width: 0; padding: 10px 12px; }
+.matrix-compact .matrix-table .sticky-col { min-width: 0; width: 124px; }
+
+/* При table-layout: fixed содержимое обязано уметь переноситься само:
+   иначе колонка не сжимается, а текст вылезает на соседнюю. */
+.matrix-compact .matrix-table th,
+.matrix-compact .matrix-table td { overflow-wrap: anywhere; }
+.matrix-compact-cell { display: table-cell; }
+
+.value-chip {
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+  gap: 7px;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  text-align: left;
+  font-size: 13px;
+  line-height: 1.35;
+  margin-bottom: 8px;
+  overflow-wrap: anywhere;
+}
+
+.value-chip > span:last-child { min-width: 0; }
+.value-chip:hover > span:last-child { text-decoration: underline; text-underline-offset: 3px; }
+
+.value-dot {
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  background: var(--tone-fact-line);
+  margin-top: 5px;
+  flex: 0 0 auto;
+}
+
+.value-dot-unsettled { background: var(--border-strong); }
+.matrix-tip { max-width: 340px; }
+.matrix-hint { font-size: 12px; color: var(--text-subtle); margin-top: 12px; }
+
+/* ==================================================================
+   7. Кандидаты
+   ================================================================== */
+
+.people-layout { display: grid; grid-template-columns: 250px minmax(0, 1fr); gap: 34px; padding-top: 28px; }
+.party-picker { border-right: 1px solid var(--border); padding-right: 18px; }
+
+/* Выпадающий список — только для узких экранов, см. блок адаптива. */
+.party-select { display: none; }
+
+.party-list button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  text-align: left;
+  border: 0;
+  background: transparent;
+  padding: 11px;
+  border-radius: 7px;
+  gap: 3px;
+}
+
+.party-list button.active { background: var(--surface); box-shadow: inset 0 0 0 1px var(--border); }
+.party-list button > span:nth-child(2) { display: flex; flex-direction: column; flex: 1; min-width: 0; }
+.party-list small { font-size: 11px; color: var(--text-subtle); }
+
+.people-main { min-width: 0; }
+.people-header { display: flex; justify-content: space-between; align-items: flex-end; gap: 20px; }
+.people-header p { margin: 0; }
+.people-header > div > p { margin: 0; }
+.people-deck { max-width: 650px; margin-top: 8px; color: var(--text-muted); font-size: 14px; }
+
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  padding: 9px 11px;
+  border-radius: 7px;
+  flex: 0 0 auto;
+}
+
+.search-box input { border: 0; outline: 0; background: transparent; width: 190px; }
+.search-box button { border: 0; background: transparent; padding: 0; display: grid; place-items: center; color: var(--text-subtle); }
+
+.scenario-box { margin: 24px 0 14px; padding: 18px 20px 22px; background: var(--surface-inverse-soft); color: #fff; }
+.scenario-head { display: flex; justify-content: space-between; align-items: center; }
+.scenario-box b { font-family: var(--font-serif); font-size: 30px; }
+.scenario-box p { font-size: 12px; color: var(--text-inverse-muted); margin: 20px 0 0; }
+.scenario-box .term { color: inherit; }
+
+/* Дорожка одна. Проверенная часть заливки — светлая, часть за границей
+   аудита — песочная: цвет отвечает на вопрос «эти места кто-нибудь смотрел». */
+/* Дорожка толще стандартной: на 4px две заливки не различить. */
+.scenario-box [data-slot='slider-track'] { background: #4c5666; height: 8px; border-radius: 999px; }
+.scenario-box [data-slot='slider-thumb'] { height: 16px; width: 16px; border-color: #fff; }
+
+.scenario-box [data-slot='slider-range'] {
+  background: linear-gradient(
+    to right,
+    var(--track-audited) 0 var(--audited-share),
+    var(--track-beyond) var(--audited-share) 100%
+  );
+}
+
+.scenario-scale { position: relative; padding-bottom: 20px; }
+
+/* Засечка на месте границы аудита: тонкая метка на шкале, не вторая полоса. */
+.scale-boundary {
+  position: absolute;
+  top: 14px;
+  left: var(--audited-mark);
+  transform: translateX(-50%);
+  font-size: 10px;
+  line-height: 1;
+  white-space: nowrap;
+  color: var(--text-inverse-muted);
+  padding-top: 7px;
+}
+
+.scale-boundary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 5px;
+  width: 1px;
+  background: var(--text-inverse-muted);
+}
+
+.scenario-beyond .scenario-head b { color: var(--track-beyond); }
+
+.candidate-list { border: 1px solid var(--border); background: var(--surface); }
+.candidate-list > div { border-bottom: 1px solid var(--border); }
+.candidate-list > div:last-child { border: 0; }
+.candidate-list .outside { opacity: .5; }
+
+.candidate-row {
+  width: 100%;
+  border: 0;
+  background: var(--surface);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 14px 16px;
+  text-align: left;
+}
+
+.candidate-row:hover { background: var(--surface-tint); }
+
+.candidate-number {
+  height: 31px;
+  width: 31px;
+  border: 1px solid var(--border-strong);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-family: var(--font-serif);
+  flex: 0 0 auto;
+}
+
+.candidate-number.large { height: 54px; width: 54px; font-size: 23px; margin-bottom: 12px; }
+
+/* Мобильная вкладка «Кандидаты» переставала помещаться из-за nowrap. */
+.candidate-main { display: flex; flex-direction: column; flex: 1 1 auto; min-width: 0; }
+.candidate-name-line { display: flex; align-items: center; gap: 10px; min-width: 0; }
+.candidate-name-line b { font-size: 14px; overflow-wrap: anywhere; }
+.candidate-name-line em { font-style: normal; }
+
+.candidate-main small {
+  font-size: 12px;
+  color: var(--text-subtle);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.dot { height: 9px; width: 9px; border-radius: 50%; flex: 0 0 auto; }
+.dot-red { background: var(--mark-red); }
+.dot-yellow { background: var(--mark-yellow); }
+.dot-green { background: var(--mark-green); }
+
+.depth {
+  font-size: 9px;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  border: 1px solid;
+  padding: 2px 5px;
+  border-radius: 999px;
+  color: var(--text-subtle);
+  white-space: nowrap;
+}
+
+.depth-substantive { background: #e5f2e9; border-color: #b9d6c2; color: #1d6644; }
+.depth-basic { background: #f5ecd9; border-color: #dfcca7; color: #78561a; }
+.depth-limited { background: #eeeeeb; border-color: #d4d6d0; color: #6c716c; }
+
+.coverage-note { font-size: 13px; color: var(--text-subtle); margin-top: 14px; }
+.coverage-note .source-row { display: inline-flex; }
+
+/* ==================================================================
+   8. Панель досье
+   ================================================================== */
+
+.candidate-sheet { overflow-y: auto; }
+.sheet-header { padding: 32px; border-bottom: 1px solid var(--border); background: var(--surface-tint-warm); }
+.sheet-name { font-family: var(--font-serif); font-size: 32px; }
+.sheet-badges { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+
+.sheet-badge {
+  font-size: 11px;
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  padding: 3px 8px;
+  color: var(--text-muted);
+}
+
+.sheet-body { padding: 28px 32px; display: flex; flex-direction: column; gap: 30px; }
+.sheet-bio { font-size: 16px; line-height: 1.55; }
+
+.flags-stack { display: flex; flex-direction: column; gap: 10px; margin-top: 14px; }
+.flag-block { border: 1px solid; padding: 14px; }
+.flag-head { display: flex; justify-content: space-between; gap: 10px; align-items: center; }
+.flag-block p { font-size: 13px; }
+
+.profile-claims { display: flex; flex-direction: column; gap: 10px; }
+.profile-claim { border-left: 3px solid; padding: 15px 16px; background: var(--surface); }
+.profile-claim-positive { border-color: var(--tone-fact-line); background: var(--tone-fact-surface); }
+.profile-claim-caution { border-color: var(--tone-caution-line); background: var(--tone-caution-surface); }
+.profile-claim-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
+
+.profile-claim p,
+.criteria-notes p { font-size: 13px; line-height: 1.55; margin: 8px 0 10px; }
+
+.profile-claim .source-row a,
+.criteria-notes .source-row a { font-size: 11px; }
+
+.criteria-notes { border-top: 1px solid var(--border); }
+.criteria-notes article { padding: 15px 0; border-bottom: 1px solid var(--border); }
+.criteria-notes article > div { display: flex; justify-content: space-between; gap: 12px; align-items: center; }
+
+.criteria-notes article > div > span {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+.unknown-panel { background: var(--surface-tint-warm); padding: 18px; }
+.unknown-panel .micro-label { margin-bottom: 8px; }
+.unknown-panel ul { margin: 0; padding-left: 18px; }
+.unknown-panel li { font-size: 13px; line-height: 1.5; color: var(--text-muted); }
+
+.neutral-note { font-size: 12px; border-top: 1px solid var(--border); padding-top: 20px; color: var(--text-subtle); }
+
+/* ==================================================================
+   9. Методика и источники
+   ================================================================== */
+
+.method-grid { padding: 38px 0; display: grid; grid-template-columns: 1.3fr .7fr; gap: 16px; }
+
+.method-copy,
+.legend-card,
+.method-card { background: var(--surface); border: 1px solid var(--border); padding: 28px; }
+
+.method-copy { grid-row: span 3; }
+.method-copy p { font-size: 15px; color: var(--text-muted); }
+.method-copy p b { color: var(--foreground); }
+.legend-card { display: flex; flex-direction: column; gap: 20px; }
+
+.legend-card p,
+.method-card p { font-size: 13px; color: var(--text-muted); margin-bottom: 0; }
+
+.legend-dots { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; font-size: 12px; color: var(--text-muted); }
+.legend-dots > span { display: inline-flex; align-items: center; gap: 6px; }
+.method-card a { display: inline-flex; gap: 5px; align-items: center; margin-top: 12px; font-size: 13px; }
+
+.sources-section { border-top: 1px solid var(--border); padding-top: 38px; }
+
+.sources-list {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 26px 32px;
+  align-items: start;
+}
+
+.source-group h3 { margin: 0 0 10px; }
+.source-group ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+.source-group li { display: flex; flex-direction: column; gap: 2px; }
+.source-group a { display: inline-flex; align-items: center; gap: 5px; font-size: 14px; text-decoration: none; }
+.source-group a:hover { text-decoration: underline; text-underline-offset: 3px; }
+.source-group small { font-size: 11px; color: var(--text-subtle); }
+
+footer {
+  border-top: 1px solid var(--border);
+  padding: 22px var(--page-pad);
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 12px;
+  color: var(--text-subtle);
+}
+
+/* ==================================================================
+   10. Анимация
+   ================================================================== */
+
+@keyframes rise-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.intro h1,
+.status-strip { animation: rise-in .5s ease-out both; }
+.status-strip { animation-delay: .08s; }
+
+/* Задержка считается из порядкового номера карточки, а не из nth-child. */
+.party-card { animation: rise-in .4s ease-out both; animation-delay: calc(var(--i, 0) * 40ms); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* ==================================================================
+   11. Адаптив
+   ================================================================== */
+
+@media (max-width: 1000px) {
+  .party-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .site-header { grid-template-columns: 1fr auto; }
+  .freshness { display: none; }
+  .status-strip { grid-template-columns: 1fr; }
+  .status-strip > div { border-right: 0; border-bottom: 1px solid var(--border-inverse); }
+  .people-layout { grid-template-columns: minmax(0, 1fr); }
+
+  /* Лента со скроллом прятала половину списков — на узком экране это
+     обычный select, который открывается системным колесом выбора. */
+  .party-picker { border-right: 0; padding-right: 0; }
+  .party-picker .micro-label { margin-bottom: 8px; }
+  .party-list { display: none; }
+
+  .party-select {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    border-radius: 7px;
+    padding: 0 12px 0 0;
+  }
+
+  .party-select select {
+    appearance: none;
+    border: 0;
+    background: transparent;
+    width: 100%;
+    padding: 12px 0 12px 14px;
+    font-size: 15px;
+    color: inherit;
+  }
+
+  .party-select svg { flex: 0 0 auto; color: var(--text-subtle); pointer-events: none; }
+  .matrix-compact .matrix-table { min-width: 720px; }
+}
+
+@media (max-width: 680px) {
+  .site-header { padding: 0 18px; }
+  .site-header nav a span { display: none; }
+
+  /* Первый экран на телефоне: заголовок и лид не должны занимать его целиком. */
+  .intro { grid-template-columns: 1fr; padding: 30px 18px 22px; gap: 16px; }
+  .intro h1 { font-size: 32px; }
+  .intro-copy { font-size: 15px; line-height: 1.45; }
+
+  .status-strip { margin: 0 18px 20px; max-width: none; grid-template-columns: 1fr; }
+  .status-strip > div { padding: 12px 16px; }
+  .status-strip b { display: inline; margin-right: 5px; }
+
+  .workspace { padding: 0 18px 50px; }
+  .main-tabs { gap: 4px 18px; }
+  .control-panel { flex-direction: column; }
+  .party-grid { grid-template-columns: 1fr; }
+  .matrix-head { grid-template-columns: 1fr; }
+  .people-header { align-items: stretch; flex-direction: column; gap: 14px; }
+  .search-box { width: 100%; }
+  .search-box input { width: 100%; }
+  .method-grid { grid-template-columns: 1fr; }
+  .method-copy { grid-row: auto; }
+  .sources-list { grid-template-columns: 1fr; }
+  .site-header .brand span { display: none; }
+  footer { flex-direction: column; gap: 5px; }
+
+  .candidate-name-line { align-items: flex-start; flex-direction: column; gap: 3px; }
+  .depth { font-size: 8px; }
+  .candidate-sheet { width: 100% !important; }
+  .sheet-header, .sheet-body { padding-left: 22px; padding-right: 22px; }
+  .sheet-header { padding-top: 24px; padding-bottom: 24px; }
+}

@@ -1,21 +1,20 @@
 {
-  "schema_version": "1.1",
-  "as_of": "2026-09-10",
+  "schema_version": "2.0",
   "parties": {
     "yashar": [
       {
+        "id": "yashar-eizenkot-gadi",
         "position": 1,
         "name": "Гади Эйзенкот",
         "bio": "Бывший начальник Генштаба и член военного кабинета; лидер списка.",
+        "summary": "Бывший начальник Генштаба и член военного кабинета. Его политическое предложение строится вокруг государственного управления, комиссии по 7 октября и жёсткого требования всеобщей службы.",
+        "profile_depth": "substantive",
         "source_ids": [
           "lists",
           "yashar-team"
         ],
         "verification": "verified",
-        "confidence": "medium",
-        "flags": [],
-        "profile_depth": "substantive",
-        "summary": "Бывший начальник Генштаба и член военного кабинета. Его политическое предложение строится вокруг государственного управления, комиссии по 7 октября и жёсткого требования всеобщей службы.",
+        "confidence": "confirmed",
         "strengths": [
           {
             "title": "Опыт принятия решений в сфере безопасности",
@@ -25,7 +24,7 @@
             ],
             "kind": "fact",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
         "concerns": [
@@ -37,7 +36,7 @@
             ],
             "kind": "assessment",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
         "criteria": [
@@ -50,7 +49,7 @@
             ],
             "kind": "assessment",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           },
           {
             "topic": "security",
@@ -61,42 +60,43 @@
             ],
             "kind": "assessment",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
+        "trust_notes": [],
         "unknowns": [
           "Какую именно коалиционную формулу он примет, если без части нынешней коалиции не будет 61 голоса."
         ]
       },
       {
+        "id": "yashar-koen-ioram",
         "position": 2,
         "name": "Йорам Коэн",
         "bio": "Бывший глава ШАБАК; профиль национальной безопасности.",
+        "summary": "Бывший глава ШАБАК. Представляет в списке правый, профессионально-силовой взгляд: жёсткая безопасность, всеобщая служба и скепсис к классической модели двух государств.",
+        "profile_depth": "substantive",
         "source_ids": [
           "lists",
           "yashar-team"
         ],
         "verification": "verified",
-        "confidence": "medium",
-        "flags": [],
-        "profile_depth": "substantive",
-        "summary": "Бывший глава ШАБАК. Представляет в списке правый, профессионально-силовой взгляд: жёсткая безопасность, всеобщая служба и скепсис к классической модели двух государств.",
+        "confidence": "confirmed",
         "strengths": [
           {
             "title": "Профессиональный контртеррористический опыт",
-            "text": "Руководил ШАБАК; его профиль позволяет оценивать безопасность по управленческому record, а не только по предвыборным заявлениям.",
+            "text": "Руководил ШАБАК; его профиль позволяет оценивать безопасность по управленческому послужному списку, а не только по предвыборным заявлениям.",
             "source_ids": [
               "yashar-team"
             ],
             "kind": "fact",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
         "concerns": [],
         "criteria": [
           {
-            "topic": "haredim",
+            "topic": "service",
             "label": "Служба",
             "text": "Публичная партийная линия требует реальной службы всех групп; профиль Коэна усиливает силовой вес этого требования.",
             "source_ids": [
@@ -104,10 +104,10 @@
             ],
             "kind": "assessment",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           },
           {
-            "topic": "palestinian",
+            "topic": "palestine",
             "label": "Палестинский вопрос",
             "text": "Его подход осторожнее и правее классической двухгосударственной формулы; точная конечная модель пока описана неполно.",
             "source_ids": [
@@ -115,26 +115,27 @@
             ],
             "kind": "assessment",
             "verification": "partial",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
+        "trust_notes": [],
         "unknowns": [
           "Нет подробного публичного плана конечного политического устройства Западного берега."
         ]
       },
       {
+        "id": "yashar-farkash-hakoen-orit",
         "position": 3,
         "name": "Орит Фаркаш-Хакоэн",
         "bio": "Бывшая глава Управления электроэнергетики, министр и депутат.",
+        "summary": "Юрист, бывшая глава Управления электроэнергетики, министр и депутат. Сильна в регулировании, экономической инфраструктуре и институциональной работе.",
+        "profile_depth": "substantive",
         "source_ids": [
           "lists",
           "yashar-team"
         ],
         "verification": "verified",
-        "confidence": "medium",
-        "flags": [],
-        "profile_depth": "substantive",
-        "summary": "Юрист, бывшая глава Управления электроэнергетики, министр и депутат. Сильна в регулировании, экономической инфраструктуре и институциональной работе.",
+        "confidence": "confirmed",
         "strengths": [
           {
             "title": "Институциональная компетентность",
@@ -144,7 +145,7 @@
             ],
             "kind": "fact",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
         "concerns": [
@@ -154,39 +155,40 @@
             "source_ids": [],
             "kind": "uncertainty",
             "verification": "partial",
-            "confidence": "low"
+            "confidence": "limited"
           }
         ],
         "criteria": [
           {
-            "topic": "judiciary",
+            "topic": "courts",
             "label": "Институты",
-            "text": "Её профессиональный record поддерживает институциональный образ списка; политическая проверка 2020 года показывает готовность к коалиционному компромиссу.",
+            "text": "Её послужной список поддерживает институциональный образ списка; политическая проверка 2020 года показывает готовность к коалиционному компромиссу.",
             "source_ids": [
               "yashar-team"
             ],
             "kind": "assessment",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
+        "trust_notes": [],
         "unknowns": [
           "Нужен прямой источник на голосование 2020 года перед повышением уверенности эпизода."
         ]
       },
       {
+        "id": "yashar-altshuler-adi",
         "position": 4,
         "name": "Ади Альтшулер",
         "bio": "Социальная предпринимательница, основательница Krembo Wings и Zikaron BaSalon.",
+        "summary": "Социальная предпринимательница, создавшая Krembo Wings и Zikaron BaSalon. Известна масштабированием гражданских инициатив, но почти не проходила парламентских проверок.",
+        "profile_depth": "basic",
         "source_ids": [
           "lists",
           "yashar-team"
         ],
         "verification": "verified",
-        "confidence": "medium",
-        "flags": [],
-        "profile_depth": "basic",
-        "summary": "Социальная предпринимательница, создавшая Krembo Wings и Zikaron BaSalon. Известна масштабированием гражданских инициатив, но почти не проходила парламентских проверок.",
+        "confidence": "confirmed",
         "strengths": [
           {
             "title": "Проверенный общественный менеджмент",
@@ -196,50 +198,51 @@
             ],
             "kind": "fact",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
         "concerns": [],
         "criteria": [
           {
-            "topic": "judiciary",
+            "topic": "courts",
             "label": "Государственное управление",
-            "text": "Практический опыт гражданского сектора есть; позиционный record по спорным государственным вопросам ещё мал.",
+            "text": "Практический опыт гражданского сектора есть; публичных позиций по спорным государственным вопросам пока мало.",
             "source_ids": [
               "yashar-team"
             ],
             "kind": "assessment",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
+        "trust_notes": [],
         "unknowns": [
           "Как будет голосовать при конфликте партийной дисциплины с собственной позицией."
         ]
       },
       {
+        "id": "yashar-kahana-matan",
         "position": 5,
         "name": "Матан Кахана",
         "bio": "Бывший министр религиозных услуг и военный лётчик; продвигал реформы кашрута и гиюра.",
+        "summary": "Бывший боевой лётчик и министр религиозных услуг из религиозно-сионистской среды. Уже пытался менять монополии в кашруте и гиюре.",
+        "profile_depth": "substantive",
         "source_ids": [
           "lists",
           "yashar-team"
         ],
         "verification": "verified",
-        "confidence": "medium",
-        "flags": [],
-        "profile_depth": "substantive",
-        "summary": "Бывший боевой лётчик и министр религиозных услуг из религиозно-сионистской среды. Уже пытался менять монополии в кашруте и гиюре.",
+        "confidence": "confirmed",
         "strengths": [
           {
             "title": "Реформы религиозных услуг",
-            "text": "Продвигал конкуренцию в кашруте и более доступный гиюр — это конкретный governing record, а не только обещание.",
+            "text": "Продвигал конкуренцию в кашруте и более доступный гиюр — это конкретный управленческий результат, а не только обещание.",
             "source_ids": [
               "yashar-team"
             ],
             "kind": "fact",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
         "concerns": [
@@ -251,12 +254,12 @@
             ],
             "kind": "assessment",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
         "criteria": [
           {
-            "topic": "religion_state",
+            "topic": "religion",
             "label": "Религия и государство",
             "text": "Сильный кандидат для постепенной либерализации религиозных услуг; менее очевидный выбор для полного гражданского режима.",
             "source_ids": [
@@ -264,36 +267,37 @@
             ],
             "kind": "assessment",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
+        "trust_notes": [],
         "unknowns": [
           "Какие именно реформы переживут коалиционные переговоры."
         ]
       },
       {
+        "id": "yashar-tropper-hili",
         "position": 6,
         "name": "Хили Троппер",
         "bio": "Бывший министр культуры; умеренно-религиозный политик из бывшего Государственного лагеря.",
+        "summary": "Бывший министр культуры, религиозный центрист и сторонник примирительной политики. В нынешней кампании поддерживает более жёсткую линию по службе харедим.",
+        "profile_depth": "basic",
         "source_ids": [
           "lists",
           "yashar-team"
         ],
         "verification": "verified",
-        "confidence": "medium",
-        "flags": [],
-        "profile_depth": "basic",
-        "summary": "Бывший министр культуры, религиозный центрист и сторонник примирительной политики. В нынешней кампании поддерживает более жёсткую линию по службе харедим.",
+        "confidence": "confirmed",
         "strengths": [
           {
             "title": "Опыт социальной и министерской работы",
-            "text": "Имеет парламентский и министерский record, а также длительную работу в образовании и гражданском секторе.",
+            "text": "Имеет парламентский и министерский послужной список, а также длительную работу в образовании и гражданском секторе.",
             "source_ids": [
               "yashar-team"
             ],
             "kind": "fact",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
         "concerns": [
@@ -305,12 +309,12 @@
             ],
             "kind": "assessment",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
         "criteria": [
           {
-            "topic": "haredim",
+            "topic": "service",
             "label": "Служба",
             "text": "Поддерживает всеобщую службу, но его политический стиль повышает вероятность договорного, а не максималистского исполнения.",
             "source_ids": [
@@ -318,34 +322,27 @@
             ],
             "kind": "assessment",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
+        "trust_notes": [],
         "unknowns": [
           "Какие количественные цели призыва он считает достаточными."
         ]
       },
       {
+        "id": "yashar-meridor-shaul",
         "position": 7,
         "name": "Шауль Меридор",
         "bio": "Бывший руководитель бюджетного отдела Минфина; ушёл в 2020 году после конфликта о бюджетном управлении.",
+        "summary": "Экономист и бывший глава бюджетного отдела Минфина. Ушёл с должности в 2020 году, заявив о нарушении нормального бюджетного процесса.",
+        "profile_depth": "substantive",
         "source_ids": [
           "lists",
           "yashar-team"
         ],
         "verification": "verified",
-        "confidence": "medium",
-        "flags": [
-          {
-            "color": "green",
-            "title": "Институциональный поступок",
-            "text": "Уход с государственной должности из-за профессионального конфликта требует отдельной ссылки в следующем обновлении.",
-            "source_ids": [],
-            "kind": "assessment"
-          }
-        ],
-        "profile_depth": "substantive",
-        "summary": "Экономист и бывший глава бюджетного отдела Минфина. Ушёл с должности в 2020 году, заявив о нарушении нормального бюджетного процесса.",
+        "confidence": "confirmed",
         "strengths": [
           {
             "title": "Заплатил карьерную цену за институциональную позицию",
@@ -355,106 +352,112 @@
             ],
             "kind": "fact",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           },
           {
-            "color": "green",
             "title": "Институциональный поступок",
             "text": "Уход с государственной должности из-за профессионального конфликта требует отдельной ссылки в следующем обновлении.",
+            "color": "green",
+            "kind": "uncertainty",
             "source_ids": [],
-            "kind": "assessment"
+            "verification": "unverified",
+            "confidence": "limited"
           }
         ],
         "concerns": [],
         "criteria": [
           {
-            "topic": "judiciary",
+            "topic": "courts",
             "label": "Институты",
-            "text": "Его record особенно релевантен критерию независимости профессиональной госслужбы.",
+            "text": "Его послужной список особенно релевантен критерию независимости профессиональной госслужбы.",
             "source_ids": [
               "yashar-team"
             ],
             "kind": "assessment",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
+        "trust_notes": [],
         "unknowns": [
-          "У него мало самостоятельного политического record по безопасности и религии–государству."
+          "У него мало самостоятельного политического опыта по безопасности и религии–государству."
         ]
       },
       {
+        "id": "yashar-ifargan-tair",
         "position": 8,
         "name": "Таир Ифарган",
         "bio": "Бывшая генеральная директорка Министерства труда.",
+        "summary": "Бывшая генеральная директорка Министерства труда.",
+        "profile_depth": "limited",
         "source_ids": [
           "lists",
           "yashar-team"
         ],
         "verification": "verified",
-        "confidence": "medium",
-        "flags": [],
-        "profile_depth": "limited",
-        "summary": "Бывшая генеральная директорка Министерства труда.",
+        "confidence": "confirmed",
         "strengths": [],
         "concerns": [],
         "criteria": [],
+        "trust_notes": [],
         "unknowns": [
           "Пока найдено недостаточно публичного материала для содержательной оценки по ключевым критериям."
         ]
       },
       {
+        "id": "yashar-gani-gonen-oshrat",
         "position": 9,
         "name": "Ошрат Гани-Гонен",
         "bio": "Глава регионального совета Дром-ха-Шарон; опыт местного управления.",
+        "summary": "Глава регионального совета Дром-ха-Шарон; опыт местного управления.",
+        "profile_depth": "limited",
         "source_ids": [
           "lists",
           "yashar-team"
         ],
         "verification": "verified",
-        "confidence": "medium",
-        "flags": [],
-        "profile_depth": "limited",
-        "summary": "Глава регионального совета Дром-ха-Шарон; опыт местного управления.",
+        "confidence": "confirmed",
         "strengths": [],
         "concerns": [],
         "criteria": [],
+        "trust_notes": [],
         "unknowns": [
           "Пока найдено недостаточно публичного материала для содержательной оценки по ключевым критериям."
         ]
       },
       {
+        "id": "yashar-shapira-shira",
         "position": 10,
         "name": "Шира Шапира",
         "bio": "Кандидатка из команды Хили Троппера; национальный парламентский опыт ограничен.",
+        "summary": "Кандидатка из команды Хили Троппера; национальный парламентский опыт ограничен.",
+        "profile_depth": "limited",
         "source_ids": [
           "lists"
         ],
         "verification": "verified",
-        "confidence": "medium",
-        "flags": [],
-        "profile_depth": "limited",
-        "summary": "Кандидатка из команды Хили Троппера; национальный парламентский опыт ограничен.",
+        "confidence": "confirmed",
         "strengths": [],
         "concerns": [],
         "criteria": [],
+        "trust_notes": [],
         "unknowns": [
           "Пока найдено недостаточно публичного материала для содержательной оценки по ключевым критериям."
         ]
       },
       {
+        "id": "yashar-harush-giti-inbar",
         "position": 11,
         "name": "Инбар Харуш-Гити",
         "bio": "Бывшая руководительница «Ахарей!»; работала с программами службы и интеграции.",
+        "summary": "Бывшая руководительница движения «Ахараи!», работающего с молодёжью, службой и социальной мобильностью. Национального парламентского опыта нет.",
+        "profile_depth": "basic",
         "source_ids": [
           "lists",
           "yashar-team"
         ],
         "verification": "verified",
-        "confidence": "medium",
-        "flags": [],
-        "profile_depth": "basic",
-        "summary": "Бывшая руководительница движения «Ахараи!», работающего с молодёжью, службой и социальной мобильностью. Национального парламентского record нет.",
+        "confidence": "confirmed",
         "strengths": [
           {
             "title": "Практика интеграции через службу",
@@ -464,13 +467,13 @@
             ],
             "kind": "fact",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
         "concerns": [],
         "criteria": [
           {
-            "topic": "haredim",
+            "topic": "service",
             "label": "Служба",
             "text": "Биография напрямую связана с расширением участия в службе, но конкретная модель принуждения и санкций пока не проверена.",
             "source_ids": [
@@ -478,48 +481,38 @@
             ],
             "kind": "assessment",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
+        "trust_notes": [],
         "unknowns": [
           "Нет истории голосований или управления государственным бюджетом."
         ]
       },
       {
+        "id": "yashar-shtern-elazar",
         "position": 12,
         "name": "Элазар Штерн",
         "bio": "Генерал запаса, бывший министр и депутат.",
+        "summary": "Бывший генерал, депутат и руководитель кадрового управления ЦАХАЛ. Сочетает опыт армии, религиозно-государственных вопросов и парламентской политики.",
+        "profile_depth": "substantive",
         "source_ids": [
           "lists",
           "stern",
           "stern-response"
         ],
         "verification": "verified",
-        "confidence": "medium",
-        "flags": [
-          {
-            "color": "red",
-            "title": "Спор об анонимных жалобах",
-            "text": "В 2021 году сказал, что уничтожал анонимные жалобы; отрицал, что речь шла о жалобах о сексуальных домогательствах. Снял кандидатуру на руководство Еврейским агентством.",
-            "source_ids": [
-              "stern",
-              "stern-response"
-            ],
-            "kind": "assessment"
-          }
-        ],
-        "profile_depth": "substantive",
-        "summary": "Бывший генерал, депутат и руководитель кадрового управления ЦАХАЛ. Сочетает опыт армии, религиозно-государственных вопросов и парламентской политики.",
+        "confidence": "confirmed",
         "strengths": [
           {
-            "title": "Длинный государственный record",
+            "title": "Долгий государственный послужной список",
             "text": "Работал на стыке армии, интеграции и религиозно-государственной политики.",
             "source_ids": [
               "yashar-team"
             ],
             "kind": "fact",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
         "concerns": [
@@ -532,12 +525,13 @@
             ],
             "kind": "fact",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed",
+            "color": "red"
           }
         ],
-        "criteria": [
+        "criteria": [],
+        "trust_notes": [
           {
-            "topic": "trust",
             "label": "Доверие",
             "text": "Эпизод 2021 года требует учитывать одновременно серьёзность обвинений, отрицание Штерна и отсутствие вывода суда в этих источниках.",
             "source_ids": [
@@ -546,7 +540,7 @@
             ],
             "kind": "assessment",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
         "unknowns": [
@@ -554,18 +548,18 @@
         ]
       },
       {
+        "id": "yashar-abu-rukun-kamil",
         "position": 13,
         "name": "Камиль Абу-Рукун",
         "bio": "Бывший координатор действий правительства на территориях (COGAT).",
+        "summary": "Бывший координатор действий правительства на территориях и генерал с десятилетиями службы. Специализируется на связи безопасности, экономики и гражданского управления.",
+        "profile_depth": "basic",
         "source_ids": [
           "lists",
           "yashar-team"
         ],
         "verification": "verified",
-        "confidence": "medium",
-        "flags": [],
-        "profile_depth": "basic",
-        "summary": "Бывший координатор действий правительства на территориях и генерал с десятилетиями службы. Специализируется на связи безопасности, экономики и гражданского управления.",
+        "confidence": "confirmed",
         "strengths": [
           {
             "title": "Опыт управления палестинским контуром",
@@ -575,13 +569,13 @@
             ],
             "kind": "fact",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
         "concerns": [],
         "criteria": [
           {
-            "topic": "palestinian",
+            "topic": "palestine",
             "label": "Палестинский вопрос",
             "text": "Его подход практический и управленческий; он не заменяет ясного ответа партии о конечном политическом устройстве.",
             "source_ids": [
@@ -589,46 +583,48 @@
             ],
             "kind": "assessment",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
+        "trust_notes": [],
         "unknowns": [
           "Нет подробного личного плана по государственности и поселениям."
         ]
       },
       {
+        "id": "yashar-bahar-dvora",
         "position": 14,
         "name": "Двора Бахар",
         "bio": "Бывшая сотрудница ШАБАК и Моссада.",
+        "summary": "Бывшая сотрудница ШАБАК и Моссада.",
+        "profile_depth": "limited",
         "source_ids": [
           "lists",
           "yashar-team"
         ],
         "verification": "verified",
-        "confidence": "medium",
-        "flags": [],
-        "profile_depth": "limited",
-        "summary": "Бывшая сотрудница ШАБАК и Моссада.",
+        "confidence": "confirmed",
         "strengths": [],
         "concerns": [],
         "criteria": [],
+        "trust_notes": [],
         "unknowns": [
           "Пока найдено недостаточно публичного материала для содержательной оценки по ключевым критериям."
         ]
       },
       {
+        "id": "yashar-rif-aleks",
         "position": 15,
         "name": "Алекс Риф",
         "bio": "Общественная деятельница, связанная с русскоязычными израильтянами и вопросами личного статуса.",
+        "summary": "Общественная деятельница, специализирующаяся на русскоязычных израильтянах и барьерах в браке, гиюре и отношениях с раввинатом.",
+        "profile_depth": "basic",
         "source_ids": [
           "lists",
           "yashar-team"
         ],
         "verification": "verified",
-        "confidence": "medium",
-        "flags": [],
-        "profile_depth": "basic",
-        "summary": "Общественная деятельница, специализирующаяся на русскоязычных израильтянах и барьерах в браке, гиюре и отношениях с раввинатом.",
+        "confidence": "confirmed",
         "strengths": [
           {
             "title": "Предметный опыт религии–государства",
@@ -638,13 +634,13 @@
             ],
             "kind": "fact",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
         "concerns": [],
         "criteria": [
           {
-            "topic": "religion_state",
+            "topic": "religion",
             "label": "Религия и государство",
             "text": "Её присутствие усиливает либерально-практическое крыло списка в вопросах брака и гиюра.",
             "source_ids": [
@@ -652,55 +648,47 @@
             ],
             "kind": "assessment",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
+        "trust_notes": [],
         "unknowns": [
-          "Нет парламентского record, показывающего пределы возможного компромисса."
+          "Нет парламентского послужного списка, по которому видны пределы возможного компромисса."
         ]
       },
       {
+        "id": "yashar-iehezkeli-blilius-inbar",
         "position": 16,
         "name": "Инбар Йехезкели-Блилиус",
         "bio": "Общественная деятельница; национальный политический опыт ограничен.",
+        "summary": "Общественная деятельница; национальный политический опыт ограничен.",
+        "profile_depth": "limited",
         "source_ids": [
           "lists"
         ],
         "verification": "verified",
-        "confidence": "medium",
-        "flags": [],
-        "profile_depth": "limited",
-        "summary": "Общественная деятельница; национальный политический опыт ограничен.",
+        "confidence": "confirmed",
         "strengths": [],
         "concerns": [],
         "criteria": [],
+        "trust_notes": [],
         "unknowns": [
           "Пока найдено недостаточно публичного материала для содержательной оценки по ключевым критериям."
         ]
       },
       {
+        "id": "yashar-folkman-roi",
         "position": 17,
         "name": "Рои Фолькман",
         "bio": "Бывший депутат и глава фракции «Кулану».",
+        "summary": "Бывший депутат «Кулану» и специалист по муниципальной политике. Его послужной список сочетает реформаторскую работу и заметную гибкость вокруг правительства Нетаньяху.",
+        "profile_depth": "substantive",
         "source_ids": [
           "lists",
           "folkman"
         ],
         "verification": "verified",
-        "confidence": "medium",
-        "flags": [
-          {
-            "color": "red",
-            "title": "Изменение позиции",
-            "text": "В 2019 году публично признал, что изменил прежний отказ сидеть с обвиняемым Нетаньяху.",
-            "source_ids": [
-              "folkman"
-            ],
-            "kind": "assessment"
-          }
-        ],
-        "profile_depth": "substantive",
-        "summary": "Бывший депутат «Кулану» и специалист по муниципальной политике. Его record сочетает реформаторскую работу и заметную гибкость вокруг правительства Нетаньяху.",
+        "confidence": "confirmed",
         "strengths": [
           {
             "title": "Практический опыт реформ",
@@ -710,7 +698,7 @@
             ],
             "kind": "fact",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
         "concerns": [
@@ -722,7 +710,8 @@
             ],
             "kind": "fact",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed",
+            "color": "red"
           }
         ],
         "criteria": [
@@ -735,26 +724,27 @@
             ],
             "kind": "assessment",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
+        "trust_notes": [],
         "unknowns": [
           "Как он теперь оценивает собственную позицию 2019 года."
         ]
       },
       {
+        "id": "yashar-zari-israel",
         "position": 18,
         "name": "Исраэль Зари",
         "bio": "Заместитель мэра Рамат-Гана; гражданская и муниципальная повестка.",
+        "summary": "Заместитель мэра Рамат-Гана с муниципальным и ЛГБТ-общественным опытом.",
+        "profile_depth": "basic",
         "source_ids": [
           "lists",
           "yashar-team"
         ],
         "verification": "verified",
-        "confidence": "medium",
-        "flags": [],
-        "profile_depth": "basic",
-        "summary": "Заместитель мэра Рамат-Гана с муниципальным и ЛГБТ-общественным опытом.",
+        "confidence": "confirmed",
         "strengths": [
           {
             "title": "Локальный управленческий опыт",
@@ -764,40 +754,41 @@
             ],
             "kind": "fact",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
         "concerns": [],
         "criteria": [
           {
-            "topic": "religion_state",
+            "topic": "religion",
             "label": "Гражданские права",
-            "text": "Биография указывает на либеральное гражданское представительство; национальный законодательный record пока ограничен.",
+            "text": "Биография указывает на либеральное гражданское представительство; национальный законодательный опыт пока ограничен.",
             "source_ids": [
               "yashar-team"
             ],
             "kind": "assessment",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
+        "trust_notes": [],
         "unknowns": [
           "Позиции по безопасности и коалициям раскрыты мало."
         ]
       },
       {
+        "id": "yashar-ohana-tal",
         "position": 19,
         "name": "Таль Охана",
         "bio": "Бывшая глава Йерухама; опыт местного управления и периферии.",
+        "summary": "Бывшая глава Йерухама. Представляет местное управление, периферию и практический опыт работы с государственными системами.",
+        "profile_depth": "basic",
         "source_ids": [
           "lists",
           "yashar-team"
         ],
         "verification": "verified",
-        "confidence": "medium",
-        "flags": [],
-        "profile_depth": "basic",
-        "summary": "Бывшая глава Йерухама. Представляет местное управление, периферию и практический опыт работы с государственными системами.",
+        "confidence": "confirmed",
         "strengths": [
           {
             "title": "Исполнительный муниципальный опыт",
@@ -807,7 +798,7 @@
             ],
             "kind": "fact",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
         "concerns": [],
@@ -821,64 +812,67 @@
             ],
             "kind": "assessment",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
+        "trust_notes": [],
         "unknowns": [
           "Мало материала по ключевым идеологическим развилкам."
         ]
       },
       {
+        "id": "yashar-perets-elisaf",
         "position": 20,
         "name": "Элисаф Перец",
         "bio": "Общественный кандидат; национальный парламентский опыт ограничен.",
+        "summary": "Общественный кандидат; национальный парламентский опыт ограничен.",
+        "profile_depth": "limited",
         "source_ids": [
           "lists"
         ],
         "verification": "verified",
-        "confidence": "medium",
-        "flags": [],
-        "profile_depth": "limited",
-        "summary": "Общественный кандидат; национальный парламентский опыт ограничен.",
+        "confidence": "confirmed",
         "strengths": [],
         "concerns": [],
         "criteria": [],
+        "trust_notes": [],
         "unknowns": [
           "Пока найдено недостаточно публичного материала для содержательной оценки по ключевым критериям."
         ]
       },
       {
+        "id": "yashar-tabadzha-yaffa",
         "position": 21,
         "name": "Яффа Табаджа",
         "bio": "Общественная кандидатка; подробный политический профиль ещё проверяется.",
+        "summary": "Общественная кандидатка; подробный политический профиль ещё проверяется.",
+        "profile_depth": "limited",
         "source_ids": [
           "lists"
         ],
         "verification": "verified",
-        "confidence": "medium",
-        "flags": [],
-        "profile_depth": "limited",
-        "summary": "Общественная кандидатка; подробный политический профиль ещё проверяется.",
+        "confidence": "confirmed",
         "strengths": [],
         "concerns": [],
         "criteria": [],
+        "trust_notes": [],
         "unknowns": [
           "Пока найдено недостаточно публичного материала для содержательной оценки по ключевым критериям."
         ]
       },
       {
+        "id": "yashar-hagbi-nir",
         "position": 22,
         "name": "Нир Хагби",
         "bio": "Полковник запаса из Кисуфима; опыт войны после 7 октября.",
+        "summary": "Полковник резерва из Кисуфима; его публичный профиль тесно связан с провалом и боевыми событиями 7 октября.",
+        "profile_depth": "basic",
         "source_ids": [
           "lists",
           "yashar-team"
         ],
         "verification": "verified",
-        "confidence": "medium",
-        "flags": [],
-        "profile_depth": "basic",
-        "summary": "Полковник резерва из Кисуфима; его публичный профиль тесно связан с провалом и боевыми событиями 7 октября.",
+        "confidence": "confirmed",
         "strengths": [
           {
             "title": "Непосредственный опыт приграничной безопасности",
@@ -888,7 +882,7 @@
             ],
             "kind": "fact",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
         "concerns": [],
@@ -902,66 +896,70 @@
             ],
             "kind": "assessment",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
+        "trust_notes": [],
         "unknowns": [
-          "Нет проверенного политического record по институтам и религии–государству."
+          "Нет проверенного политического послужного списка по институтам и религии–государству."
         ]
       },
       {
+        "id": "yashar-barkai-ron",
         "position": 23,
         "name": "Рон Баркаи",
         "bio": "Кандидат; доступных проверяемых сведений пока мало.",
+        "summary": "Кандидат; доступных проверяемых сведений пока мало.",
+        "profile_depth": "limited",
         "source_ids": [
           "lists"
         ],
         "verification": "verified",
-        "confidence": "medium",
-        "flags": [],
-        "profile_depth": "limited",
-        "summary": "Кандидат; доступных проверяемых сведений пока мало.",
+        "confidence": "confirmed",
         "strengths": [],
         "concerns": [],
         "criteria": [],
+        "trust_notes": [],
         "unknowns": [
           "Пока найдено недостаточно публичного материала для содержательной оценки по ключевым критериям."
         ]
       },
       {
+        "id": "yashar-fisher-shai",
         "position": 24,
         "name": "Шай Фишер",
         "bio": "Кандидат; доступных проверяемых сведений пока мало.",
+        "summary": "Кандидат; доступных проверяемых сведений пока мало.",
+        "profile_depth": "limited",
         "source_ids": [
           "lists"
         ],
         "verification": "verified",
-        "confidence": "medium",
-        "flags": [],
-        "profile_depth": "limited",
-        "summary": "Кандидат; доступных проверяемых сведений пока мало.",
+        "confidence": "confirmed",
         "strengths": [],
         "concerns": [],
         "criteria": [],
+        "trust_notes": [],
         "unknowns": [
           "Пока найдено недостаточно публичного материала для содержательной оценки по ключевым критериям."
         ]
       },
       {
+        "id": "yashar-folk-david-lian",
         "position": 25,
         "name": "Лиан Фольк-Давид",
         "bio": "Кандидатка; доступных проверяемых сведений пока мало.",
+        "summary": "Кандидатка; доступных проверяемых сведений пока мало.",
+        "profile_depth": "limited",
         "source_ids": [
           "lists"
         ],
         "verification": "verified",
-        "confidence": "medium",
-        "flags": [],
-        "profile_depth": "limited",
-        "summary": "Кандидатка; доступных проверяемых сведений пока мало.",
+        "confidence": "confirmed",
         "strengths": [],
         "concerns": [],
         "criteria": [],
+        "trust_notes": [],
         "unknowns": [
           "Пока найдено недостаточно публичного материала для содержательной оценки по ключевым критериям."
         ]
@@ -969,29 +967,18 @@
     ],
     "together": [
       {
+        "id": "together-bennet-naftali",
         "position": 1,
         "name": "Нафтали Беннет",
         "bio": "Бывший премьер-министр; лидер правого крыла объединения.",
+        "summary": "Бывший премьер-министр, министр обороны и лидер религиозно-национального лагеря, теперь возглавляющий общий список с Лапидом. Обладает самым большим опытом управления в списке и самым заметным эпизодом нарушения буквального обещания.",
+        "profile_depth": "substantive",
         "source_ids": [
           "lists",
           "together"
         ],
         "verification": "verified",
-        "confidence": "medium",
-        "flags": [
-          {
-            "color": "red",
-            "title": "Подписанное обещание",
-            "text": "В 2021 году исключал ротацию с Лапидом, затем сформировал с ним правительство.",
-            "source_ids": [
-              "bennett-pledge",
-              "coalition-2021"
-            ],
-            "kind": "assessment"
-          }
-        ],
-        "profile_depth": "substantive",
-        "summary": "Бывший премьер-министр, министр обороны и лидер религиозно-национального лагеря, теперь возглавляющий общий список с Лапидом. Обладает самым полным governing record в списке и самым заметным эпизодом нарушения буквального обещания.",
+        "confidence": "confirmed",
         "strengths": [
           {
             "title": "Способность собрать разнородное правительство",
@@ -1001,7 +988,7 @@
             ],
             "kind": "fact",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
         "concerns": [
@@ -1014,7 +1001,8 @@
             ],
             "kind": "fact",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed",
+            "color": "red"
           }
         ],
         "criteria": [
@@ -1028,10 +1016,10 @@
             ],
             "kind": "assessment",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           },
           {
-            "topic": "religion_state",
+            "topic": "religion",
             "label": "Религия и государство",
             "text": "Поддерживает гражданский брак и локальные решения по транспорту в шаббат, оставаясь религиозно-национальным политиком.",
             "source_ids": [
@@ -1039,26 +1027,27 @@
             ],
             "kind": "assessment",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
+        "trust_notes": [],
         "unknowns": [
           "Какая часть совместной программы переживёт внутренние разногласия с Лапидом."
         ]
       },
       {
+        "id": "together-lapid-yair",
         "position": 2,
         "name": "Яир Лапид",
         "bio": "Бывший премьер-министр и министр финансов; лидер «Еш Атид».",
+        "summary": "Бывший премьер и многолетний лидер светского центра. Его линия по гражданским вопросам стабильнее, чем история исполнения этих обещаний.",
+        "profile_depth": "substantive",
         "source_ids": [
           "lists",
           "together"
         ],
         "verification": "verified",
-        "confidence": "medium",
-        "flags": [],
-        "profile_depth": "substantive",
-        "summary": "Бывший премьер и многолетний лидер светского центра. Его линия по гражданским вопросам стабильнее, чем история исполнения этих обещаний.",
+        "confidence": "confirmed",
         "strengths": [
           {
             "title": "Не вошёл в правительство Нетаньяху в 2020 году",
@@ -1068,7 +1057,7 @@
             ],
             "kind": "fact",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
         "concerns": [
@@ -1081,23 +1070,23 @@
             ],
             "kind": "assessment",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
         "criteria": [
           {
             "topic": "netanyahu",
             "label": "Нетаньяху",
-            "text": "Имеет более устойчивый record отказа от правительства Нетаньяху, чем многие центристы.",
+            "text": "Имеет более устойчивую историю отказа от правительства Нетаньяху, чем многие центристы.",
             "source_ids": [
               "coalition-2021"
             ],
             "kind": "assessment",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           },
           {
-            "topic": "religion_state",
+            "topic": "religion",
             "label": "Религия и государство",
             "text": "Последовательно выступает за светско-либеральные реформы; главный вопрос — способность провести их.",
             "source_ids": [
@@ -1105,26 +1094,27 @@
             ],
             "kind": "assessment",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
+        "trust_notes": [],
         "unknowns": [
           "Как будут разделены полномочия и красные линии внутри тандема с Беннетом."
         ]
       },
       {
+        "id": "together-terner-eyal-keren",
         "position": 3,
         "name": "Керен Тернер-Эяль",
         "bio": "Бывшая генеральная директорка министерств транспорта и финансов.",
+        "summary": "Экономист, бывшая генеральная директорка министерств транспорта и финансов. Представляет профессиональную госслужбу и инфраструктурное управление.",
+        "profile_depth": "basic",
         "source_ids": [
           "lists",
           "together"
         ],
         "verification": "verified",
-        "confidence": "medium",
-        "flags": [],
-        "profile_depth": "basic",
-        "summary": "Экономист, бывшая генеральная директорка министерств транспорта и финансов. Представляет профессиональную госслужбу и инфраструктурное управление.",
+        "confidence": "confirmed",
         "strengths": [
           {
             "title": "Опыт управления крупными министерствами",
@@ -1134,48 +1124,41 @@
             ],
             "kind": "fact",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
         "concerns": [],
         "criteria": [
           {
-            "topic": "judiciary",
+            "topic": "courts",
             "label": "Институты",
-            "text": "Её ценность для списка — независимая профессиональная экспертиза; партийный и парламентский record почти отсутствует.",
+            "text": "Её ценность для списка — независимая профессиональная экспертиза; партийного и парламентского опыта почти нет.",
             "source_ids": [
               "together"
             ],
             "kind": "assessment",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
+        "trust_notes": [],
         "unknowns": [
           "Личные позиции по коалиции, палестинскому вопросу и религии–государству раскрыты мало."
         ]
       },
       {
+        "id": "together-ben-ari-merav",
         "position": 4,
         "name": "Мерав Бен-Ари",
         "bio": "Действующая депутатка «Еш Атид».",
+        "summary": "Опытный депутат Еш Атид, заметная в парламентских дебатах по внутренней безопасности. Её прямой стиль включает высказывания, которые вызвали серьёзную моральную критику.",
+        "profile_depth": "substantive",
         "source_ids": [
           "lists",
           "together"
         ],
         "verification": "verified",
-        "confidence": "medium",
-        "flags": [
-          {
-            "color": "yellow",
-            "title": "Высказывание о детях Газы",
-            "text": "В беседе отмечалось резкое высказывание октября 2023 года; прямой источник будет добавлен в следующем обновлении.",
-            "source_ids": [],
-            "kind": "assessment"
-          }
-        ],
-        "profile_depth": "substantive",
-        "summary": "Опытный депутат Еш Атид, заметная в парламентских дебатах по внутренней безопасности. Её прямой стиль включает высказывания, которые вызвали серьёзную моральную критику.",
+        "confidence": "confirmed",
         "strengths": [
           {
             "title": "Парламентская опытность",
@@ -1185,7 +1168,7 @@
             ],
             "kind": "fact",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
         "concerns": [
@@ -1195,37 +1178,39 @@
             "source_ids": [],
             "kind": "uncertainty",
             "verification": "partial",
-            "confidence": "low"
+            "confidence": "limited",
+            "color": "yellow"
           }
         ],
         "criteria": [
           {
-            "topic": "palestinian",
+            "topic": "palestine",
             "label": "Гражданское население",
             "text": "Высказывание сдвигает её личный профиль правее и жёстче общей центристской упаковки списка.",
             "source_ids": [],
-            "kind": "assessment",
-            "verification": "partial",
-            "confidence": "low"
+            "kind": "uncertainty",
+            "verification": "unverified",
+            "confidence": "limited"
           }
         ],
+        "trust_notes": [],
         "unknowns": [
           "Нужна прямая ссылка на исходное выступление или надёжную полную расшифровку."
         ]
       },
       {
+        "id": "together-avishar-ben-horin-liran",
         "position": 5,
         "name": "Лиран Авишар Бен-Хорин",
         "bio": "Бывшая генеральная директорка Министерства связи.",
+        "summary": "Бывшая генеральная директорка Министерства связи и руководительница общественных организаций. Профиль — профессиональная администрация, связь и медиарегулирование.",
+        "profile_depth": "basic",
         "source_ids": [
           "lists",
           "together"
         ],
         "verification": "verified",
-        "confidence": "medium",
-        "flags": [],
-        "profile_depth": "basic",
-        "summary": "Бывшая генеральная директорка Министерства связи и руководительница общественных организаций. Профиль — профессиональная администрация, связь и медиарегулирование.",
+        "confidence": "confirmed",
         "strengths": [
           {
             "title": "Профессиональная госслужба",
@@ -1235,40 +1220,41 @@
             ],
             "kind": "fact",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
         "concerns": [],
         "criteria": [
           {
-            "topic": "judiciary",
+            "topic": "courts",
             "label": "Независимость институтов",
-            "text": "Её опыт релевантен защите профессиональных регуляторов; самостоятельный политический record ещё мал.",
+            "text": "Её опыт релевантен защите профессиональных регуляторов; самостоятельный политический опыт ещё мал.",
             "source_ids": [
               "together"
             ],
             "kind": "assessment",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
+        "trust_notes": [],
         "unknowns": [
           "Нет истории парламентских голосований по ключевым критериям."
         ]
       },
       {
+        "id": "together-tibon-noam",
         "position": 6,
         "name": "Ноам Тибон",
         "bio": "Генерал-майор запаса; 7 октября выехал на юг и участвовал в спасении людей.",
+        "summary": "Генерал-майор в отставке, известный также участием в спасении семьи и жителей Нахаль-Оза 7 октября. Активно выступал против судебной реформы.",
+        "profile_depth": "substantive",
         "source_ids": [
           "lists",
           "together"
         ],
         "verification": "verified",
-        "confidence": "medium",
-        "flags": [],
-        "profile_depth": "substantive",
-        "summary": "Генерал-майор в отставке, известный также участием в спасении семьи и жителей Нахаль-Оза 7 октября. Активно выступал против судебной реформы.",
+        "confidence": "confirmed",
         "strengths": [
           {
             "title": "Полевой и командный авторитет",
@@ -1278,7 +1264,7 @@
             ],
             "kind": "fact",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
         "concerns": [
@@ -1290,12 +1276,12 @@
             ],
             "kind": "fact",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
         "criteria": [
           {
-            "topic": "judiciary",
+            "topic": "courts",
             "label": "Судебная система",
             "text": "Занимает жёсткую позицию против демонтажа судебных сдержек.",
             "source_ids": [
@@ -1303,7 +1289,7 @@
             ],
             "kind": "assessment",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           },
           {
             "topic": "security",
@@ -1314,46 +1300,48 @@
             ],
             "kind": "assessment",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
+        "trust_notes": [],
         "unknowns": [
           "Нет полного личного плана по палестинскому урегулированию."
         ]
       },
       {
+        "id": "together-hirsh-negri-mihal",
         "position": 7,
         "name": "Михаль Хирш-Негри",
         "bio": "Бывшая генеральная директорка муниципалитета Раананы.",
+        "summary": "Бывшая генеральная директорка муниципалитета Раананы.",
+        "profile_depth": "limited",
         "source_ids": [
           "lists",
           "together"
         ],
         "verification": "verified",
-        "confidence": "medium",
-        "flags": [],
-        "profile_depth": "limited",
-        "summary": "Бывшая генеральная директорка муниципалитета Раананы.",
+        "confidence": "confirmed",
         "strengths": [],
         "concerns": [],
         "criteria": [],
+        "trust_notes": [],
         "unknowns": [
           "Пока найдено недостаточно публичного материала для содержательной оценки по ключевым критериям."
         ]
       },
       {
+        "id": "together-ginzburg-eitan",
         "position": 8,
         "name": "Эйтан Гинзбург",
         "bio": "Бывший мэр Раананы и депутат; гражданская либеральная повестка.",
+        "summary": "Бывший мэр Раананы, депутат и один из архитекторов юридической конструкции ротации Ганца и Нетаньяху в 2020 году. Открытый гей и либеральный представитель центра.",
+        "profile_depth": "basic",
         "source_ids": [
           "lists",
           "together"
         ],
         "verification": "verified",
-        "confidence": "medium",
-        "flags": [],
-        "profile_depth": "basic",
-        "summary": "Бывший мэр Раананы, депутат и один из архитекторов юридической конструкции ротации Ганца и Нетаньяху в 2020 году. Открытый гей и либеральный представитель центра.",
+        "confidence": "confirmed",
         "strengths": [
           {
             "title": "Муниципальный и законодательный опыт",
@@ -1363,7 +1351,7 @@
             ],
             "kind": "fact",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
         "concerns": [
@@ -1373,39 +1361,40 @@
             "source_ids": [],
             "kind": "uncertainty",
             "verification": "partial",
-            "confidence": "low"
+            "confidence": "limited"
           }
         ],
         "criteria": [
           {
             "topic": "netanyahu",
             "label": "Нетаньяху",
-            "text": "Его личный record включает участие в компромиссе с Нетаньяху, хотя нынешний список выступает за смену власти.",
+            "text": "Его послужной список включает участие в компромиссе с Нетаньяху, хотя нынешний список выступает за смену власти.",
             "source_ids": [
               "together"
             ],
             "kind": "assessment",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
+        "trust_notes": [],
         "unknowns": [
           "Нужен прямой источник на его конкретную роль в законодательном оформлении ротации."
         ]
       },
       {
+        "id": "together-koen-merav",
         "position": 9,
         "name": "Мерав Коэн",
         "bio": "Бывшая министр социального равенства.",
+        "summary": "Бывшая министр социального равенства, специализируется на защите пожилых и потребителей. В 2020 году вошла с Ганцем в правительство Нетаньяху, а в январе 2021-го ушла к Лапиду.",
+        "profile_depth": "substantive",
         "source_ids": [
           "lists",
           "together"
         ],
         "verification": "verified",
-        "confidence": "medium",
-        "flags": [],
-        "profile_depth": "substantive",
-        "summary": "Бывшая министр социального равенства, специализируется на защите пожилых и потребителей. В 2020 году вошла с Ганцем в правительство Нетаньяху, а в январе 2021-го ушла к Лапиду.",
+        "confidence": "confirmed",
         "strengths": [
           {
             "title": "Исправила собственный политический выбор",
@@ -1415,7 +1404,7 @@
             ],
             "kind": "fact",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
         "concerns": [
@@ -1427,7 +1416,7 @@
             ],
             "kind": "assessment",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
         "criteria": [
@@ -1440,36 +1429,27 @@
             ],
             "kind": "assessment",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
+        "trust_notes": [],
         "unknowns": [
           "Насколько твёрдой будет её граница при новом коалиционном тупике."
         ]
       },
       {
+        "id": "together-shalev-ionatan",
         "position": 10,
         "name": "Йонатан Шалев",
         "bio": "Лидер движения резервистов за равенство службы.",
+        "summary": "Организатор движения резервистов и политический союзник Беннета. Его движение создало медийную инфраструктуру, позднее использованную кампанией.",
+        "profile_depth": "substantive",
         "source_ids": [
           "lists",
           "shalev"
         ],
         "verification": "verified",
-        "confidence": "medium",
-        "flags": [
-          {
-            "color": "yellow",
-            "title": "Пожертвования движения",
-            "text": "N12 поставил вопрос о переходе медийных активов движения, собравшего более ₪500 тыс., в партийную кампанию. Сторона Беннета отрицала нарушение.",
-            "source_ids": [
-              "shalev"
-            ],
-            "kind": "assessment"
-          }
-        ],
-        "profile_depth": "substantive",
-        "summary": "Организатор движения резервистов и политический союзник Беннета. Его движение создало медийную инфраструктуру, позднее использованную кампанией.",
+        "confidence": "confirmed",
         "strengths": [
           {
             "title": "Мобилизация резервистов",
@@ -1479,7 +1459,7 @@
             ],
             "kind": "fact",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
         "concerns": [
@@ -1491,21 +1471,23 @@
             ],
             "kind": "fact",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           },
           {
-            "color": "yellow",
             "title": "Пожертвования движения",
             "text": "N12 поставил вопрос о переходе медийных активов движения, собравшего более ₪500 тыс., в партийную кампанию. Сторона Беннета отрицала нарушение.",
+            "color": "yellow",
+            "kind": "assessment",
             "source_ids": [
               "shalev"
             ],
-            "kind": "assessment"
+            "verification": "verified",
+            "confidence": "confirmed"
           }
         ],
-        "criteria": [
+        "criteria": [],
+        "trust_notes": [
           {
-            "topic": "trust",
             "label": "Прозрачность",
             "text": "Эпизод не доказывает нарушение закона, но создаёт вопрос о прозрачности перехода общественной инфраструктуры в партийную.",
             "source_ids": [
@@ -1513,7 +1495,7 @@
             ],
             "kind": "assessment",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
         "unknowns": [
@@ -1521,37 +1503,38 @@
         ]
       },
       {
+        "id": "together-naim-arman-bruriya",
         "position": 11,
         "name": "Брурия Наим-Арман",
         "bio": "Партийный организатор; независимый национальный опыт ограничен.",
+        "summary": "Партийный организатор; независимый национальный опыт ограничен.",
+        "profile_depth": "limited",
         "source_ids": [
           "lists"
         ],
         "verification": "verified",
-        "confidence": "medium",
-        "flags": [],
-        "profile_depth": "limited",
-        "summary": "Партийный организатор; независимый национальный опыт ограничен.",
+        "confidence": "confirmed",
         "strengths": [],
         "concerns": [],
         "criteria": [],
+        "trust_notes": [],
         "unknowns": [
           "Пока найдено недостаточно публичного материала для содержательной оценки по ключевым критериям."
         ]
       },
       {
+        "id": "together-ben-barak-ram",
         "position": 12,
         "name": "Рам Бен-Барак",
         "bio": "Бывший заместитель главы Моссада и депутат.",
+        "summary": "Бывший заместитель главы Моссада и опытный депутат. Сочетает центристскую партийность с жёсткими и иногда необычными предложениями по Газе.",
+        "profile_depth": "substantive",
         "source_ids": [
           "lists",
           "together"
         ],
         "verification": "verified",
-        "confidence": "medium",
-        "flags": [],
-        "profile_depth": "substantive",
-        "summary": "Бывший заместитель главы Моссада и опытный депутат. Сочетает центристскую партийность с жёсткими и иногда необычными предложениями по Газе.",
+        "confidence": "confirmed",
         "strengths": [
           {
             "title": "Глубокий разведывательный опыт",
@@ -1561,7 +1544,7 @@
             ],
             "kind": "fact",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
         "concerns": [
@@ -1573,12 +1556,12 @@
             ],
             "kind": "fact",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
         "criteria": [
           {
-            "topic": "palestinian",
+            "topic": "palestine",
             "label": "Палестинский вопрос",
             "text": "Его личная позиция по Газе может быть правее, чем ожидает часть избирателей Лапида.",
             "source_ids": [
@@ -1586,46 +1569,48 @@
             ],
             "kind": "assessment",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
+        "trust_notes": [],
         "unknowns": [
           "Остаётся ли эта инициатива его актуальной программой в 2026 году."
         ]
       },
       {
+        "id": "together-strugo-amir",
         "position": 13,
         "name": "Амир Струго",
         "bio": "Офицер запаса и общественный деятель «Ахарей!».",
+        "summary": "Офицер запаса и общественный деятель «Ахарей!».",
+        "profile_depth": "limited",
         "source_ids": [
           "lists",
           "together"
         ],
         "verification": "verified",
-        "confidence": "medium",
-        "flags": [],
-        "profile_depth": "limited",
-        "summary": "Офицер запаса и общественный деятель «Ахарей!».",
+        "confidence": "confirmed",
         "strengths": [],
         "concerns": [],
         "criteria": [],
+        "trust_notes": [],
         "unknowns": [
           "Пока найдено недостаточно публичного материала для содержательной оценки по ключевым критериям."
         ]
       },
       {
+        "id": "together-shiri-naor",
         "position": 14,
         "name": "Наор Шири",
         "bio": "Действующий депутат «Еш Атид».",
+        "summary": "Депутат Еш Атид, работавший в местном управлении. Выступал против финансирования харедимских учреждений без базовой программы и надзора.",
+        "profile_depth": "basic",
         "source_ids": [
           "lists",
           "together"
         ],
         "verification": "verified",
-        "confidence": "medium",
-        "flags": [],
-        "profile_depth": "basic",
-        "summary": "Депутат Еш Атид, работавший в местном управлении. Выступал против финансирования харедимских учреждений без базовой программы и надзора.",
+        "confidence": "confirmed",
         "strengths": [
           {
             "title": "Связывает бюджет с базовым образованием",
@@ -1635,13 +1620,13 @@
             ],
             "kind": "fact",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
         "concerns": [],
         "criteria": [
           {
-            "topic": "haredim",
+            "topic": "service",
             "label": "Харедим",
             "text": "Поддерживает не только военную службу, но и экономические условия интеграции через базовое образование.",
             "source_ids": [
@@ -1649,26 +1634,27 @@
             ],
             "kind": "assessment",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
+        "trust_notes": [],
         "unknowns": [
           "Мало самостоятельного материала по безопасности и палестинскому вопросу."
         ]
       },
       {
+        "id": "together-zeevi-nisan",
         "position": 15,
         "name": "Нисан Зеэви",
         "bio": "Резервист и общественный активист по восстановлению севера.",
+        "summary": "Резервист и общественный деятель с севера, занимающийся безопасностью приграничных районов и восстановлением эвакуированных общин.",
+        "profile_depth": "basic",
         "source_ids": [
           "lists",
           "together"
         ],
         "verification": "verified",
-        "confidence": "medium",
-        "flags": [],
-        "profile_depth": "basic",
-        "summary": "Резервист и общественный деятель с севера, занимающийся безопасностью приграничных районов и восстановлением эвакуированных общин.",
+        "confidence": "confirmed",
         "strengths": [
           {
             "title": "Региональный опыт войны и восстановления",
@@ -1678,7 +1664,7 @@
             ],
             "kind": "fact",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
         "concerns": [],
@@ -1686,15 +1672,16 @@
           {
             "topic": "security",
             "label": "Безопасность",
-            "text": "Добавляет списку взгляд с северной периферии; национальный стратегический record пока ограничен.",
+            "text": "Добавляет списку взгляд с северной периферии; национальный стратегический опыт пока ограничен.",
             "source_ids": [
               "together"
             ],
             "kind": "assessment",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
+        "trust_notes": [],
         "unknowns": [
           "Нет парламентской истории голосований."
         ]
@@ -1702,29 +1689,18 @@
     ],
     "beytenu": [
       {
+        "id": "beytenu-liberman-avigdor",
         "position": 1,
         "name": "Авигдор Либерман",
         "bio": "Лидер НДИ; бывший министр обороны, финансов и иностранных дел.",
+        "summary": "Многолетний лидер НДИ, бывший министр обороны, финансов и иностранных дел. Его линия по службе харедим подтверждена реальной политической ценой, но общий послужной список содержит громкие обещания и последующие развороты.",
+        "profile_depth": "substantive",
         "source_ids": [
           "lists",
           "ndi-idi"
         ],
         "verification": "verified",
-        "confidence": "medium",
-        "flags": [
-          {
-            "color": "yellow",
-            "title": "Смешанный record",
-            "text": "Отказ от коалиции в 2019 году подтверждает принцип по призыву; в 2016 году он вернулся в правительство Нетаньяху.",
-            "source_ids": [
-              "lieberman-2019",
-              "lieberman-2016"
-            ],
-            "kind": "assessment"
-          }
-        ],
-        "profile_depth": "substantive",
-        "summary": "Многолетний лидер НДИ, бывший министр обороны, финансов и иностранных дел. Его линия по службе харедим подтверждена реальной политической ценой, но общий record содержит громкие обещания и последующие развороты.",
+        "confidence": "confirmed",
         "strengths": [
           {
             "title": "Сорвал коалицию из-за закона о призыве",
@@ -1734,12 +1710,12 @@
             ],
             "kind": "fact",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
         "concerns": [
           {
-            "title": "Смешанный record",
+            "title": "Смешанный послужной список",
             "text": "В 2015 году обещал не входить в правительство Нетаньяху, а в 2016-м стал его министром обороны. Ряд максималистских обещаний по безопасности и религии–государству не был исполнен.",
             "source_ids": [
               "lieberman-2015",
@@ -1748,12 +1724,13 @@
             ],
             "kind": "assessment",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed",
+            "color": "yellow"
           }
         ],
         "criteria": [
           {
-            "topic": "haredim",
+            "topic": "service",
             "label": "Служба",
             "text": "Один из наиболее подтверждённых политической ценой противников освобождения харедим, хотя закон 2021–2022 годов был мягче нынешней риторики.",
             "source_ids": [
@@ -1762,7 +1739,7 @@
             ],
             "kind": "assessment",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           },
           {
             "topic": "netanyahu",
@@ -1774,26 +1751,27 @@
             ],
             "kind": "assessment",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
+        "trust_notes": [],
         "unknowns": [
           "Какие компромиссы он сочтёт допустимыми для формирования правительства после выборов."
         ]
       },
       {
+        "id": "beytenu-ben-shitrit-rafi",
         "position": 2,
         "name": "Рафи Бен-Шитрит",
         "bio": "Бывший мэр Бейт-Шеана; отец Эльроя Бен-Шитрита, погибшего 7 октября.",
+        "summary": "Бывший мэр Бейт-Шеана и отец Эльроя Бен-Шитрита, погибшего 7 октября. Участвует в движении семей, требующих ответственности и расследования провала.",
+        "profile_depth": "basic",
         "source_ids": [
           "lists",
           "ndi-list"
         ],
         "verification": "verified",
-        "confidence": "medium",
-        "flags": [],
-        "profile_depth": "basic",
-        "summary": "Бывший мэр Бейт-Шеана и отец Эльроя Бен-Шитрита, погибшего 7 октября. Участвует в движении семей, требующих ответственности и расследования провала.",
+        "confidence": "confirmed",
         "strengths": [
           {
             "title": "Муниципальный и личный опыт последствий 7 октября",
@@ -1803,7 +1781,7 @@
             ],
             "kind": "fact",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
         "concerns": [],
@@ -1817,36 +1795,37 @@
             ],
             "kind": "assessment",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
+        "trust_notes": [],
         "unknowns": [
           "Позиции по религии–государству и палестинскому устройству раскрыты мало."
         ]
       },
       {
+        "id": "beytenu-lankri-taliya",
         "position": 3,
         "name": "Талия Ланкри",
         "bio": "Полковник запаса; бывшая заместительница главы Совета нацбезопасности по внутренней безопасности и тылу.",
+        "summary": "Полковник резерва и бывшая заместитель главы Совета национальной безопасности по контртерроризму, внутренней безопасности и тылу.",
+        "profile_depth": "basic",
         "source_ids": [
           "lists",
           "ndi-list"
         ],
         "verification": "verified",
-        "confidence": "medium",
-        "flags": [],
-        "profile_depth": "basic",
-        "summary": "Полковник резерва и бывшая заместитель главы Совета национальной безопасности по контртерроризму, внутренней безопасности и тылу.",
+        "confidence": "confirmed",
         "strengths": [
           {
             "title": "Опыт национальной безопасности и тыла",
-            "text": "Имеет профессиональный record в контртерроризме и подготовке гражданского тыла.",
+            "text": "Имеет профессиональный опыт в контртерроризме и подготовке гражданского тыла.",
             "source_ids": [
               "ndi-list"
             ],
             "kind": "fact",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
         "concerns": [],
@@ -1860,154 +1839,153 @@
             ],
             "kind": "assessment",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
+        "trust_notes": [],
         "unknowns": [
           "Самостоятельные политические позиции по гражданским вопросам пока мало известны."
         ]
       },
       {
+        "id": "beytenu-forer-oded",
         "position": 4,
         "name": "Одед Форер",
         "bio": "Действующий депутат и бывший министр сельского хозяйства.",
+        "summary": "Действующий депутат и бывший министр сельского хозяйства.",
+        "profile_depth": "limited",
         "source_ids": [
           "lists",
           "ndi-list"
         ],
         "verification": "verified",
-        "confidence": "medium",
-        "flags": [],
-        "profile_depth": "limited",
-        "summary": "Действующий депутат и бывший министр сельского хозяйства.",
+        "confidence": "confirmed",
         "strengths": [],
         "concerns": [],
         "criteria": [],
+        "trust_notes": [],
         "unknowns": [
           "Пока найдено недостаточно публичного материала для содержательной оценки по ключевым критериям."
         ]
       },
       {
+        "id": "beytenu-malinovski-yuliya",
         "position": 5,
         "name": "Юлия Малиновски",
         "bio": "Действующая депутатка, заметная в вопросах религии и государства.",
+        "summary": "Действующая депутатка, заметная в вопросах религии и государства.",
+        "profile_depth": "limited",
         "source_ids": [
           "lists",
           "ndi-list"
         ],
         "verification": "verified",
-        "confidence": "medium",
-        "flags": [],
-        "profile_depth": "limited",
-        "summary": "Действующая депутатка, заметная в вопросах религии и государства.",
+        "confidence": "confirmed",
         "strengths": [],
         "concerns": [],
         "criteria": [],
+        "trust_notes": [],
         "unknowns": [
           "Пока найдено недостаточно публичного материала для содержательной оценки по ключевым критериям."
         ]
       },
       {
+        "id": "beytenu-sharabi-sharon",
         "position": 6,
         "name": "Шарон Шараби",
         "bio": "Общественный кандидат, брат бывших заложников Эли и Йоси Шараби.",
+        "summary": "Общественный кандидат, брат бывших заложников Эли и Йоси Шараби.",
+        "profile_depth": "limited",
         "source_ids": [
           "lists",
           "ndi-list"
         ],
         "verification": "verified",
-        "confidence": "medium",
-        "flags": [],
-        "profile_depth": "limited",
-        "summary": "Общественный кандидат, брат бывших заложников Эли и Йоси Шараби.",
+        "confidence": "confirmed",
         "strengths": [],
         "concerns": [],
         "criteria": [],
+        "trust_notes": [],
         "unknowns": [
           "Пока найдено недостаточно публичного материала для содержательной оценки по ключевым критериям."
         ]
       },
       {
+        "id": "beytenu-amar-hamed",
         "position": 7,
         "name": "Хамед Амар",
         "bio": "Депутат-друз и бывший министр в Минфине.",
+        "summary": "Депутат-друз и бывший министр в Минфине.",
+        "profile_depth": "limited",
         "source_ids": [
           "lists",
           "ndi-list"
         ],
         "verification": "verified",
-        "confidence": "medium",
-        "flags": [],
-        "profile_depth": "limited",
-        "summary": "Депутат-друз и бывший министр в Минфине.",
+        "confidence": "confirmed",
         "strengths": [],
         "concerns": [],
         "criteria": [],
+        "trust_notes": [],
         "unknowns": [
           "Пока найдено недостаточно публичного материала для содержательной оценки по ключевым критериям."
         ]
       },
       {
+        "id": "beytenu-sova-evgenii",
         "position": 8,
         "name": "Евгений Сова",
         "bio": "Депутат и журналист.",
+        "summary": "Депутат и журналист.",
+        "profile_depth": "limited",
         "source_ids": [
           "lists",
           "ndi-list"
         ],
         "verification": "verified",
-        "confidence": "medium",
-        "flags": [],
-        "profile_depth": "limited",
-        "summary": "Депутат и журналист.",
+        "confidence": "confirmed",
         "strengths": [],
         "concerns": [],
         "criteria": [],
+        "trust_notes": [],
         "unknowns": [
           "Пока найдено недостаточно публичного материала для содержательной оценки по ключевым критериям."
         ]
       },
       {
+        "id": "beytenu-kolihman-elvira",
         "position": 9,
         "name": "Эльвира Колихман",
         "bio": "Бывшая депутатка и муниципальный политик.",
+        "summary": "Бывшая депутатка и муниципальный политик.",
+        "profile_depth": "limited",
         "source_ids": [
           "lists",
           "ndi-list"
         ],
         "verification": "verified",
-        "confidence": "medium",
-        "flags": [],
-        "profile_depth": "limited",
-        "summary": "Бывшая депутатка и муниципальный политик.",
+        "confidence": "confirmed",
         "strengths": [],
         "concerns": [],
         "criteria": [],
+        "trust_notes": [],
         "unknowns": [
           "Пока найдено недостаточно публичного материала для содержательной оценки по ключевым критериям."
         ]
       },
       {
+        "id": "beytenu-iluz-dan",
         "position": 10,
         "name": "Дан Илуз",
         "bio": "Бывший депутат Ликуда; выступал против проекта освобождения харедим от службы.",
+        "summary": "Правый либерал, избранный от Ликуда и перешедший в НДИ после конфликта вокруг освобождения харедим от службы. Это идеологически правый, а не центристский кандидат.",
+        "profile_depth": "substantive",
         "source_ids": [
           "lists",
           "ndi-list"
         ],
         "verification": "verified",
-        "confidence": "medium",
-        "flags": [
-          {
-            "color": "yellow",
-            "title": "Не либеральный центрист",
-            "text": "Разрыв с Ликудом по службе не означает отказа от всех элементов судебной перестройки; голосования требуют отдельного аудита.",
-            "source_ids": [],
-            "kind": "assessment"
-          }
-        ],
-        "profile_depth": "substantive",
-        "summary": "Правый либерал, избранный от Ликуда и перешедший в НДИ после конфликта вокруг освобождения харедим от службы. Это идеологически правый, а не центристский кандидат.",
+        "confidence": "confirmed",
         "strengths": [
           {
             "title": "Заплатил политическую цену за призыв",
@@ -2017,7 +1995,7 @@
             ],
             "kind": "fact",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
         "concerns": [
@@ -2027,19 +2005,21 @@
             "source_ids": [],
             "kind": "uncertainty",
             "verification": "partial",
-            "confidence": "low"
+            "confidence": "limited"
           },
           {
-            "color": "yellow",
             "title": "Не либеральный центрист",
             "text": "Разрыв с Ликудом по службе не означает отказа от всех элементов судебной перестройки; голосования требуют отдельного аудита.",
+            "color": "yellow",
+            "kind": "uncertainty",
             "source_ids": [],
-            "kind": "assessment"
+            "verification": "unverified",
+            "confidence": "limited"
           }
         ],
         "criteria": [
           {
-            "topic": "haredim",
+            "topic": "service",
             "label": "Служба",
             "text": "Его позиция подтверждена голосованиями и уходом из партии власти.",
             "source_ids": [
@@ -2047,18 +2027,19 @@
             ],
             "kind": "assessment",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           },
           {
-            "topic": "judiciary",
+            "topic": "courts",
             "label": "Судебная система",
             "text": "Правее большинства сравниваемого анти-нетаньяховского блока; точные нынешние границы реформы требуют свежего интервью.",
             "source_ids": [],
-            "kind": "assessment",
-            "verification": "partial",
-            "confidence": "low"
+            "kind": "uncertainty",
+            "verification": "unverified",
+            "confidence": "limited"
           }
         ],
+        "trust_notes": [],
         "unknowns": [
           "Нужны свежие прямые позиции по независимости суда и общественного вещания."
         ]
@@ -2066,18 +2047,18 @@
     ],
     "democrats": [
       {
+        "id": "democrats-golan-yair",
         "position": 1,
         "name": "Яир Голан",
         "bio": "Бывший заместитель начальника Генштаба; лидер Демократов.",
+        "summary": "Бывший заместитель начальника Генштаба и лидер объединённых левых «Демократов». Продвигает жёсткую борьбу с ХАМАС вместе с политическим горизонтом и региональными партнёрами.",
+        "profile_depth": "substantive",
         "source_ids": [
           "lists",
           "golan-interview"
         ],
         "verification": "verified",
-        "confidence": "medium",
-        "flags": [],
-        "profile_depth": "substantive",
-        "summary": "Бывший заместитель начальника Генштаба и лидер объединённых левых «Демократов». Продвигает жёсткую борьбу с ХАМАС вместе с политическим горизонтом и региональными партнёрами.",
+        "confidence": "confirmed",
         "strengths": [
           {
             "title": "Военный опыт сочетается с политическим планом",
@@ -2088,7 +2069,7 @@
             ],
             "kind": "fact",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
         "concerns": [
@@ -2100,12 +2081,12 @@
             ],
             "kind": "fact",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
         "criteria": [
           {
-            "topic": "palestinian",
+            "topic": "palestine",
             "label": "Палестинский вопрос",
             "text": "Поддерживает двухгосударственное направление с демилитаризацией и длительной израильской ответственностью за безопасность.",
             "source_ids": [
@@ -2114,7 +2095,7 @@
             ],
             "kind": "assessment",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           },
           {
             "topic": "security",
@@ -2126,25 +2107,26 @@
             ],
             "kind": "assessment",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
+        "trust_notes": [],
         "unknowns": [
           "Как будет выглядеть переход от израильского контроля безопасности к устойчивому политическому соглашению."
         ]
       },
       {
+        "id": "democrats-lazimi-naama",
         "position": 2,
         "name": "Наама Лазими",
         "bio": "Депутатка с выраженной социально-демократической повесткой.",
+        "summary": "Депутат с выраженной социал-демократической повесткой: стоимость жизни, трудовые права и государственные услуги. По безопасности поддерживает региональный союз и демилитаризацию Газы.",
+        "profile_depth": "basic",
         "source_ids": [
           "lists"
         ],
         "verification": "verified",
-        "confidence": "medium",
-        "flags": [],
-        "profile_depth": "basic",
-        "summary": "Депутат с выраженной социал-демократической повесткой: стоимость жизни, трудовые права и государственные услуги. По безопасности поддерживает региональный союз и демилитаризацию Газы.",
+        "confidence": "confirmed",
         "strengths": [
           {
             "title": "Последовательная социально-экономическая линия",
@@ -2154,7 +2136,7 @@
             ],
             "kind": "fact",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
         "concerns": [],
@@ -2168,25 +2150,26 @@
             ],
             "kind": "assessment",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
+        "trust_notes": [],
         "unknowns": [
           "Цена и последовательность реализации экономической программы в коалиции центра."
         ]
       },
       {
+        "id": "democrats-kariv-gilad",
         "position": 3,
         "name": "Гилад Карив",
         "bio": "Реформистский раввин и депутат; борется с ортодоксальной монополией.",
+        "summary": "Реформистский раввин и опытный депутат. Один из самых ясных кандидатов по свободе религии, гражданскому браку и плюралистическому иудаизму.",
+        "profile_depth": "substantive",
         "source_ids": [
           "lists"
         ],
         "verification": "verified",
-        "confidence": "medium",
-        "flags": [],
-        "profile_depth": "substantive",
-        "summary": "Реформистский раввин и опытный депутат. Один из самых ясных кандидатов по свободе религии, гражданскому браку и плюралистическому иудаизму.",
+        "confidence": "confirmed",
         "strengths": [
           {
             "title": "Прямая биографическая связь с религиозным плюрализмом",
@@ -2196,13 +2179,13 @@
             ],
             "kind": "fact",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
         "concerns": [],
         "criteria": [
           {
-            "topic": "religion_state",
+            "topic": "religion",
             "label": "Религия и государство",
             "text": "Одна из наиболее предсказуемых либеральных позиций среди всех кандидатов сравнения.",
             "source_ids": [
@@ -2210,10 +2193,10 @@
             ],
             "kind": "assessment",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           },
           {
-            "topic": "palestinian",
+            "topic": "palestine",
             "label": "Палестинский вопрос",
             "text": "Поддерживает демилитаризованное палестинское государство и реформированную ПА при сохранении возможности израильского вмешательства.",
             "source_ids": [
@@ -2221,25 +2204,26 @@
             ],
             "kind": "assessment",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
+        "trust_notes": [],
         "unknowns": [
           "Как далеко коалиционные партнёры позволят продвинуть религиозный плюрализм."
         ]
       },
       {
+        "id": "democrats-raiten-efrat",
         "position": 4,
         "name": "Эфрат Райтен",
         "bio": "Юрист и депутатка; институциональная и правовая повестка.",
+        "summary": "Юрист и депутат, работающая с вопросами государственного расследования 7 октября и ответственности руководства.",
+        "profile_depth": "basic",
         "source_ids": [
           "lists"
         ],
         "verification": "verified",
-        "confidence": "medium",
-        "flags": [],
-        "profile_depth": "basic",
-        "summary": "Юрист и депутат, работающая с вопросами государственного расследования 7 октября и ответственности руководства.",
+        "confidence": "confirmed",
         "strengths": [
           {
             "title": "Инициатива государственной комиссии",
@@ -2249,7 +2233,7 @@
             ],
             "kind": "fact",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
         "concerns": [],
@@ -2257,47 +2241,48 @@
           {
             "topic": "netanyahu",
             "label": "Ответственность",
-            "text": "Её record прямо связан с независимым расследованием решений политического и военного руководства.",
+            "text": "Её послужной список прямо связан с независимым расследованием решений политического и военного руководства.",
             "source_ids": [
               "democrats"
             ],
             "kind": "assessment",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
+        "trust_notes": [],
         "unknowns": [
           "Самостоятельные позиции по религии–государству и арабским партиям менее детальны."
         ]
       },
       {
+        "id": "democrats-fink-yaya",
         "position": 5,
         "name": "Яя Финк",
         "bio": "Религиозно-либеральный активист и офицер резерва.",
+        "summary": "Религиозно-сионистский общественный деятель и резервист-десантник. Представляет внутри левого списка мост к религиозным и традиционным избирателям.",
+        "profile_depth": "basic",
         "source_ids": [
           "lists"
         ],
         "verification": "verified",
-        "confidence": "medium",
-        "flags": [],
-        "profile_depth": "basic",
-        "summary": "Религиозно-сионистский общественный деятель и резервист-десантник. Представляет внутри левого списка мост к религиозным и традиционным избирателям.",
+        "confidence": "confirmed",
         "strengths": [
           {
-            "title": "Личный резервистский record",
+            "title": "Личный резервистский опыт",
             "text": "После сотен дней резервной службы публично выступает против освобождения харедим от призыва.",
             "source_ids": [
               "democrats"
             ],
             "kind": "fact",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
         "concerns": [],
         "criteria": [
           {
-            "topic": "haredim",
+            "topic": "service",
             "label": "Служба",
             "text": "Его требование равенства нагрузки подкреплено собственной длительной службой.",
             "source_ids": [
@@ -2305,10 +2290,10 @@
             ],
             "kind": "assessment",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           },
           {
-            "topic": "religion_state",
+            "topic": "religion",
             "label": "Религия и государство",
             "text": "Религиозный кандидат в либеральной партии; скорее плюралистическая, чем антирелигиозная рамка.",
             "source_ids": [
@@ -2316,46 +2301,37 @@
             ],
             "kind": "assessment",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
+        "trust_notes": [],
         "unknowns": [
           "Точные границы компромисса с ортодоксальными партиями."
         ]
       },
       {
+        "id": "democrats-laski-gabi",
         "position": 6,
         "name": "Габи Ласки",
         "bio": "Бывшая депутатка Meretz и правозащитный юрист.",
+        "summary": "Правозащитная юристка и бывший депутат Мерец. Последовательно ставит права человека и ограничения государственной силы в центр политики.",
+        "profile_depth": "substantive",
         "source_ids": [
           "lists",
           "lasky"
         ],
         "verification": "verified",
-        "confidence": "medium",
-        "flags": [
-          {
-            "color": "red",
-            "title": "Выплаты семьям террористов",
-            "text": "В 2022 году защищала необходимость выплат по гуманитарным причинам, затем извинилась и назвала слова неуместными.",
-            "source_ids": [
-              "lasky"
-            ],
-            "kind": "assessment"
-          }
-        ],
-        "profile_depth": "substantive",
-        "summary": "Правозащитная юристка и бывший депутат Мерец. Последовательно ставит права человека и ограничения государственной силы в центр политики.",
+        "confidence": "confirmed",
         "strengths": [
           {
-            "title": "Долгий правозащитный record",
+            "title": "Долгий правозащитный послужной список",
             "text": "Её позиции предсказуемы и подкреплены профессиональной практикой, а не появились перед выборами.",
             "source_ids": [
               "democrats"
             ],
             "kind": "fact",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
         "concerns": [
@@ -2367,21 +2343,23 @@
             ],
             "kind": "fact",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           },
           {
-            "color": "red",
             "title": "Выплаты семьям террористов",
             "text": "В 2022 году защищала необходимость выплат по гуманитарным причинам, затем извинилась и назвала слова неуместными.",
+            "color": "red",
+            "kind": "assessment",
             "source_ids": [
               "lasky"
             ],
-            "kind": "assessment"
+            "verification": "verified",
+            "confidence": "confirmed"
           }
         ],
         "criteria": [
           {
-            "topic": "palestinian",
+            "topic": "palestine",
             "label": "Палестинский вопрос",
             "text": "Наиболее выраженный правозащитный профиль в списке; для одних это гарантия сдержек, для других — риск недооценки стимулов терроризма.",
             "source_ids": [
@@ -2389,36 +2367,27 @@
             ],
             "kind": "assessment",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
+        "trust_notes": [],
         "unknowns": [
           "Как она согласует свои прежние позиции с более силовой общей программой Голана."
         ]
       },
       {
+        "id": "democrats-ronen-omri",
         "position": 7,
         "name": "Омри Ронен",
         "bio": "Офицер Маглана и активист протестного движения.",
+        "summary": "Офицер резерва «Маглана», участник боёв 7 октября; его бабушка была убита в Кфар-Азе. Стал заметен как активист резервистов против судебной реформы.",
+        "profile_depth": "substantive",
         "source_ids": [
           "lists",
           "ronen"
         ],
         "verification": "verified",
-        "confidence": "medium",
-        "flags": [
-          {
-            "color": "yellow",
-            "title": "Отказ от резервистской службы",
-            "text": "Министр обороны распорядился отстранить его после обвинения в призыве к политическому отказу от службы; партия защищала его боевой вклад.",
-            "source_ids": [
-              "ronen"
-            ],
-            "kind": "assessment"
-          }
-        ],
-        "profile_depth": "substantive",
-        "summary": "Офицер резерва «Маглана», участник боёв 7 октября; его бабушка была убита в Кфар-Азе. Стал заметен как активист резервистов против судебной реформы.",
+        "confidence": "confirmed",
         "strengths": [
           {
             "title": "Большой личный вклад в войну",
@@ -2428,7 +2397,7 @@
             ],
             "kind": "fact",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
         "concerns": [
@@ -2440,21 +2409,23 @@
             ],
             "kind": "fact",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           },
           {
-            "color": "yellow",
             "title": "Отказ от резервистской службы",
             "text": "Министр обороны распорядился отстранить его после обвинения в призыве к политическому отказу от службы; партия защищала его боевой вклад.",
+            "color": "yellow",
+            "kind": "assessment",
             "source_ids": [
               "ronen"
             ],
-            "kind": "assessment"
+            "verification": "verified",
+            "confidence": "confirmed"
           }
         ],
         "criteria": [
           {
-            "topic": "judiciary",
+            "topic": "courts",
             "label": "Судебная система",
             "text": "Максимально жёсткая защита демократических сдержек, включая средство, которое многие считают опасным для армии.",
             "source_ids": [
@@ -2462,41 +2433,42 @@
             ],
             "kind": "assessment",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
+        "trust_notes": [],
         "unknowns": [
           "Как он сейчас формулирует пределы допустимого протеста после продолжительной войны."
         ]
       },
       {
+        "id": "democrats-rozin-mihal",
         "position": 8,
         "name": "Михаль Розин",
         "bio": "Бывшая депутатка Meretz; последовательная двухгосударственная и правозащитная линия.",
+        "summary": "Опытная бывшая депутат Мерец, правозащитница и сторонница двух государств. При этом публично признаёт необходимость борьбы с ХАМАС.",
+        "profile_depth": "basic",
         "source_ids": [
           "lists"
         ],
         "verification": "verified",
-        "confidence": "medium",
-        "flags": [],
-        "profile_depth": "basic",
-        "summary": "Опытная бывшая депутат Мерец, правозащитница и сторонница двух государств. При этом публично признаёт необходимость борьбы с ХАМАС.",
+        "confidence": "confirmed",
         "strengths": [
           {
             "title": "Предсказуемая идеологическая линия",
-            "text": "Длинный парламентский record по правам человека, против аннексии и незаконных форпостов.",
+            "text": "Длинный парламентский послужной список по правам человека, против аннексии и незаконных форпостов.",
             "source_ids": [
               "democrats"
             ],
             "kind": "fact",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
         "concerns": [],
         "criteria": [
           {
-            "topic": "palestinian",
+            "topic": "palestine",
             "label": "Палестинский вопрос",
             "text": "Классическая сионистская левая позиция: борьба с ХАМАС плюс политическое разделение с палестинцами.",
             "source_ids": [
@@ -2504,25 +2476,26 @@
             ],
             "kind": "assessment",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
+        "trust_notes": [],
         "unknowns": [
           "Конкретные условия безопасности и сроки политического процесса."
         ]
       },
       {
+        "id": "democrats-radman-moshe",
         "position": 9,
         "name": "Моше Радман",
         "bio": "Один из лидеров протеста против судебной перестройки.",
+        "summary": "Предприниматель и один из лидеров массового протеста против судебной реформы. Сильнее всего проверен в гражданской мобилизации, слабее — в государственном управлении.",
+        "profile_depth": "basic",
         "source_ids": [
           "lists"
         ],
         "verification": "verified",
-        "confidence": "medium",
-        "flags": [],
-        "profile_depth": "basic",
-        "summary": "Предприниматель и один из лидеров массового протеста против судебной реформы. Сильнее всего проверен в гражданской мобилизации, слабее — в государственном управлении.",
+        "confidence": "confirmed",
         "strengths": [
           {
             "title": "Организационный опыт защиты институтов",
@@ -2532,13 +2505,13 @@
             ],
             "kind": "fact",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
         "concerns": [],
         "criteria": [
           {
-            "topic": "judiciary",
+            "topic": "courts",
             "label": "Судебная система",
             "text": "Позиция против ослабления суда максимально ясна; опыт компромисса и исполнения внутри правительства отсутствует.",
             "source_ids": [
@@ -2546,44 +2519,46 @@
             ],
             "kind": "assessment",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
+        "trust_notes": [],
         "unknowns": [
           "Безопасность, бюджет и отношения с арабскими партиями раскрыты значительно слабее."
         ]
       },
       {
+        "id": "democrats-bashir-sumiya",
         "position": 10,
         "name": "Сумия Башир",
         "bio": "Общественная деятельница; арабо-еврейская гражданская повестка.",
+        "summary": "Общественная деятельница; арабо-еврейская гражданская повестка.",
+        "profile_depth": "limited",
         "source_ids": [
           "lists"
         ],
         "verification": "verified",
-        "confidence": "medium",
-        "flags": [],
-        "profile_depth": "limited",
-        "summary": "Общественная деятельница; арабо-еврейская гражданская повестка.",
+        "confidence": "confirmed",
         "strengths": [],
         "concerns": [],
         "criteria": [],
+        "trust_notes": [],
         "unknowns": [
           "Пока найдено недостаточно публичного материала для содержательной оценки по ключевым критериям."
         ]
       },
       {
+        "id": "democrats-shefer-nimrod",
         "position": 11,
         "name": "Нимрод Шефер",
         "bio": "Генерал-майор ВВС в отставке.",
+        "summary": "Генерал-майор ВВС в отставке. Добавляет левому списку старший командный опыт.",
+        "profile_depth": "basic",
         "source_ids": [
           "lists"
         ],
         "verification": "verified",
-        "confidence": "medium",
-        "flags": [],
-        "profile_depth": "basic",
-        "summary": "Генерал-майор ВВС в отставке. Добавляет левому списку старший командный опыт.",
+        "confidence": "confirmed",
         "strengths": [
           {
             "title": "Высший командный опыт",
@@ -2593,7 +2568,7 @@
             ],
             "kind": "fact",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
         "concerns": [],
@@ -2607,28 +2582,29 @@
             ],
             "kind": "assessment",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
+        "trust_notes": [],
         "unknowns": [
-          "Нет заметного самостоятельного парламентского record."
+          "Нет заметного самостоятельного парламентского опыта."
         ]
       }
     ],
     "reservists": [
       {
+        "id": "reservists-hendel-ioaz",
         "position": 1,
         "name": "Йоаз Хендель",
         "bio": "Бывший министр связи и офицер спецподразделения; продвигает равенство службы.",
+        "summary": "Бывший министр связи, офицер спецподразделения и правый центрист. Строит список вокруг резервистов, всеобщей службы и отказа от секторальных партий.",
+        "profile_depth": "substantive",
         "source_ids": [
           "lists",
           "hendel-union"
         ],
         "verification": "verified",
-        "confidence": "medium",
-        "flags": [],
-        "profile_depth": "substantive",
-        "summary": "Бывший министр связи, офицер спецподразделения и правый центрист. Строит список вокруг резервистов, всеобщей службы и отказа от секторальных партий.",
+        "confidence": "confirmed",
         "strengths": [
           {
             "title": "Ясные коалиционные границы 2026 года",
@@ -2638,7 +2614,7 @@
             ],
             "kind": "fact",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
         "concerns": [
@@ -2650,12 +2626,12 @@
             ],
             "kind": "assessment",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
         "criteria": [
           {
-            "topic": "haredim",
+            "topic": "service",
             "label": "Служба",
             "text": "Жёсткая и ясная линия: без секторального исключения и без харедимских партий в коалиции.",
             "source_ids": [
@@ -2663,10 +2639,10 @@
             ],
             "kind": "assessment",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           },
           {
-            "topic": "arab_parties",
+            "topic": "arab",
             "label": "Арабские партии",
             "text": "Не готов опираться и на арабские партии; это резко сужает путь к 61.",
             "source_ids": [
@@ -2674,26 +2650,27 @@
             ],
             "kind": "assessment",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
+        "trust_notes": [],
         "unknowns": [
           "Какой из запретов будет пересмотрен, если заявленная коалиция не набирает большинство."
         ]
       },
       {
+        "id": "reservists-zeliha-yaron",
         "position": 2,
         "name": "Ярон Зелиха",
         "bio": "Экономист, бывший генеральный бухгалтер Минфина.",
+        "summary": "Экономист и бывший генеральный аудитор Минфина, известный антикоррупционной и антимонопольной риторикой. Его союз с Хенделем оформлен незадолго до подачи списков.",
+        "profile_depth": "basic",
         "source_ids": [
           "lists",
           "hendel-union"
         ],
         "verification": "verified",
-        "confidence": "medium",
-        "flags": [],
-        "profile_depth": "basic",
-        "summary": "Экономист и бывший генеральный аудитор Минфина, известный антикоррупционной и антимонопольной риторикой. Его союз с Хенделем оформлен незадолго до подачи списков.",
+        "confidence": "confirmed",
         "strengths": [
           {
             "title": "Сильная экономическая специализация",
@@ -2703,7 +2680,7 @@
             ],
             "kind": "fact",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
         "concerns": [
@@ -2715,20 +2692,20 @@
             ],
             "kind": "assessment",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
-        "criteria": [
+        "criteria": [],
+        "trust_notes": [
           {
-            "topic": "trust",
             "label": "Согласованность союза",
-            "text": "Есть взаимодополняющие компетенции, но почти нет совместного governing record.",
+            "text": "Есть взаимодополняющие компетенции, но почти нет совместного опыта управления.",
             "source_ids": [
               "hendel-union"
             ],
             "kind": "assessment",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
         "unknowns": [
@@ -2736,18 +2713,18 @@
         ]
       },
       {
+        "id": "reservists-vilf-einat",
         "position": 3,
         "name": "Эйнат Вильф",
         "bio": "Бывшая депутатка Аводы; исследовательница конфликта, UNRWA и «права на возвращение».",
+        "summary": "Бывшая депутат от Аводы и советница Шимона Переса, позже стала одним из самых жёстких критиков палестинского требования права на возвращение и модели UNRWA.",
+        "profile_depth": "substantive",
         "source_ids": [
           "lists",
           "wilf"
         ],
         "verification": "verified",
-        "confidence": "medium",
-        "flags": [],
-        "profile_depth": "substantive",
-        "summary": "Бывшая депутат от Аводы и советница Шимона Переса, позже стала одним из самых жёстких критиков палестинского требования права на возвращение и модели UNRWA.",
+        "confidence": "confirmed",
         "strengths": [
           {
             "title": "Разработанная позиция по корню конфликта",
@@ -2757,7 +2734,7 @@
             ],
             "kind": "fact",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
         "concerns": [
@@ -2769,12 +2746,12 @@
             ],
             "kind": "assessment",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
         "criteria": [
           {
-            "topic": "palestinian",
+            "topic": "palestine",
             "label": "Палестинский вопрос",
             "text": "Не отрицает соглашение в принципе, но ставит предварительное принятие еврейского суверенитета и отказ от права на возвращение.",
             "source_ids": [
@@ -2782,47 +2759,50 @@
             ],
             "kind": "assessment",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
+        "trust_notes": [],
         "unknowns": [
           "Как её доктрина превращается в краткосрочную политику по Газе и Западному берегу."
         ]
       },
       {
+        "id": "reservists-volvovich-haviv",
         "position": 4,
         "name": "Хавив Вольвович",
         "bio": "Кандидат; подробный публичный профиль ещё проверяется.",
+        "summary": "Кандидат; подробный публичный профиль ещё проверяется.",
+        "profile_depth": "limited",
         "source_ids": [
           "lists"
         ],
         "verification": "verified",
-        "confidence": "medium",
-        "flags": [],
-        "profile_depth": "limited",
-        "summary": "Кандидат; подробный публичный профиль ещё проверяется.",
+        "confidence": "confirmed",
         "strengths": [],
         "concerns": [],
         "criteria": [],
+        "trust_notes": [],
         "unknowns": [
           "Пока найдено недостаточно публичного материала для содержательной оценки по ключевым критериям."
         ]
       },
       {
+        "id": "reservists-adomi-ioav",
         "position": 5,
         "name": "Йоав Адоми",
         "bio": "Кандидат; подробный публичный профиль ещё проверяется.",
+        "summary": "Кандидат; подробный публичный профиль ещё проверяется.",
+        "profile_depth": "limited",
         "source_ids": [
           "lists"
         ],
         "verification": "verified",
-        "confidence": "medium",
-        "flags": [],
-        "profile_depth": "limited",
-        "summary": "Кандидат; подробный публичный профиль ещё проверяется.",
+        "confidence": "confirmed",
         "strengths": [],
         "concerns": [],
         "criteria": [],
+        "trust_notes": [],
         "unknowns": [
           "Пока найдено недостаточно публичного материала для содержательной оценки по ключевым критериям."
         ]
@@ -2830,18 +2810,18 @@
     ],
     "amcha": [
       {
+        "id": "amcha-vinter-ofer",
         "position": 1,
         "name": "Офер Винтер",
         "bio": "Бригадный генерал запаса; лидер нового правого списка.",
+        "summary": "Бригадный генерал в отставке и лидер правого контрольного списка. Ставит военную победу, еврейскую идентичность и поддержку правого правительства выше институционального центризма.",
+        "profile_depth": "substantive",
         "source_ids": [
           "lists",
           "winter"
         ],
         "verification": "verified",
-        "confidence": "medium",
-        "flags": [],
-        "profile_depth": "substantive",
-        "summary": "Бригадный генерал в отставке и лидер правого контрольного списка. Ставит военную победу, еврейскую идентичность и поддержку правого правительства выше институционального центризма.",
+        "confidence": "confirmed",
         "strengths": [
           {
             "title": "Понятный силовой профиль",
@@ -2852,7 +2832,7 @@
             ],
             "kind": "fact",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
         "concerns": [
@@ -2864,7 +2844,7 @@
             ],
             "kind": "fact",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
         "criteria": [
@@ -2877,10 +2857,10 @@
             ],
             "kind": "assessment",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           },
           {
-            "topic": "palestinian",
+            "topic": "palestine",
             "label": "Палестинский вопрос",
             "text": "Выступает за военное решение и добровольную эмиграцию; значительно правее остальных списков сравнения.",
             "source_ids": [
@@ -2889,25 +2869,26 @@
             ],
             "kind": "assessment",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
+        "trust_notes": [],
         "unknowns": [
-          "Как он будет действовать в гражданском правительстве: политического governing record почти нет."
+          "Как он будет действовать в гражданском правительстве: опыта управления в гражданском правительстве почти нет."
         ]
       },
       {
+        "id": "amcha-haddad-iosef",
         "position": 2,
         "name": "Йосеф Хаддад",
         "bio": "Араб-христианин, ветеран бригады Голани и публичный защитник Израиля.",
+        "summary": "Арабский христианин из Назарета, ветеран «Голани», раненный в Ливане, и известный международный защитник Израиля.",
+        "profile_depth": "basic",
         "source_ids": [
           "lists"
         ],
         "verification": "verified",
-        "confidence": "medium",
-        "flags": [],
-        "profile_depth": "basic",
-        "summary": "Арабский христианин из Назарета, ветеран «Голани», раненный в Ливане, и известный международный защитник Израиля.",
+        "confidence": "confirmed",
         "strengths": [
           {
             "title": "Личный мост между арабской идентичностью и израильской службой",
@@ -2917,13 +2898,13 @@
             ],
             "kind": "fact",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
         "concerns": [],
         "criteria": [
           {
-            "topic": "arab_parties",
+            "topic": "arab",
             "label": "Арабское представительство",
             "text": "Предлагает интеграционную арабо-израильскую модель вместо сотрудничества с отдельными арабскими партиями.",
             "source_ids": [
@@ -2931,25 +2912,26 @@
             ],
             "kind": "assessment",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
+        "trust_notes": [],
         "unknowns": [
-          "Нет парламентского record и подробной социально-экономической программы."
+          "Нет парламентского опыта и подробной социально-экономической программы."
         ]
       },
       {
+        "id": "amcha-shem-tov-netali",
         "position": 3,
         "name": "Нетали Шем-Тов",
         "bio": "Журналистка из Метулы.",
+        "summary": "Журналистка и телеведущая из Метулы. Представляет северную периферию и публичную коммуникацию.",
+        "profile_depth": "basic",
         "source_ids": [
           "lists"
         ],
         "verification": "verified",
-        "confidence": "medium",
-        "flags": [],
-        "profile_depth": "basic",
-        "summary": "Журналистка и телеведущая из Метулы. Представляет северную периферию и публичную коммуникацию.",
+        "confidence": "confirmed",
         "strengths": [
           {
             "title": "Связь с северной границей",
@@ -2959,7 +2941,7 @@
             ],
             "kind": "fact",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
         "concerns": [],
@@ -2973,25 +2955,26 @@
             ],
             "kind": "uncertainty",
             "verification": "partial",
-            "confidence": "low"
+            "confidence": "limited"
           }
         ],
+        "trust_notes": [],
         "unknowns": [
-          "Нет политического record и ясных позиций по большинству критериев."
+          "Нет политического послужного списка и ясных позиций по большинству критериев."
         ]
       },
       {
+        "id": "amcha-ben-ari-eran",
         "position": 4,
         "name": "Эран Бен-Ари",
         "bio": "Юрист, работал в прокуратуре и Министерстве обороны.",
+        "summary": "Юрист с опытом прокуратуры, Министерства обороны и профессиональной оппозиции в коллегии адвокатов.",
+        "profile_depth": "basic",
         "source_ids": [
           "lists"
         ],
         "verification": "verified",
-        "confidence": "medium",
-        "flags": [],
-        "profile_depth": "basic",
-        "summary": "Юрист с опытом прокуратуры, Министерства обороны и профессиональной оппозиции в коллегии адвокатов.",
+        "confidence": "confirmed",
         "strengths": [
           {
             "title": "Правовой и оборонный опыт",
@@ -3001,13 +2984,13 @@
             ],
             "kind": "fact",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
         "concerns": [],
         "criteria": [
           {
-            "topic": "judiciary",
+            "topic": "courts",
             "label": "Судебная система",
             "text": "Биография релевантна правовым реформам, но его конкретная модель сдержек ещё недостаточно описана.",
             "source_ids": [
@@ -3015,25 +2998,26 @@
             ],
             "kind": "uncertainty",
             "verification": "partial",
-            "confidence": "low"
+            "confidence": "limited"
           }
         ],
+        "trust_notes": [],
         "unknowns": [
           "Нужны прямые позиции по судебной реформе и независимости юридических советников."
         ]
       },
       {
+        "id": "amcha-hasan-nahum-fler",
         "position": 5,
         "name": "Флер Хасан-Нахум",
         "bio": "Бывшая заместительница мэра Иерусалима; международные связи.",
+        "summary": "Бывшая заместительница мэра Иерусалима и международная общественная деятельница. Специализируется на внешних связях города и защите Израиля.",
+        "profile_depth": "basic",
         "source_ids": [
           "lists"
         ],
         "verification": "verified",
-        "confidence": "medium",
-        "flags": [],
-        "profile_depth": "basic",
-        "summary": "Бывшая заместительница мэра Иерусалима и международная общественная деятельница. Специализируется на внешних связях города и защите Израиля.",
+        "confidence": "confirmed",
         "strengths": [
           {
             "title": "Муниципальная и международная работа",
@@ -3043,13 +3027,13 @@
             ],
             "kind": "fact",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
         "concerns": [],
         "criteria": [
           {
-            "topic": "palestinian",
+            "topic": "palestine",
             "label": "Иерусалим и дипломатия",
             "text": "Её профиль явно правый по Иерусалиму и внешнему представлению Израиля; деталей общей палестинской стратегии меньше.",
             "source_ids": [
@@ -3057,13 +3041,17 @@
             ],
             "kind": "assessment",
             "verification": "verified",
-            "confidence": "medium"
+            "confidence": "confirmed"
           }
         ],
+        "trust_notes": [],
         "unknowns": [
-          "Нет национального парламентского record."
+          "Нет национального парламентского опыта."
         ]
       }
     ]
+  },
+  "meta": {
+    "as_of": "2026-09-10"
   }
 }

@@ -1,42 +1,78 @@
 {
-  "schema_version": "1.0",
-  "as_of": "2026-09-10",
+  "schema_version": "2.0",
   "topics": [
     {
       "id": "netanyahu",
-      "label": "Нетаньяху"
+      "label": "Нетаньяху",
+      "values": {
+        "replace": "Смена правительства",
+        "recommend": "Рекомендует Нетаньяху"
+      }
     },
     {
       "id": "service",
-      "label": "Харедим и служба"
+      "label": "Харедим и служба",
+      "values": {
+        "universal": "Служба для всех"
+      }
     },
     {
       "id": "religion",
-      "label": "Религия и государство"
+      "label": "Религия и государство",
+      "values": {
+        "local": "Решает община и муниципалитет",
+        "civil": "Гражданский брак и шаббат"
+      }
     },
     {
       "id": "courts",
-      "label": "Судебная система"
+      "label": "Судебная система",
+      "values": {
+        "independence": "Независимость суда",
+        "constitution": "Конституция и конституционный суд"
+      }
     },
     {
       "id": "security",
-      "label": "Безопасность и Газа"
+      "label": "Безопасность и Газа",
+      "values": {
+        "force_and_diplomacy": "Сила и дипломатия",
+        "international_transfer": "Международное управление Газой",
+        "regional_alternative": "Региональная альтернатива ХАМАС",
+        "military_primacy": "Военное решение"
+      }
     },
     {
       "id": "palestine",
-      "label": "Палестинский вопрос"
+      "label": "Палестинский вопрос",
+      "values": {
+        "two_states": "Два государства"
+      }
     },
     {
       "id": "arab",
-      "label": "Арабские партии"
+      "label": "Арабские партии",
+      "values": {
+        "conditional": "Сотрудничество под условием",
+        "exclude": "Коалиция без арабских партий",
+        "partnership": "Гражданское партнёрство"
+      }
     },
     {
       "id": "economy",
-      "label": "Экономика"
+      "label": "Экономика",
+      "values": {
+        "competition": "Конкуренция и стоимость жизни",
+        "social": "Социальное равенство"
+      }
     },
     {
       "id": "selection",
-      "label": "Формирование списка"
+      "label": "Формирование списка",
+      "values": {
+        "leader": "Решение лидеров",
+        "primaries": "Праймериз"
+      }
     }
   ],
   "sources": [
@@ -48,7 +84,7 @@
       "type": "institutional_media",
       "accessed_at": "2026-09-10",
       "language": "he",
-      "date_note": null
+      "date_kind": "exact"
     },
     {
       "id": "lists-n12",
@@ -58,7 +94,7 @@
       "type": "media",
       "accessed_at": "2026-09-10",
       "language": "mixed",
-      "date_note": null
+      "date_kind": "exact"
     },
     {
       "id": "list-status",
@@ -68,7 +104,7 @@
       "type": "analysis",
       "accessed_at": "2026-09-10",
       "language": "he",
-      "date_note": null
+      "date_kind": "exact"
     },
     {
       "id": "poll-n12",
@@ -78,7 +114,7 @@
       "type": "poll",
       "accessed_at": "2026-09-10",
       "language": "he",
-      "date_note": null
+      "date_kind": "exact"
     },
     {
       "id": "poll-kan",
@@ -88,7 +124,7 @@
       "type": "poll",
       "accessed_at": "2026-09-10",
       "language": "he",
-      "date_note": null
+      "date_kind": "exact"
     },
     {
       "id": "poll-13",
@@ -98,7 +134,7 @@
       "type": "poll",
       "accessed_at": "2026-09-10",
       "language": "he",
-      "date_note": null
+      "date_kind": "exact"
     },
     {
       "id": "yashar",
@@ -108,7 +144,7 @@
       "type": "party",
       "accessed_at": "2026-09-10",
       "language": "he",
-      "date_note": "Точная дата публикации не установлена; указана дата проверки."
+      "date_kind": "accessed_only"
     },
     {
       "id": "yashar-team",
@@ -118,7 +154,7 @@
       "type": "party",
       "accessed_at": "2026-09-10",
       "language": "he",
-      "date_note": "Точная дата публикации не установлена; указана дата проверки."
+      "date_kind": "accessed_only"
     },
     {
       "id": "together",
@@ -128,7 +164,7 @@
       "type": "party",
       "accessed_at": "2026-09-10",
       "language": "he",
-      "date_note": "Точная дата публикации не установлена; указана дата проверки."
+      "date_kind": "accessed_only"
     },
     {
       "id": "together-idi",
@@ -138,7 +174,7 @@
       "type": "research",
       "accessed_at": "2026-09-10",
       "language": "he",
-      "date_note": "Точная дата публикации не установлена; указана дата проверки."
+      "date_kind": "accessed_only"
     },
     {
       "id": "bennett-civil",
@@ -148,7 +184,7 @@
       "type": "media",
       "accessed_at": "2026-09-10",
       "language": "mixed",
-      "date_note": null
+      "date_kind": "exact"
     },
     {
       "id": "bennett-coalition",
@@ -158,7 +194,7 @@
       "type": "interview",
       "accessed_at": "2026-09-10",
       "language": "he",
-      "date_note": "Точная дата публикации не установлена; указана дата проверки."
+      "date_kind": "accessed_only"
     },
     {
       "id": "bennett-pledge",
@@ -168,7 +204,7 @@
       "type": "media",
       "accessed_at": "2026-09-10",
       "language": "mixed",
-      "date_note": null
+      "date_kind": "exact"
     },
     {
       "id": "coalition-2021",
@@ -178,7 +214,7 @@
       "type": "media",
       "accessed_at": "2026-09-10",
       "language": "mixed",
-      "date_note": null
+      "date_kind": "exact"
     },
     {
       "id": "ndi",
@@ -188,7 +224,7 @@
       "type": "party",
       "accessed_at": "2026-09-10",
       "language": "he",
-      "date_note": "Точная дата публикации не установлена; указана дата проверки."
+      "date_kind": "accessed_only"
     },
     {
       "id": "ndi-idi",
@@ -198,7 +234,7 @@
       "type": "research",
       "accessed_at": "2026-09-10",
       "language": "he",
-      "date_note": "Точная дата публикации не установлена; указана дата проверки."
+      "date_kind": "accessed_only"
     },
     {
       "id": "ndi-list",
@@ -208,7 +244,7 @@
       "type": "media",
       "accessed_at": "2026-09-10",
       "language": "mixed",
-      "date_note": null
+      "date_kind": "exact"
     },
     {
       "id": "lieberman-2019",
@@ -218,7 +254,7 @@
       "type": "media",
       "accessed_at": "2026-09-10",
       "language": "mixed",
-      "date_note": null
+      "date_kind": "exact"
     },
     {
       "id": "lieberman-2016",
@@ -228,7 +264,7 @@
       "type": "media",
       "accessed_at": "2026-09-10",
       "language": "mixed",
-      "date_note": null
+      "date_kind": "exact"
     },
     {
       "id": "lieberman-2015",
@@ -238,7 +274,7 @@
       "type": "media",
       "accessed_at": "2026-09-10",
       "language": "mixed",
-      "date_note": "Точная дата публикации не установлена; указана дата проверки."
+      "date_kind": "accessed_only"
     },
     {
       "id": "democrats",
@@ -248,7 +284,7 @@
       "type": "party",
       "accessed_at": "2026-09-10",
       "language": "he",
-      "date_note": "Точная дата публикации не установлена; указана дата проверки."
+      "date_kind": "accessed_only"
     },
     {
       "id": "democrats-plan",
@@ -258,7 +294,7 @@
       "type": "party",
       "accessed_at": "2026-09-10",
       "language": "he",
-      "date_note": "Точная дата публикации не установлена; указана дата проверки."
+      "date_kind": "accessed_only"
     },
     {
       "id": "democrats-site",
@@ -268,7 +304,7 @@
       "type": "party",
       "accessed_at": "2026-09-10",
       "language": "he",
-      "date_note": "Точная дата публикации не установлена; указана дата проверки."
+      "date_kind": "accessed_only"
     },
     {
       "id": "golan-interview",
@@ -278,7 +314,7 @@
       "type": "interview",
       "accessed_at": "2026-09-10",
       "language": "he",
-      "date_note": null
+      "date_kind": "month"
     },
     {
       "id": "lasky",
@@ -288,7 +324,7 @@
       "type": "media",
       "accessed_at": "2026-09-10",
       "language": "mixed",
-      "date_note": null
+      "date_kind": "exact"
     },
     {
       "id": "ronen",
@@ -298,7 +334,7 @@
       "type": "media",
       "accessed_at": "2026-09-10",
       "language": "mixed",
-      "date_note": null
+      "date_kind": "exact"
     },
     {
       "id": "hendel-union",
@@ -308,7 +344,7 @@
       "type": "media",
       "accessed_at": "2026-09-10",
       "language": "mixed",
-      "date_note": null
+      "date_kind": "exact"
     },
     {
       "id": "wilf",
@@ -318,7 +354,7 @@
       "type": "media",
       "accessed_at": "2026-09-10",
       "language": "mixed",
-      "date_note": null
+      "date_kind": "exact"
     },
     {
       "id": "winter",
@@ -328,7 +364,7 @@
       "type": "media",
       "accessed_at": "2026-09-10",
       "language": "mixed",
-      "date_note": "Точная дата публикации не установлена; указана дата проверки."
+      "date_kind": "accessed_only"
     },
     {
       "id": "winter-platform",
@@ -338,7 +374,7 @@
       "type": "media",
       "accessed_at": "2026-09-10",
       "language": "mixed",
-      "date_note": "Точная дата публикации не установлена; указана дата проверки."
+      "date_kind": "accessed_only"
     },
     {
       "id": "winter-interview",
@@ -348,7 +384,7 @@
       "type": "interview",
       "accessed_at": "2026-09-10",
       "language": "he",
-      "date_note": "Точная дата публикации не установлена; указана дата проверки."
+      "date_kind": "accessed_only"
     },
     {
       "id": "stern",
@@ -358,7 +394,7 @@
       "type": "media",
       "accessed_at": "2026-09-10",
       "language": "mixed",
-      "date_note": null
+      "date_kind": "exact"
     },
     {
       "id": "stern-response",
@@ -368,7 +404,7 @@
       "type": "media",
       "accessed_at": "2026-09-10",
       "language": "mixed",
-      "date_note": null
+      "date_kind": "exact"
     },
     {
       "id": "shalev",
@@ -378,7 +414,7 @@
       "type": "investigation",
       "accessed_at": "2026-09-10",
       "language": "he",
-      "date_note": "Точная дата публикации не установлена; указана дата проверки."
+      "date_kind": "accessed_only"
     },
     {
       "id": "folkman",
@@ -388,7 +424,7 @@
       "type": "media",
       "accessed_at": "2026-09-10",
       "language": "mixed",
-      "date_note": null
+      "date_kind": "exact"
     },
     {
       "id": "draft-yashar",
@@ -398,7 +434,7 @@
       "type": "media",
       "accessed_at": "2026-09-10",
       "language": "mixed",
-      "date_note": "Точная дата публикации не установлена; указана дата проверки."
+      "date_kind": "accessed_only"
     },
     {
       "id": "cohen-switch",
@@ -406,7 +442,8 @@
       "url": "https://www.timesofisrael.com/social-justice-minister-meirav-cohen-jumps-from-blue-and-white-to-yesh-atid/amp/",
       "published_at": "2021-01-05",
       "accessed_at": "2026-09-10",
-      "type": "news"
+      "type": "news",
+      "date_kind": "exact"
     },
     {
       "id": "tibon-reservists",
@@ -414,7 +451,8 @@
       "url": "https://www.timesofisrael.com/reservists-pull-all-nighter-outside-gallants-home-hoping-hell-stop-overhaul-again/",
       "published_at": "2023-07-08",
       "accessed_at": "2026-09-10",
-      "type": "news"
+      "type": "news",
+      "date_kind": "exact"
     },
     {
       "id": "benbarak-gaza",
@@ -422,7 +460,8 @@
       "url": "https://www.timesofisrael.com/senior-cabinet-minister-trumps-gaza-migration-idea-could-save-netanyahus-government/",
       "published_at": "2025-01-27",
       "accessed_at": "2026-09-10",
-      "type": "news"
+      "type": "news",
+      "date_kind": "exact"
     },
     {
       "id": "golan-remarks",
@@ -430,7 +469,8 @@
       "url": "https://apnews.com/article/af22ee826be05daa37a73cac737f4e0c",
       "published_at": "2025-05-22",
       "accessed_at": "2026-09-10",
-      "type": "news"
+      "type": "news",
+      "date_kind": "exact"
     },
     {
       "id": "hendel-coalitions",
@@ -438,7 +478,8 @@
       "url": "https://www.jpost.com/israel-election-2026/article-906335",
       "published_at": "2026-08-27",
       "accessed_at": "2026-09-10",
-      "type": "news"
+      "type": "news",
+      "date_kind": "exact"
     },
     {
       "id": "illouz-move",
@@ -446,7 +487,8 @@
       "url": "https://www.mako.co.il/news-israel-elections/2026/Article-bc40304fb13df91026.htm",
       "published_at": "2026-08-05",
       "accessed_at": "2026-09-10",
-      "type": "news"
+      "type": "news",
+      "date_kind": "exact"
     }
   ],
   "parties": [
@@ -472,9 +514,7 @@
             "yashar"
           ],
           "verification": "verified",
-          "confidence": "medium",
-          "event_date": null,
-          "checked_at": "2026-09-10"
+          "confidence": "confirmed"
         },
         {
           "topic": "service",
@@ -486,9 +526,7 @@
             "draft-yashar"
           ],
           "verification": "verified",
-          "confidence": "medium",
-          "event_date": null,
-          "checked_at": "2026-09-10"
+          "confidence": "confirmed"
         },
         {
           "topic": "religion",
@@ -499,9 +537,7 @@
             "yashar"
           ],
           "verification": "verified",
-          "confidence": "medium",
-          "event_date": null,
-          "checked_at": "2026-09-10"
+          "confidence": "confirmed"
         },
         {
           "topic": "courts",
@@ -512,22 +548,18 @@
             "yashar"
           ],
           "verification": "verified",
-          "confidence": "medium",
-          "event_date": null,
-          "checked_at": "2026-09-10"
+          "confidence": "confirmed"
         },
         {
           "topic": "security",
-          "value": "security",
+          "value": "force_and_diplomacy",
           "text": "Укрепление армии и границ, инициативная стратегия и расширение региональных соглашений.",
           "kind": "position",
           "source_ids": [
             "yashar"
           ],
           "verification": "verified",
-          "confidence": "medium",
-          "event_date": null,
-          "checked_at": "2026-09-10"
+          "confidence": "confirmed"
         },
         {
           "topic": "palestine",
@@ -536,9 +568,7 @@
           "kind": "uncertainty",
           "source_ids": [],
           "verification": "unverified",
-          "confidence": "low",
-          "event_date": null,
-          "checked_at": "2026-09-10"
+          "confidence": "limited"
         },
         {
           "topic": "arab",
@@ -549,9 +579,7 @@
             "bennett-coalition"
           ],
           "verification": "verified",
-          "confidence": "medium",
-          "event_date": null,
-          "checked_at": "2026-09-10"
+          "confidence": "confirmed"
         },
         {
           "topic": "economy",
@@ -562,9 +590,7 @@
             "yashar"
           ],
           "verification": "verified",
-          "confidence": "medium",
-          "event_date": null,
-          "checked_at": "2026-09-10"
+          "confidence": "confirmed"
         },
         {
           "topic": "selection",
@@ -573,9 +599,7 @@
           "kind": "uncertainty",
           "source_ids": [],
           "verification": "unverified",
-          "confidence": "low",
-          "event_date": null,
-          "checked_at": "2026-09-10"
+          "confidence": "limited"
         }
       ],
       "trust_risk": {
@@ -585,9 +609,7 @@
           "lists"
         ],
         "verification": "verified",
-        "confidence": "medium",
-        "event_date": null,
-        "checked_at": "2026-09-10"
+        "confidence": "confirmed"
       },
       "flags": [
         {
@@ -599,9 +621,7 @@
             "lists"
           ],
           "verification": "verified",
-          "confidence": "medium",
-          "event_date": null,
-          "checked_at": "2026-09-10"
+          "confidence": "confirmed"
         },
         {
           "color": "green",
@@ -612,9 +632,7 @@
             "yashar"
           ],
           "verification": "verified",
-          "confidence": "medium",
-          "event_date": null,
-          "checked_at": "2026-09-10"
+          "confidence": "confirmed"
         }
       ]
     },
@@ -641,9 +659,7 @@
             "bennett-coalition"
           ],
           "verification": "verified",
-          "confidence": "medium",
-          "event_date": null,
-          "checked_at": "2026-09-10"
+          "confidence": "confirmed"
         },
         {
           "topic": "service",
@@ -654,9 +670,7 @@
             "together"
           ],
           "verification": "verified",
-          "confidence": "medium",
-          "event_date": null,
-          "checked_at": "2026-09-10"
+          "confidence": "confirmed"
         },
         {
           "topic": "religion",
@@ -667,9 +681,7 @@
             "bennett-civil"
           ],
           "verification": "verified",
-          "confidence": "medium",
-          "event_date": null,
-          "checked_at": "2026-09-10"
+          "confidence": "confirmed"
         },
         {
           "topic": "courts",
@@ -678,22 +690,18 @@
           "kind": "uncertainty",
           "source_ids": [],
           "verification": "unverified",
-          "confidence": "low",
-          "event_date": null,
-          "checked_at": "2026-09-10"
+          "confidence": "limited"
         },
         {
           "topic": "security",
-          "value": "security",
+          "value": "force_and_diplomacy",
           "text": "Программа связывает военную, дипломатическую и технологическую мощь. Подробный план управления Газой отдельно не подтверждён.",
           "kind": "position",
           "source_ids": [
             "together"
           ],
           "verification": "verified",
-          "confidence": "medium",
-          "event_date": null,
-          "checked_at": "2026-09-10"
+          "confidence": "confirmed"
         },
         {
           "topic": "palestine",
@@ -702,9 +710,7 @@
           "kind": "uncertainty",
           "source_ids": [],
           "verification": "unverified",
-          "confidence": "low",
-          "event_date": null,
-          "checked_at": "2026-09-10"
+          "confidence": "limited"
         },
         {
           "topic": "arab",
@@ -716,9 +722,7 @@
             "coalition-2021"
           ],
           "verification": "verified",
-          "confidence": "medium",
-          "event_date": null,
-          "checked_at": "2026-09-10"
+          "confidence": "confirmed"
         },
         {
           "topic": "economy",
@@ -729,9 +733,7 @@
             "together"
           ],
           "verification": "verified",
-          "confidence": "medium",
-          "event_date": null,
-          "checked_at": "2026-09-10"
+          "confidence": "confirmed"
         },
         {
           "topic": "selection",
@@ -742,9 +744,7 @@
             "together-idi"
           ],
           "verification": "verified",
-          "confidence": "medium",
-          "event_date": null,
-          "checked_at": "2026-09-10"
+          "confidence": "confirmed"
         }
       ],
       "trust_risk": {
@@ -755,9 +755,7 @@
           "coalition-2021"
         ],
         "verification": "verified",
-        "confidence": "medium",
-        "event_date": null,
-        "checked_at": "2026-09-10"
+        "confidence": "confirmed"
       },
       "flags": [
         {
@@ -770,9 +768,7 @@
             "coalition-2021"
           ],
           "verification": "verified",
-          "confidence": "medium",
-          "event_date": null,
-          "checked_at": "2026-09-10"
+          "confidence": "confirmed"
         },
         {
           "color": "yellow",
@@ -783,9 +779,7 @@
             "together-idi"
           ],
           "verification": "verified",
-          "confidence": "medium",
-          "event_date": null,
-          "checked_at": "2026-09-10"
+          "confidence": "confirmed"
         }
       ]
     },
@@ -812,9 +806,7 @@
             "lieberman-2016"
           ],
           "verification": "verified",
-          "confidence": "medium",
-          "event_date": null,
-          "checked_at": "2026-09-10"
+          "confidence": "confirmed"
         },
         {
           "topic": "service",
@@ -825,9 +817,7 @@
             "ndi"
           ],
           "verification": "verified",
-          "confidence": "medium",
-          "event_date": null,
-          "checked_at": "2026-09-10"
+          "confidence": "confirmed"
         },
         {
           "topic": "religion",
@@ -838,9 +828,7 @@
             "ndi"
           ],
           "verification": "verified",
-          "confidence": "medium",
-          "event_date": null,
-          "checked_at": "2026-09-10"
+          "confidence": "confirmed"
         },
         {
           "topic": "courts",
@@ -851,22 +839,18 @@
             "ndi"
           ],
           "verification": "verified",
-          "confidence": "medium",
-          "event_date": null,
-          "checked_at": "2026-09-10"
+          "confidence": "confirmed"
         },
         {
           "topic": "security",
-          "value": "security",
+          "value": "international_transfer",
           "text": "Израильская свобода военных действий; передача гражданской ответственности за Газу согласованной международной стороне.",
           "kind": "position",
           "source_ids": [
             "ndi"
           ],
           "verification": "verified",
-          "confidence": "medium",
-          "event_date": null,
-          "checked_at": "2026-09-10"
+          "confidence": "confirmed"
         },
         {
           "topic": "palestine",
@@ -875,9 +859,7 @@
           "kind": "uncertainty",
           "source_ids": [],
           "verification": "unverified",
-          "confidence": "low",
-          "event_date": null,
-          "checked_at": "2026-09-10"
+          "confidence": "limited"
         },
         {
           "topic": "arab",
@@ -886,9 +868,7 @@
           "kind": "uncertainty",
           "source_ids": [],
           "verification": "unverified",
-          "confidence": "low",
-          "event_date": null,
-          "checked_at": "2026-09-10"
+          "confidence": "limited"
         },
         {
           "topic": "economy",
@@ -899,22 +879,18 @@
             "ndi"
           ],
           "verification": "verified",
-          "confidence": "medium",
-          "event_date": null,
-          "checked_at": "2026-09-10"
+          "confidence": "confirmed"
         },
         {
           "topic": "selection",
           "value": "unknown",
           "text": "Первая десятка существенно обновлена; внутренний механизм утверждения мест в этой версии не проверен.",
-          "kind": "position",
+          "kind": "uncertainty",
           "source_ids": [
             "ndi-list"
           ],
-          "verification": "verified",
-          "confidence": "medium",
-          "event_date": null,
-          "checked_at": "2026-09-10"
+          "verification": "partial",
+          "confidence": "confirmed"
         }
       ],
       "trust_risk": {
@@ -925,9 +901,7 @@
           "lieberman-2019"
         ],
         "verification": "verified",
-        "confidence": "medium",
-        "event_date": null,
-        "checked_at": "2026-09-10"
+        "confidence": "confirmed"
       },
       "flags": [
         {
@@ -939,9 +913,7 @@
             "lieberman-2019"
           ],
           "verification": "verified",
-          "confidence": "medium",
-          "event_date": null,
-          "checked_at": "2026-09-10"
+          "confidence": "confirmed"
         },
         {
           "color": "yellow",
@@ -953,9 +925,7 @@
             "lieberman-2016"
           ],
           "verification": "verified",
-          "confidence": "medium",
-          "event_date": null,
-          "checked_at": "2026-09-10"
+          "confidence": "confirmed"
         }
       ]
     },
@@ -981,9 +951,7 @@
             "democrats-site"
           ],
           "verification": "verified",
-          "confidence": "medium",
-          "event_date": null,
-          "checked_at": "2026-09-10"
+          "confidence": "confirmed"
         },
         {
           "topic": "service",
@@ -992,9 +960,7 @@
           "kind": "uncertainty",
           "source_ids": [],
           "verification": "unverified",
-          "confidence": "low",
-          "event_date": null,
-          "checked_at": "2026-09-10"
+          "confidence": "limited"
         },
         {
           "topic": "religion",
@@ -1006,9 +972,7 @@
             "democrats"
           ],
           "verification": "verified",
-          "confidence": "medium",
-          "event_date": null,
-          "checked_at": "2026-09-10"
+          "confidence": "confirmed"
         },
         {
           "topic": "courts",
@@ -1019,22 +983,18 @@
             "democrats-site"
           ],
           "verification": "verified",
-          "confidence": "medium",
-          "event_date": null,
-          "checked_at": "2026-09-10"
+          "confidence": "confirmed"
         },
         {
           "topic": "security",
-          "value": "regional",
+          "value": "regional_alternative",
           "text": "Голан предлагает гражданскую альтернативу ХАМАС с участием арабских государств и реформированной ПА; безопасность остаётся условием процесса.",
           "kind": "position",
           "source_ids": [
             "golan-interview"
           ],
           "verification": "verified",
-          "confidence": "medium",
-          "event_date": null,
-          "checked_at": "2026-09-10"
+          "confidence": "confirmed"
         },
         {
           "topic": "palestine",
@@ -1045,22 +1005,18 @@
             "golan-interview"
           ],
           "verification": "verified",
-          "confidence": "medium",
-          "event_date": null,
-          "checked_at": "2026-09-10"
+          "confidence": "confirmed"
         },
         {
           "topic": "arab",
-          "value": "unknown",
+          "value": "partnership",
           "text": "Заявлено гражданское партнёрство; точные условия коалиции с Раам или другими списками в этой версии не подтверждены.",
           "kind": "position",
           "source_ids": [
             "democrats-plan"
           ],
           "verification": "verified",
-          "confidence": "medium",
-          "event_date": null,
-          "checked_at": "2026-09-10"
+          "confidence": "confirmed"
         },
         {
           "topic": "economy",
@@ -1071,9 +1027,7 @@
             "democrats-plan"
           ],
           "verification": "verified",
-          "confidence": "medium",
-          "event_date": null,
-          "checked_at": "2026-09-10"
+          "confidence": "confirmed"
         },
         {
           "topic": "selection",
@@ -1084,9 +1038,7 @@
             "lists"
           ],
           "verification": "verified",
-          "confidence": "medium",
-          "event_date": null,
-          "checked_at": "2026-09-10"
+          "confidence": "confirmed"
         }
       ],
       "trust_risk": {
@@ -1097,9 +1049,7 @@
           "golan-interview"
         ],
         "verification": "verified",
-        "confidence": "medium",
-        "event_date": null,
-        "checked_at": "2026-09-10"
+        "confidence": "confirmed"
       },
       "flags": [
         {
@@ -1111,9 +1061,7 @@
             "golan-interview"
           ],
           "verification": "verified",
-          "confidence": "medium",
-          "event_date": null,
-          "checked_at": "2026-09-10"
+          "confidence": "confirmed"
         },
         {
           "color": "yellow",
@@ -1124,9 +1072,7 @@
             "ronen"
           ],
           "verification": "verified",
-          "confidence": "medium",
-          "event_date": null,
-          "checked_at": "2026-09-10"
+          "confidence": "confirmed"
         }
       ]
     },
@@ -1151,9 +1097,7 @@
           "kind": "uncertainty",
           "source_ids": [],
           "verification": "unverified",
-          "confidence": "low",
-          "event_date": null,
-          "checked_at": "2026-09-10"
+          "confidence": "limited"
         },
         {
           "topic": "service",
@@ -1164,9 +1108,7 @@
             "hendel-union"
           ],
           "verification": "verified",
-          "confidence": "medium",
-          "event_date": null,
-          "checked_at": "2026-09-10"
+          "confidence": "confirmed"
         },
         {
           "topic": "religion",
@@ -1175,9 +1117,7 @@
           "kind": "uncertainty",
           "source_ids": [],
           "verification": "unverified",
-          "confidence": "low",
-          "event_date": null,
-          "checked_at": "2026-09-10"
+          "confidence": "limited"
         },
         {
           "topic": "courts",
@@ -1186,22 +1126,18 @@
           "kind": "uncertainty",
           "source_ids": [],
           "verification": "unverified",
-          "confidence": "low",
-          "event_date": null,
-          "checked_at": "2026-09-10"
+          "confidence": "limited"
         },
         {
           "topic": "security",
           "value": "unknown",
           "text": "Присоединилась Эйнат Вильф, известная работами о конфликте. Её взгляды не равны принятой программе союза.",
-          "kind": "position",
+          "kind": "uncertainty",
           "source_ids": [
             "wilf"
           ],
-          "verification": "verified",
-          "confidence": "medium",
-          "event_date": null,
-          "checked_at": "2026-09-10"
+          "verification": "partial",
+          "confidence": "confirmed"
         },
         {
           "topic": "palestine",
@@ -1210,9 +1146,7 @@
           "kind": "uncertainty",
           "source_ids": [],
           "verification": "unverified",
-          "confidence": "low",
-          "event_date": null,
-          "checked_at": "2026-09-10"
+          "confidence": "limited"
         },
         {
           "topic": "arab",
@@ -1223,9 +1157,7 @@
             "hendel-union"
           ],
           "verification": "verified",
-          "confidence": "medium",
-          "event_date": null,
-          "checked_at": "2026-09-10"
+          "confidence": "confirmed"
         },
         {
           "topic": "economy",
@@ -1236,9 +1168,7 @@
             "hendel-union"
           ],
           "verification": "verified",
-          "confidence": "medium",
-          "event_date": null,
-          "checked_at": "2026-09-10"
+          "confidence": "confirmed"
         },
         {
           "topic": "selection",
@@ -1251,9 +1181,7 @@
             "lists"
           ],
           "verification": "verified",
-          "confidence": "medium",
-          "event_date": null,
-          "checked_at": "2026-09-10"
+          "confidence": "confirmed"
         }
       ],
       "trust_risk": {
@@ -1263,9 +1191,7 @@
           "hendel-union"
         ],
         "verification": "verified",
-        "confidence": "medium",
-        "event_date": null,
-        "checked_at": "2026-09-10"
+        "confidence": "confirmed"
       },
       "flags": [
         {
@@ -1277,9 +1203,7 @@
             "hendel-union"
           ],
           "verification": "verified",
-          "confidence": "medium",
-          "event_date": null,
-          "checked_at": "2026-09-10"
+          "confidence": "confirmed"
         },
         {
           "color": "yellow",
@@ -1291,9 +1215,7 @@
             "poll-n12"
           ],
           "verification": "verified",
-          "confidence": "medium",
-          "event_date": null,
-          "checked_at": "2026-09-10"
+          "confidence": "confirmed"
         }
       ]
     },
@@ -1319,9 +1241,7 @@
             "winter"
           ],
           "verification": "verified",
-          "confidence": "medium",
-          "event_date": null,
-          "checked_at": "2026-09-10"
+          "confidence": "confirmed"
         },
         {
           "topic": "service",
@@ -1332,9 +1252,7 @@
             "winter-platform"
           ],
           "verification": "verified",
-          "confidence": "medium",
-          "event_date": null,
-          "checked_at": "2026-09-10"
+          "confidence": "confirmed"
         },
         {
           "topic": "religion",
@@ -1343,9 +1261,7 @@
           "kind": "uncertainty",
           "source_ids": [],
           "verification": "unverified",
-          "confidence": "low",
-          "event_date": null,
-          "checked_at": "2026-09-10"
+          "confidence": "limited"
         },
         {
           "topic": "courts",
@@ -1354,22 +1270,18 @@
           "kind": "uncertainty",
           "source_ids": [],
           "verification": "unverified",
-          "confidence": "low",
-          "event_date": null,
-          "checked_at": "2026-09-10"
+          "confidence": "limited"
         },
         {
           "topic": "security",
-          "value": "military",
+          "value": "military_primacy",
           "text": "Винтер выступает за военное решение и добровольную эмиграцию из Газы; это заявленная политика, её последствия не оценены.",
           "kind": "position",
           "source_ids": [
             "winter-platform"
           ],
           "verification": "verified",
-          "confidence": "medium",
-          "event_date": null,
-          "checked_at": "2026-09-10"
+          "confidence": "confirmed"
         },
         {
           "topic": "palestine",
@@ -1378,9 +1290,7 @@
           "kind": "uncertainty",
           "source_ids": [],
           "verification": "unverified",
-          "confidence": "low",
-          "event_date": null,
-          "checked_at": "2026-09-10"
+          "confidence": "limited"
         },
         {
           "topic": "arab",
@@ -1389,9 +1299,7 @@
           "kind": "uncertainty",
           "source_ids": [],
           "verification": "unverified",
-          "confidence": "low",
-          "event_date": null,
-          "checked_at": "2026-09-10"
+          "confidence": "limited"
         },
         {
           "topic": "economy",
@@ -1400,22 +1308,18 @@
           "kind": "uncertainty",
           "source_ids": [],
           "verification": "unverified",
-          "confidence": "low",
-          "event_date": null,
-          "checked_at": "2026-09-10"
+          "confidence": "limited"
         },
         {
           "topic": "selection",
           "value": "unknown",
           "text": "Новый список во главе с Винтером подан в сентябре. Механизм отбора ещё проверяется.",
-          "kind": "position",
+          "kind": "uncertainty",
           "source_ids": [
             "lists"
           ],
-          "verification": "verified",
-          "confidence": "medium",
-          "event_date": null,
-          "checked_at": "2026-09-10"
+          "verification": "partial",
+          "confidence": "confirmed"
         }
       ],
       "trust_risk": {
@@ -1426,9 +1330,7 @@
           "lists"
         ],
         "verification": "verified",
-        "confidence": "medium",
-        "event_date": null,
-        "checked_at": "2026-09-10"
+        "confidence": "confirmed"
       },
       "flags": [
         {
@@ -1440,11 +1342,32 @@
             "winter-interview"
           ],
           "verification": "verified",
-          "confidence": "medium",
-          "event_date": null,
-          "checked_at": "2026-09-10"
+          "confidence": "confirmed"
         }
       ]
     }
-  ]
+  ],
+  "meta": {
+    "as_of": "2026-09-10",
+    "lists": {
+      "submitted_from": "2026-09-08",
+      "submitted_to": "2026-09-09",
+      "status": "Списки поданы, официальное утверждение Центральной избирательной комиссией ещё впереди.",
+      "source_ids": [
+        "lists",
+        "lists-n12",
+        "list-status"
+      ]
+    },
+    "poll": {
+      "name": "Опрос N12",
+      "conducted_at": "2026-09-09",
+      "published_at": "2026-09-10",
+      "note": "Числа мандатов на карточках — из этого опроса. Опрос это снимок мнений, а не прогноз результата.",
+      "source_ids": [
+        "poll-n12",
+        "poll-13"
+      ]
+    }
+  }
 }

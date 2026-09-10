@@ -10,6 +10,8 @@
     "build": "vinext build",
     "start": "wrangler dev --config dist/server/wrangler.json",
     "lint": "oxlint",
+    "validate": "node scripts/validate-data.mjs",
+    "check": "tsc --noEmit && oxlint && node scripts/validate-data.mjs",
     "format": "oxfmt"
   },
   "dependencies": {

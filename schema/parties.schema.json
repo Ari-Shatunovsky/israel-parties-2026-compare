@@ -1,0 +1,189 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://israel-parties-2026-compare/schema/parties.schema.json",
+  "title": "Партии, позиции и каталог источников",
+  "type": "object",
+  "required": ["schema_version", "meta", "topics", "sources", "parties"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": { "const": "2.0" },
+    "meta": { "$ref": "#/$defs/meta" },
+    "topics": {
+      "description": "Закрытый список политических критериев. Каждая партия обязана иметь ровно одну позицию по каждому критерию.",
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "label", "values"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z_]+$" },
+          "label": { "type": "string", "minLength": 1 },
+          "values": {
+            "description": "Словарь коротких подписей для position.value внутри темы. Значение unknown подписывается глобально («Не установлено») и здесь не объявляется.",
+            "type": "object",
+            "minProperties": 1,
+            "propertyNames": { "pattern": "^[a-z_]+$" },
+            "additionalProperties": { "type": "string", "minLength": 1 }
+          }
+        }
+      }
+    },
+    "sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/source" }
+    },
+    "parties": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/party" }
+    }
+  },
+  "$defs": {
+    "meta": {
+      "description": "Единственное место, где живут сквозные даты и параметры набора.",
+      "type": "object",
+      "required": ["as_of", "lists", "poll"],
+      "additionalProperties": false,
+      "properties": {
+        "as_of": { "$ref": "common.schema.json#/$defs/isoDate" },
+        "lists": {
+          "type": "object",
+          "required": ["submitted_from", "submitted_to", "status", "source_ids"],
+          "additionalProperties": false,
+          "properties": {
+            "submitted_from": { "$ref": "common.schema.json#/$defs/isoDate" },
+            "submitted_to": { "$ref": "common.schema.json#/$defs/isoDate" },
+            "status": { "type": "string", "minLength": 1 },
+            "source_ids": { "$ref": "common.schema.json#/$defs/sourceIds" }
+          }
+        },
+        "poll": {
+          "description": "Опрос, из которого взяты значения default_seats.",
+          "type": "object",
+          "required": ["name", "conducted_at", "published_at", "note", "source_ids"],
+          "additionalProperties": false,
+          "properties": {
+            "name": { "type": "string", "minLength": 1 },
+            "conducted_at": { "$ref": "common.schema.json#/$defs/isoDate" },
+            "published_at": { "$ref": "common.schema.json#/$defs/isoDate" },
+            "note": { "type": "string", "minLength": 1 },
+            "source_ids": { "$ref": "common.schema.json#/$defs/sourceIds" }
+          }
+        }
+      }
+    },
+    "source": {
+      "type": "object",
+      "required": ["id", "title", "url", "published_at", "accessed_at", "type", "date_kind"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "$ref": "common.schema.json#/$defs/sourceId" },
+        "title": { "type": "string", "minLength": 1 },
+        "url": { "type": "string", "format": "uri", "pattern": "^https?://" },
+        "published_at": {
+          "description": "null допустим только вместе с date_kind: accessed_only.",
+          "type": ["string", "null"],
+          "pattern": "^\\d{4}-\\d{2}(-\\d{2})?$"
+        },
+        "accessed_at": { "$ref": "common.schema.json#/$defs/isoDate" },
+        "type": {
+          "description": "Тип издания. Русские подписи живут в SOURCE_TYPE_LABEL в app/page.tsx.",
+          "enum": [
+            "institutional_media",
+            "media",
+            "news",
+            "analysis",
+            "research",
+            "poll",
+            "party",
+            "interview",
+            "investigation"
+          ]
+        },
+        "date_kind": {
+          "description": "exact — полная дата; month — известен только месяц; accessed_only — дата публикации не установлена, показываем только дату проверки.",
+          "enum": ["exact", "month", "accessed_only"]
+        },
+        "language": {
+          "description": "Язык первоисточника. mixed — материал с параллельными версиями.",
+          "enum": ["he", "en", "ru", "mixed"]
+        }
+      }
+    },
+    "party": {
+      "type": "object",
+      "required": [
+        "id", "name_he", "name_ru", "leaders", "descriptor", "control",
+        "color", "default_seats", "audit_depth", "positions", "trust_risk", "flags"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z-]+$" },
+        "name_he": { "type": "string", "minLength": 1 },
+        "name_ru": { "type": "string", "minLength": 1 },
+        "leaders": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 1 } },
+        "descriptor": { "type": "string", "minLength": 1 },
+        "control": {
+          "description": "Контрольный вариант — список, взятый для контраста, а не как рекомендация.",
+          "type": "boolean"
+        },
+        "color": { "type": "string", "pattern": "^#[0-9a-fA-F]{6}$" },
+        "default_seats": {
+          "description": "Мандаты по опросу из meta.poll. 0 означает «ниже электорального барьера».",
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 120
+        },
+        "audit_depth": {
+          "description": "Сколько мест списка прошли биографический аудит. Обязано совпадать с длиной списка в candidates.json.",
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 120
+        },
+        "positions": { "type": "array", "items": { "$ref": "#/$defs/position" } },
+        "trust_risk": { "$ref": "common.schema.json#/$defs/claim" },
+        "flags": { "type": "array", "items": { "$ref": "#/$defs/flag" } }
+      }
+    },
+    "position": {
+      "allOf": [{ "$ref": "common.schema.json#/$defs/claim" }],
+      "type": "object",
+      "required": ["topic", "value", "text", "kind", "source_ids", "verification", "confidence"],
+      "additionalProperties": false,
+      "properties": {
+        "topic": { "type": "string" },
+        "value": {
+          "description": "Машиночитаемый ярлык позиции внутри темы. unknown допустим только при kind: uncertainty и не должен повторять имя темы.",
+          "type": "string",
+          "pattern": "^[a-z_]+$"
+        },
+        "text": { "type": "string", "minLength": 1 },
+        "kind": { "$ref": "common.schema.json#/$defs/kind" },
+        "source_ids": { "$ref": "common.schema.json#/$defs/sourceIds" },
+        "verification": { "$ref": "common.schema.json#/$defs/verification" },
+        "confidence": { "$ref": "common.schema.json#/$defs/confidence" },
+        "event_date": {
+          "description": "Когда произошло описываемое событие, если это добавляет смысла. Поле необязательное: пустое значение не хранится.",
+          "$ref": "common.schema.json#/$defs/isoDate"
+        }
+      }
+    },
+    "flag": {
+      "type": "object",
+      "required": ["color", "title", "text", "kind", "source_ids", "verification", "confidence"],
+      "additionalProperties": false,
+      "properties": {
+        "color": { "$ref": "common.schema.json#/$defs/color" },
+        "title": { "type": "string", "minLength": 1 },
+        "text": { "type": "string", "minLength": 1 },
+        "kind": { "$ref": "common.schema.json#/$defs/kind" },
+        "source_ids": { "$ref": "common.schema.json#/$defs/sourceIds" },
+        "verification": { "$ref": "common.schema.json#/$defs/verification" },
+        "confidence": { "$ref": "common.schema.json#/$defs/confidence" },
+        "event_date": { "$ref": "common.schema.json#/$defs/isoDate" }
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Правила приёма правок
+    url: https://github.com/Ari-Shatunovsky/israel-parties-2026-compare/blob/main/docs/CONTRIBUTING.md
+    about: Что принимается, что нет и почему. Прочитайте до того, как открывать issue.
+  - name: Состав выборки и список критериев
+    url: https://github.com/Ari-Shatunovsky/israel-parties-2026-compare/blob/main/docs/BACKLOG.md
+    about: Добавление партии или изменение набора критериев — редакционное решение, а не правка данных.

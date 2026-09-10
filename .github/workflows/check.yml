@@ -1,0 +1,33 @@
+name: check
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.13'
+          cache: npm
+
+      - run: npm ci
+
+      - name: Типы
+        run: npx tsc --noEmit
+
+      - name: Линтер
+        run: npm run lint
+
+      # Данные проверяются в CI намеренно: корпус правят агенты и люди,
+      # и ошибка в ссылке на источник должна ловиться до публикации.
+      - name: Данные
+        run: npm run validate
+
+      - name: Сборка
+        run: npm run build

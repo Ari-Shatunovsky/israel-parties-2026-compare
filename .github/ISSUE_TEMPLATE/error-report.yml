@@ -1,0 +1,73 @@
+name: Ошибка в данных
+description: Неверный факт, устаревшие данные или пробел, который можно закрыть источником
+title: '[данные] '
+labels: [данные]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Правки принимаются только с источником — правила в
+        [docs/CONTRIBUTING.md](../blob/main/docs/CONTRIBUTING.md).
+
+        Заявка без ссылки закрывается без обсуждения. Это не про взгляды автора:
+        утверждение, которое нельзя проверить, нельзя и опубликовать.
+
+  - type: input
+    id: location
+    attributes:
+      label: Где именно
+      description: Партия и критерий, либо имя кандидата и раздел досье. Ещё точнее — ссылка на страницу с параметрами, например `?tab=people&c=yashar-eizenkot-gadi`.
+      placeholder: 'Наш дом Израиль → Судебная система'
+    validations:
+      required: true
+
+  - type: textarea
+    id: current
+    attributes:
+      label: Что написано сейчас
+      description: Скопируйте текст, который считаете неверным.
+    validations:
+      required: true
+
+  - type: textarea
+    id: correct
+    attributes:
+      label: Что должно быть
+      description: Формулировка по существу, без оценок. Если позиция просто не заявлена публично, так и напишите — «Не установлено» это допустимый и честный ответ.
+    validations:
+      required: true
+
+  - type: textarea
+    id: sources
+    attributes:
+      label: Источник
+      description: |
+        Прямые ссылки, по одной на строку. Для спорного эпизода нужно два независимых источника,
+        и один из них должен давать позицию самого человека или партии, если она публично существует.
+      placeholder: |
+        https://www.knesset.tv/...
+        https://www.mako.co.il/...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Что это за утверждение
+      options:
+        - Факт — проверяемое событие, должность, голосование
+        - Позиция или обещание — то, что участник заявляет о будущем
+        - Пробел — публичной позиции нет, и это нужно так и обозначить
+        - Не знаю
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: rules
+    attributes:
+      label: Подтверждение
+      options:
+        - label: Источник открывается и содержит именно то, на что я ссылаюсь.
+          required: true
+        - label: Я предлагаю правку факта или формулировки, а не оценку человека или партии.
+          required: true
