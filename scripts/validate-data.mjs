@@ -265,6 +265,7 @@ const LENGTH_LIMIT = {
   title: 90,
   label: 70,
   note: 400,
+  description: 420,
   status: 200,
 };
 

@@ -364,6 +364,7 @@ function ScaleRow({ topic, visible }: { topic: Topic & { axis: Axis }; visible: 
   return (
     <section className="scale-row">
       <p className="scale-topic">{topic.label}</p>
+      {topic.description && <p className="scale-description">{topic.description}</p>}
       <p className="scale-note">{topic.axis.note}</p>
       <div className="scale-line">
         <span className="scale-pole">{topic.axis.low}</span>

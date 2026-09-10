@@ -33,7 +33,7 @@ export type TrustNote = Claim & { label: string };
 export type Position = Claim & { topic: string; value: string };
 
 export type Axis = { low: string; high: string; order: string[]; note: string };
-export type Topic = { id: string; label: string; values: Record<string, string>; axis?: Axis };
+export type Topic = { id: string; label: string; description?: string; values: Record<string, string>; axis?: Axis };
 
 export type Source = {
   id: string;
