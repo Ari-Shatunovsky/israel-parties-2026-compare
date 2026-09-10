@@ -32,7 +32,8 @@ export type CriterionNote = Claim & { topic: string; label: string };
 export type TrustNote = Claim & { label: string };
 export type Position = Claim & { topic: string; value: string };
 
-export type Topic = { id: string; label: string; values: Record<string, string> };
+export type Axis = { low: string; high: string; order: string[] };
+export type Topic = { id: string; label: string; values: Record<string, string>; axis?: Axis };
 
 export type Source = {
   id: string;
@@ -222,6 +223,23 @@ export function sourceDateLine(source: Source): string {
 export function valueLabel(position: Position): string {
   if (position.value === 'unknown') return KIND_LABEL.uncertainty;
   return topicById(position.topic)?.values[position.value] ?? position.value;
+}
+
+/** Темы, у которых объявлена шкала, в порядке `topics`. */
+export const scaledTopics: (Topic & { axis: Axis })[] = topics.filter(
+  (topic): topic is Topic & { axis: Axis } => Boolean(topic.axis),
+);
+
+/**
+ * Место позиции на шкале темы: 0 — полюс `low`, 1 — полюс `high`.
+ * Считается из порядкового номера, а не из придуманных весов: `order`
+ * утверждает последовательность значений и ничего не говорит о том,
+ * насколько одна ступень дальше другой. `null` — позиция не установлена.
+ */
+export function axisPosition(topic: Topic & { axis: Axis }, position: Position): number | null {
+  const index = topic.axis.order.indexOf(position.value);
+  if (index < 0) return null;
+  return index / (topic.axis.order.length - 1);
 }
 
 /** Утверждение считается неустановленным, если это пробел или если проверка не завершена. */

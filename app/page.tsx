@@ -18,11 +18,11 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/comp
 import {
   allCandidates, candidateMark, candidatesByParty, CONFIDENCE_LABEL, COLOR_LABEL,
   DEPTH_LABEL, distinctSourceCount, formatDate, GLOSSARY, isUnsettled, KIND_LABEL,
-  MAX_SEATS, meta, parties, partyById, sourceById, sourceDateLine, sources,
-  SOURCE_TYPE_LABEL, SOURCE_TYPE_ORDER, topicById, topics, valueLabel,
-  VERIFICATION_LABEL,
-  type Candidate, type Claim, type Color, type CriterionNote, type Flag,
-  type Party, type Position, type ProfileClaim, type TrustNote,
+  axisPosition, MAX_SEATS, meta, parties, partyById, scaledTopics, sourceById,
+  sourceDateLine, sources, SOURCE_TYPE_LABEL, SOURCE_TYPE_ORDER, topicById, topics,
+  valueLabel, VERIFICATION_LABEL,
+  type Axis, type Candidate, type Claim, type Color, type CriterionNote, type Flag,
+  type Party, type Position, type ProfileClaim, type Topic, type TrustNote,
 } from '@/lib/corpus';
 import { useUrlState } from '@/lib/use-url-state';
 
@@ -328,6 +328,97 @@ function MatrixCell({ position, compact }: { position: Position; compact: boolea
   );
 }
 
+/**
+ * Одна тема как шкала: полюса подписаны с обоих концов, партии стоят точками.
+ *
+ * Площади здесь нет намеренно. Радар сложил бы шесть осей в фигуру, чью
+ * площадь читатель принял бы за суммарную оценку, а партия с пробелами
+ * получила бы фигуру поменьше — и незаполненность данных выглядела бы
+ * политической характеристикой. Строка такой суммы не образует.
+ */
+function ScaleRow({ topic, visible }: { topic: Topic & { axis: Axis }; visible: Party[] }) {
+  const byStep = new Map<number, { party: Party; position: Position }[]>();
+  const missing: { party: Party; position: Position }[] = [];
+
+  for (const party of visible) {
+    const position = party.positions.find(p => p.topic === topic.id)!;
+    const at = axisPosition(topic, position);
+    if (at === null) { missing.push({ party, position }); continue; }
+    const group = byStep.get(at) ?? [];
+    group.push({ party, position });
+    byStep.set(at, group);
+  }
+
+  /* Совпадающие позиции разводим в кластер вокруг засечки. Иначе четыре
+     партии с одинаковым ответом рисуются одной точкой, и главное, что
+     показывает шкала — что они совпали, — становится невидимым. */
+  const DOT_GAP = 17;
+  const placed = [...byStep.entries()].flatMap(([at, group]) =>
+    group.map((entry, i) => ({
+      ...entry,
+      at,
+      offset: (i - (group.length - 1) / 2) * DOT_GAP,
+      shared: group.length,
+    })));
+
+  return (
+    <section className="scale-row">
+      <p className="scale-topic">{topic.label}</p>
+      <div className="scale-line">
+        <span className="scale-pole">{topic.axis.low}</span>
+        <span className="scale-track">
+          {topic.axis.order.map((_, i) => (
+            <span
+              key={i}
+              className="scale-step"
+              style={{ left: `${(i / (topic.axis.order.length - 1)) * 100}%` }}
+            />
+          ))}
+          {placed.map(({ party, position, at, offset, shared }) => (
+            <Tooltip key={party.id}>
+              <TooltipTrigger
+                render={(
+                  <button
+                    type="button"
+                    className="scale-dot"
+                    style={{
+                      left: `calc(${at * 100}% + ${offset}px)`,
+                      background: party.color,
+                    }}
+                    aria-label={
+                      shared > 1
+                        ? `${party.name_ru}: ${valueLabel(position)} — так же, как ещё у ${shared - 1}`
+                        : `${party.name_ru}: ${valueLabel(position)}`
+                    }
+                  />
+                )}
+              />
+              <TooltipContent className="glossary-tip matrix-tip">
+                <span>
+                  <b>{party.name_ru} · {valueLabel(position)}</b>
+                  <br />{position.text}
+                </span>
+              </TooltipContent>
+            </Tooltip>
+          ))}
+        </span>
+        <span className="scale-pole scale-pole-high">{topic.axis.high}</span>
+      </div>
+      {missing.length > 0 && (
+        <p className="scale-missing">
+          <span>{KIND_LABEL.uncertainty}:</span>
+          {missing.map(({ party }) => (
+            <span key={party.id} className="scale-missing-item">
+              <span className="matrix-party-dot" style={{ background: party.color }} />
+              {party.name_ru}
+            </span>
+          ))}
+        </p>
+      )}
+    </section>
+  );
+}
+
 /* ------------------------------------------------------------------ *
  * Кандидаты
  * ------------------------------------------------------------------ */
@@ -581,7 +672,9 @@ export default function Home() {
   const seats = url.getInt('seats', activeParty.default_seats, 0, MAX_SEATS);
   const query = url.get('q', '');
   const openParty = url.get('p', '');
-  const matrixCompact = url.get('matrix', 'compact') === 'compact';
+  const matrixParam = url.get('matrix', 'compact');
+  const matrixView: 'compact' | 'full' | 'scales' =
+    matrixParam === 'full' || matrixParam === 'scales' ? matrixParam : 'compact';
 
   /** Поиск идёт по всем спискам сразу: человека ищут по имени, а не по партии. */
   const searching = query.trim().length > 0;
@@ -737,22 +830,49 @@ export default function Home() {
               <div className="segmented">
                 <button
                   type="button"
-                  className={matrixCompact ? 'active' : ''}
+                  className={matrixView === 'compact' ? 'active' : ''}
                   onClick={() => url.set({ matrix: null })}
                 >
                   Кратко
                 </button>
                 <button
                   type="button"
-                  className={matrixCompact ? '' : 'active'}
+                  className={matrixView === 'full' ? 'active' : ''}
                   onClick={() => url.set({ matrix: 'full' })}
                 >
                   Полный текст
                 </button>
+                <button
+                  type="button"
+                  className={matrixView === 'scales' ? 'active' : ''}
+                  onClick={() => url.set({ matrix: 'scales' })}
+                >
+                  Шкалы
+                </button>
               </div>
             </div>
-            {visible.length ? (
-              <div className={`matrix-wrap ${matrixCompact ? 'matrix-compact' : ''}`}>
+            {!visible.length ? (
+              <div className="empty-state">
+                Все списки сняты галочкой «в сравнении» на вкладке «Карточки».
+              </div>
+            ) : matrixView === 'scales' ? (
+              <>
+                <div className="scales-legend">
+                  {visible.map(party => (
+                    <span key={party.id}>
+                      <span className="matrix-party-dot" style={{ background: party.color }} />
+                      {party.name_ru}
+                    </span>
+                  ))}
+                </div>
+                <div className="scales">
+                  {scaledTopics.map(topic => (
+                    <ScaleRow key={topic.id} topic={topic} visible={visible} />
+                  ))}
+                </div>
+              </>
+            ) : (
+              <div className={`matrix-wrap ${matrixView === 'compact' ? 'matrix-compact' : ''}`}>
                 <Table className="matrix-table">
                   <TableHeader>
                     <TableRow>
@@ -773,7 +893,7 @@ export default function Home() {
                           <MatrixCell
                             key={party.id}
                             position={party.positions.find(p => p.topic === item.id)!}
-                            compact={matrixCompact}
+                            compact={matrixView === 'compact'}
                           />
                         ))}
                       </TableRow>
@@ -781,15 +901,20 @@ export default function Home() {
                   </TableBody>
                 </Table>
               </div>
-            ) : (
-              <div className="empty-state">
-                Все списки сняты галочкой «в сравнении» на вкладке «Карточки».
-              </div>
             )}
-            {matrixCompact && (
+            {matrixView === 'compact' && (
               <p className="matrix-hint">
                 В кратком режиме в ячейке стоит короткая формулировка позиции. Наведите или
                 нажмите на неё, чтобы прочитать полный текст и статус проверки.
+              </p>
+            )}
+            {matrixView === 'scales' && (
+              <p className="matrix-hint">
+                Шкала показывает <b>порядок</b> позиций между двумя названными полюсами — и только
+                порядок. Расстояние между ступенями ничего не измеряет, складывать шкалы между
+                собой нельзя, суммарной оценки списка здесь нет. {topics.length - scaledTopics.length}{' '}
+                критерия шкалы не получили: по ним позиции либо не выстраиваются на одной прямой,
+                либо совпадают у всех, либо почти не установлены.
               </p>
             )}
           </TabsContent>
@@ -937,6 +1062,21 @@ export default function Home() {
               <div className="method-card">
                 <b>Что не делает сайт</b>
                 <p>Не рассчитывает «совпадение», не ранжирует списки и не выдаёт персональную рекомендацию.</p>
+              </div>
+              <div className="method-card">
+                <b>Шкалы и почему это не баллы</b>
+                <p>
+                  На вкладке «Матрица» есть режим «Шкалы»: {scaledTopics.length} критериев, у каждого
+                  названы оба полюса. Шкала утверждает только <b>порядок</b> позиций между полюсами —
+                  расстояние между ступенями ничего не измеряет, и складывать шкалы между собой нельзя.
+                  Поэтому здесь нет ни радара, ни суммарной фигуры: её площадь читалась бы как оценка
+                  списка, а список с пробелами в данных выглядел бы «слабее» просто потому, что про
+                  него меньше найдено. Пробелы показаны отдельной строкой, а не точкой в нуле.
+                  Оставшиеся {topics.length - scaledTopics.length} критерия шкалы не получили: позиции
+                  по ним либо не выстраиваются на одной прямой, либо совпадают у всех, либо почти не
+                  установлены. Направление осей — редакционное решение, оно записано в{' '}
+                  <code>topics[].axis</code> в наборе данных и открыто для спора.
+                </p>
               </div>
               <div className="method-card">
                 <b>Нашли ошибку</b>

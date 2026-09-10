@@ -172,6 +172,12 @@ for (const party of parties.parties) {
     if (position.value !== 'unknown' && !topicById.get(position.topic)?.values?.[position.value]) {
       fail(at, `нет подписи для значения "${position.value}" в topics[${position.topic}].values`);
     }
+    /* Если у темы есть шкала, каждое реальное значение обязано иметь на ней место:
+       иначе позиция молча исчезнет из построчных шкал. */
+    const axis = topicById.get(position.topic)?.axis;
+    if (axis && position.value !== 'unknown' && !axis.order.includes(position.value)) {
+      fail(at, `значение "${position.value}" не входит в topics[${position.topic}].axis.order`);
+    }
   }
   for (const topic of topicIds) if (!covered.has(topic)) fail(where, `нет позиции по теме "${topic}"`);
 
@@ -184,6 +190,19 @@ for (const party of parties.parties) {
 }
 for (const key of Object.keys(candidates.parties)) {
   if (!partyIds.has(key)) fail(`candidates.json.parties.${key}`, 'нет такой партии в parties.json');
+}
+
+/* Шкалы тем: порядок значений должен быть непротиворечивым. */
+for (const topic of parties.topics) {
+  if (!topic.axis) continue;
+  const where = `parties.json.topics[${topic.id}].axis`;
+  const seen = new Set();
+  for (const value of topic.axis.order) {
+    if (seen.has(value)) fail(where, `значение "${value}" встречается в order дважды`);
+    seen.add(value);
+    if (!topic.values[value]) fail(where, `в order значение "${value}", которого нет в values`);
+  }
+  if (topic.axis.low === topic.axis.high) fail(where, 'полюса шкалы названы одинаково');
 }
 
 /* Кандидаты: уникальные id, сплошная нумерация мест, темы критериев. */

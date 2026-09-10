@@ -7,6 +7,14 @@
       "values": {
         "replace": "Смена правительства",
         "recommend": "Рекомендует Нетаньяху"
+      },
+      "axis": {
+        "low": "смена правительства",
+        "high": "рекомендует Нетаньяху",
+        "order": [
+          "replace",
+          "recommend"
+        ]
       }
     },
     {
@@ -22,6 +30,14 @@
       "values": {
         "local": "Решает община и муниципалитет",
         "civil": "Гражданский брак и шаббат"
+      },
+      "axis": {
+        "low": "решает община и муниципалитет",
+        "high": "гражданский брак и шаббат",
+        "order": [
+          "local",
+          "civil"
+        ]
       }
     },
     {
@@ -40,6 +56,16 @@
         "international_transfer": "Международное управление Газой",
         "regional_alternative": "Региональная альтернатива ХАМАС",
         "military_primacy": "Военное решение"
+      },
+      "axis": {
+        "low": "политическое урегулирование",
+        "high": "военное решение",
+        "order": [
+          "regional_alternative",
+          "international_transfer",
+          "force_and_diplomacy",
+          "military_primacy"
+        ]
       }
     },
     {
@@ -56,6 +82,15 @@
         "conditional": "Сотрудничество под условием",
         "exclude": "Коалиция без арабских партий",
         "partnership": "Гражданское партнёрство"
+      },
+      "axis": {
+        "low": "коалиция без арабских списков",
+        "high": "гражданское партнёрство",
+        "order": [
+          "exclude",
+          "conditional",
+          "partnership"
+        ]
       }
     },
     {
@@ -64,6 +99,14 @@
       "values": {
         "competition": "Конкуренция и стоимость жизни",
         "social": "Социальное равенство"
+      },
+      "axis": {
+        "low": "социальное равенство",
+        "high": "конкуренция и дерегуляция",
+        "order": [
+          "social",
+          "competition"
+        ]
       }
     },
     {
@@ -72,6 +115,14 @@
       "values": {
         "leader": "Решение лидеров",
         "primaries": "Праймериз"
+      },
+      "axis": {
+        "low": "решают лидеры",
+        "high": "праймериз",
+        "order": [
+          "leader",
+          "primaries"
+        ]
       }
     }
   ],

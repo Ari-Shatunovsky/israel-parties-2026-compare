@@ -25,6 +25,30 @@
             "minProperties": 1,
             "propertyNames": { "pattern": "^[a-z_]+$" },
             "additionalProperties": { "type": "string", "minLength": 1 }
+          },
+          "axis": {
+            "description": "Необязательная шкала темы. Задаёт порядок значений от low к high — и только порядок: расстояния между ступенями не утверждаются. Тема без axis в шкалы не попадает: так помечены критерии, где позиции не выстраиваются на одной прямой или где разброса нет.",
+            "type": "object",
+            "required": ["low", "high", "order"],
+            "additionalProperties": false,
+            "properties": {
+              "low": {
+                "description": "Название полюса в нуле. Описывает позицию, а не оценку.",
+                "type": "string",
+                "minLength": 1
+              },
+              "high": {
+                "description": "Название полюса в единице.",
+                "type": "string",
+                "minLength": 1
+              },
+              "order": {
+                "description": "Значения от low к high. Каждое обязано существовать в values, каждое использованное партией значение обязано быть здесь.",
+                "type": "array",
+                "minItems": 2,
+                "items": { "type": "string", "pattern": "^[a-z_]+$" }
+              }
+            }
           }
         }
       }
