@@ -613,6 +613,38 @@ function CandidateSheet({
   );
 }
 
+/**
+ * Что означает каждый критерий. Описания живут в данных, а не в вёрстке,
+ * и показываются здесь целиком — включая темы без шкалы, у которых в
+ * режиме «Шкалы» места нет.
+ */
+function CriteriaSection() {
+  return (
+    <section className="criteria-section">
+      <p className="eyebrow">Критерии</p>
+      <h2>О чём каждый вопрос</h2>
+      <p className="criteria-deck">
+        Одни и те же {topics.length} вопросов заданы всем спискам. {scaledTopics.length} из них
+        получили шкалу: по ним позиции выстраиваются в порядок, и его основание указано рядом.
+        Остальные сравниваются только текстом — там, где порядка нет, придумывать его нельзя.
+      </p>
+      <div className="criteria-list">
+        {topics.map(topic => (
+          <article key={topic.id}>
+            <div className="criteria-head">
+              <h3>{topic.label}</h3>
+              {topic.axis
+                ? <span className="criteria-scale">{topic.axis.low} → {topic.axis.high}</span>
+                : <span className="criteria-noscale">без шкалы</span>}
+            </div>
+            {topic.description && <p>{topic.description}</p>}
+          </article>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 /* ------------------------------------------------------------------ *
  * Источники
  * ------------------------------------------------------------------ */
@@ -1124,6 +1156,7 @@ export default function Home() {
                 </a>
               </div>
             </section>
+            <CriteriaSection />
             <SourcesSection />
           </TabsContent>
         </Tabs>
