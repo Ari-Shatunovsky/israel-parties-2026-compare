@@ -374,7 +374,10 @@ main { min-height: 100vh; }
 .descriptor { font-size: 15px; margin-top: 17px; margin-bottom: 2px; }
 .leaders { font-size: 13px; color: var(--text-subtle); margin-top: 0; }
 
-.card-position { border-top: 1px solid var(--border); margin-top: 18px; padding-top: 16px; }
+/* Нижний отступ принадлежит блоку позиции: строка действия под ним идёт
+   от края до края и своих полей не имеет, иначе теги источников липнут
+   к её верхней границе. */
+.card-position { border-top: 1px solid var(--border); margin-top: 18px; padding: 16px 0 18px; }
 .card-position p { font-size: 14px; margin: 0; }
 
 /* Прижата к низу, чтобы на карточках с разной длиной позиции действие
