@@ -243,6 +243,16 @@
             "kind": "fact",
             "verification": "verified",
             "confidence": "confirmed"
+          },
+          {
+            "title": "Публично за брак вне раввината",
+            "text": "В интервью того же периода: в Израиле люди должны иметь возможность оформить свои отношения, даже если не хотят делать это через раввинат.",
+            "source_ids": [
+              "kahana-grandchild"
+            ],
+            "kind": "fact",
+            "verification": "partial",
+            "confidence": "limited"
           }
         ],
         "concerns": [
@@ -268,6 +278,17 @@
             "kind": "assessment",
             "verification": "verified",
             "confidence": "confirmed"
+          },
+          {
+            "topic": "olim",
+            "label": "Закон о возвращении",
+            "text": "По публикации февраля 2022 года, будучи министром религиозных услуг, высказывался за отмену параграфа о внуке. Запись самого высказывания открыть не удалось; в те же годы он продвигал более доступный гиюр.",
+            "source_ids": [
+              "kahana-grandchild"
+            ],
+            "kind": "uncertainty",
+            "verification": "unverified",
+            "confidence": "limited"
           }
         ],
         "trust_notes": [],
@@ -529,7 +550,19 @@
             "color": "red"
           }
         ],
-        "criteria": [],
+        "criteria": [
+          {
+            "topic": "olim",
+            "label": "Гиюр и абсорбция",
+            "text": "Страница списка называет его инициатором армейской программы гиюра «Натив» и указывает работу ради новых репатриантов и связи с диаспорой. Закон о возвращении на странице не упоминается.",
+            "source_ids": [
+              "yashar-team"
+            ],
+            "kind": "fact",
+            "verification": "verified",
+            "confidence": "confirmed"
+          }
+        ],
         "trust_notes": [
           {
             "label": "Доверие",
@@ -643,6 +676,17 @@
             "topic": "religion",
             "label": "Религия и государство",
             "text": "Её присутствие усиливает либерально-практическое крыло списка в вопросах брака и гиюра.",
+            "source_ids": [
+              "yashar-team"
+            ],
+            "kind": "assessment",
+            "verification": "verified",
+            "confidence": "confirmed"
+          },
+          {
+            "topic": "olim",
+            "label": "Барьеры репатриантов",
+            "text": "Её профиль прямо по этой теме: брак, гиюр и раввинат глазами русскоязычных израильтян. При этом сам список темы репатриации в программе не заявляет.",
             "source_ids": [
               "yashar-team"
             ],
@@ -2199,6 +2243,17 @@
             "topic": "palestine",
             "label": "Палестинский вопрос",
             "text": "Поддерживает демилитаризованное палестинское государство и реформированную ПА при сохранении возможности израильского вмешательства.",
+            "source_ids": [
+              "democrats-plan"
+            ],
+            "kind": "assessment",
+            "verification": "verified",
+            "confidence": "confirmed"
+          },
+          {
+            "topic": "olim",
+            "label": "Кто считается евреем",
+            "text": "Пункт программы о признании гиюров всех течений и о гражданском гиюре — прямое продолжение его многолетней работы против ортодоксальной монополии.",
             "source_ids": [
               "democrats-plan"
             ],

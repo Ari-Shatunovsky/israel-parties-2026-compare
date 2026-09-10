@@ -564,6 +564,16 @@
       "type": "media",
       "date_kind": "accessed_only",
       "language": "ru"
+    },
+    {
+      "id": "kahana-grandchild",
+      "title": "Аруц 7 · Отмена параграфа о внуке и позиция министра религиозных услуг",
+      "url": "https://www.inn.co.il/news/541335",
+      "published_at": "2022-02-17",
+      "accessed_at": "2026-09-10",
+      "type": "analysis",
+      "date_kind": "exact",
+      "language": "he"
     }
   ],
   "parties": [
