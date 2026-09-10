@@ -336,7 +336,6 @@ main { min-height: 100vh; }
 .descriptor,
 .leaders,
 .card-position,
-.card-actions,
 .audit-line { margin-left: 22px; margin-right: 22px; }
 
 .party-card-top { display: flex; justify-content: space-between; gap: 10px; min-height: 48px; padding-top: 15px; }
@@ -378,21 +377,30 @@ main { min-height: 100vh; }
 .card-position { border-top: 1px solid var(--border); margin-top: 18px; padding-top: 16px; }
 .card-position p { font-size: 14px; margin: 0; }
 
-/* Кнопка прижимается к низу, чтобы на карточках с разной длиной позиции
-   действия оставались на одной линии. */
-.card-actions { margin-top: auto; padding-top: 14px; }
-/* Подпись длиннее одной строки на узкой карточке: у `.text-button` стоит
-   nowrap, и текст вылезал за скруглённую рамку. Здесь перенос разрешён,
-   а капсульный радиус заменён обычным — две строки в капсуле выглядят сломано. */
+/* Прижата к низу, чтобы на карточках с разной длиной позиции действие
+   оставалось на одной линии. */
+.card-actions { margin-top: auto; border-top: 1px solid var(--border); }
+/* Не кнопка в рамке: полноширинная обведённая коробка с текстом по центру
+   читается как поле ввода, а не как действие. Строка во всю карточку —
+   подпись слева, шеврон справа, подсветка по наведению — говорит «нажми и
+   откроется», и заодно снимает переполнение: тексту есть куда переноситься. */
 .card-actions .text-button {
   width: 100%;
-  justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  padding: 13px 22px;
+  text-align: left;
   white-space: normal;
-  text-align: center;
-  border-radius: 7px;
   line-height: 1.35;
-  padding: 9px 12px;
 }
+
+.card-actions .text-button:hover { background: var(--surface-tint); }
+.card-actions .text-button svg { flex: 0 0 auto; color: var(--text-subtle); }
 
 .claim-footer { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-top: 12px; flex-wrap: wrap; }
 .claim-marks { display: inline-flex; align-items: center; gap: 6px; }
