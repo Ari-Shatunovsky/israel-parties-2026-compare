@@ -1,0 +1,946 @@
+{
+  "schema_version": "1.0",
+  "as_of": "2026-09-10",
+  "parties": {
+    "yashar": [
+      {
+        "position": 1,
+        "name": "Гади Эйзенкот",
+        "bio": "Бывший начальник Генштаба и член военного кабинета; лидер списка.",
+        "source_ids": [
+          "lists",
+          "yashar-team"
+        ],
+        "verification": "verified",
+        "confidence": "medium",
+        "flags": []
+      },
+      {
+        "position": 2,
+        "name": "Йорам Коэн",
+        "bio": "Бывший глава ШАБАК; профиль национальной безопасности.",
+        "source_ids": [
+          "lists",
+          "yashar-team"
+        ],
+        "verification": "verified",
+        "confidence": "medium",
+        "flags": []
+      },
+      {
+        "position": 3,
+        "name": "Орит Фаркаш-Хакоэн",
+        "bio": "Бывшая глава Управления электроэнергетики, министр и депутат.",
+        "source_ids": [
+          "lists",
+          "yashar-team"
+        ],
+        "verification": "verified",
+        "confidence": "medium",
+        "flags": []
+      },
+      {
+        "position": 4,
+        "name": "Ади Альтшулер",
+        "bio": "Социальная предпринимательница, основательница Krembo Wings и Zikaron BaSalon.",
+        "source_ids": [
+          "lists",
+          "yashar-team"
+        ],
+        "verification": "verified",
+        "confidence": "medium",
+        "flags": []
+      },
+      {
+        "position": 5,
+        "name": "Матан Кахана",
+        "bio": "Бывший министр религиозных услуг и военный лётчик; продвигал реформы кашрута и гиюра.",
+        "source_ids": [
+          "lists",
+          "yashar-team"
+        ],
+        "verification": "verified",
+        "confidence": "medium",
+        "flags": []
+      },
+      {
+        "position": 6,
+        "name": "Хили Троппер",
+        "bio": "Бывший министр культуры; умеренно-религиозный политик из бывшего Государственного лагеря.",
+        "source_ids": [
+          "lists",
+          "yashar-team"
+        ],
+        "verification": "verified",
+        "confidence": "medium",
+        "flags": []
+      },
+      {
+        "position": 7,
+        "name": "Шауль Меридор",
+        "bio": "Бывший руководитель бюджетного отдела Минфина; ушёл в 2020 году после конфликта о бюджетном управлении.",
+        "source_ids": [
+          "lists",
+          "yashar-team"
+        ],
+        "verification": "verified",
+        "confidence": "medium",
+        "flags": [
+          {
+            "color": "green",
+            "title": "Институциональный поступок",
+            "text": "Уход с государственной должности из-за профессионального конфликта требует отдельной ссылки в следующем обновлении.",
+            "source_ids": [],
+            "kind": "assessment"
+          }
+        ]
+      },
+      {
+        "position": 8,
+        "name": "Таир Ифарган",
+        "bio": "Бывшая генеральная директорка Министерства труда.",
+        "source_ids": [
+          "lists",
+          "yashar-team"
+        ],
+        "verification": "verified",
+        "confidence": "medium",
+        "flags": []
+      },
+      {
+        "position": 9,
+        "name": "Ошрат Гани-Гонен",
+        "bio": "Глава регионального совета Дром-ха-Шарон; опыт местного управления.",
+        "source_ids": [
+          "lists",
+          "yashar-team"
+        ],
+        "verification": "verified",
+        "confidence": "medium",
+        "flags": []
+      },
+      {
+        "position": 10,
+        "name": "Шира Шапира",
+        "bio": "Кандидатка из команды Хили Троппера; национальный парламентский опыт ограничен.",
+        "source_ids": [
+          "lists"
+        ],
+        "verification": "verified",
+        "confidence": "medium",
+        "flags": []
+      },
+      {
+        "position": 11,
+        "name": "Инбар Харуш-Гити",
+        "bio": "Бывшая руководительница «Ахарей!»; работала с программами службы и интеграции.",
+        "source_ids": [
+          "lists",
+          "yashar-team"
+        ],
+        "verification": "verified",
+        "confidence": "medium",
+        "flags": []
+      },
+      {
+        "position": 12,
+        "name": "Элазар Штерн",
+        "bio": "Генерал запаса, бывший министр и депутат.",
+        "source_ids": [
+          "lists",
+          "stern",
+          "stern-response"
+        ],
+        "verification": "verified",
+        "confidence": "medium",
+        "flags": [
+          {
+            "color": "red",
+            "title": "Спор об анонимных жалобах",
+            "text": "В 2021 году сказал, что уничтожал анонимные жалобы; отрицал, что речь шла о жалобах о сексуальных домогательствах. Снял кандидатуру на руководство Еврейским агентством.",
+            "source_ids": [
+              "stern",
+              "stern-response"
+            ],
+            "kind": "assessment"
+          }
+        ]
+      },
+      {
+        "position": 13,
+        "name": "Камиль Абу-Рукун",
+        "bio": "Бывший координатор действий правительства на территориях (COGAT).",
+        "source_ids": [
+          "lists",
+          "yashar-team"
+        ],
+        "verification": "verified",
+        "confidence": "medium",
+        "flags": []
+      },
+      {
+        "position": 14,
+        "name": "Двора Бахар",
+        "bio": "Бывшая сотрудница ШАБАК и Моссада.",
+        "source_ids": [
+          "lists",
+          "yashar-team"
+        ],
+        "verification": "verified",
+        "confidence": "medium",
+        "flags": []
+      },
+      {
+        "position": 15,
+        "name": "Алекс Риф",
+        "bio": "Общественная деятельница, связанная с русскоязычными израильтянами и вопросами личного статуса.",
+        "source_ids": [
+          "lists",
+          "yashar-team"
+        ],
+        "verification": "verified",
+        "confidence": "medium",
+        "flags": []
+      },
+      {
+        "position": 16,
+        "name": "Инбар Йехезкели-Блилиус",
+        "bio": "Общественная деятельница; национальный политический опыт ограничен.",
+        "source_ids": [
+          "lists"
+        ],
+        "verification": "verified",
+        "confidence": "medium",
+        "flags": []
+      },
+      {
+        "position": 17,
+        "name": "Рои Фолькман",
+        "bio": "Бывший депутат и глава фракции «Кулану».",
+        "source_ids": [
+          "lists",
+          "folkman"
+        ],
+        "verification": "verified",
+        "confidence": "medium",
+        "flags": [
+          {
+            "color": "red",
+            "title": "Изменение позиции",
+            "text": "В 2019 году публично признал, что изменил прежний отказ сидеть с обвиняемым Нетаньяху.",
+            "source_ids": [
+              "folkman"
+            ],
+            "kind": "assessment"
+          }
+        ]
+      },
+      {
+        "position": 18,
+        "name": "Исраэль Зари",
+        "bio": "Заместитель мэра Рамат-Гана; гражданская и муниципальная повестка.",
+        "source_ids": [
+          "lists",
+          "yashar-team"
+        ],
+        "verification": "verified",
+        "confidence": "medium",
+        "flags": []
+      },
+      {
+        "position": 19,
+        "name": "Таль Охана",
+        "bio": "Бывшая глава Йерухама; опыт местного управления и периферии.",
+        "source_ids": [
+          "lists",
+          "yashar-team"
+        ],
+        "verification": "verified",
+        "confidence": "medium",
+        "flags": []
+      },
+      {
+        "position": 20,
+        "name": "Элисаф Перец",
+        "bio": "Общественный кандидат; национальный парламентский опыт ограничен.",
+        "source_ids": [
+          "lists"
+        ],
+        "verification": "verified",
+        "confidence": "medium",
+        "flags": []
+      },
+      {
+        "position": 21,
+        "name": "Яффа Табаджа",
+        "bio": "Общественная кандидатка; подробный политический профиль ещё проверяется.",
+        "source_ids": [
+          "lists"
+        ],
+        "verification": "verified",
+        "confidence": "medium",
+        "flags": []
+      },
+      {
+        "position": 22,
+        "name": "Нир Хагби",
+        "bio": "Полковник запаса из Кисуфима; опыт войны после 7 октября.",
+        "source_ids": [
+          "lists",
+          "yashar-team"
+        ],
+        "verification": "verified",
+        "confidence": "medium",
+        "flags": []
+      },
+      {
+        "position": 23,
+        "name": "Рон Баркаи",
+        "bio": "Кандидат; доступных проверяемых сведений пока мало.",
+        "source_ids": [
+          "lists"
+        ],
+        "verification": "verified",
+        "confidence": "medium",
+        "flags": []
+      },
+      {
+        "position": 24,
+        "name": "Шай Фишер",
+        "bio": "Кандидат; доступных проверяемых сведений пока мало.",
+        "source_ids": [
+          "lists"
+        ],
+        "verification": "verified",
+        "confidence": "medium",
+        "flags": []
+      },
+      {
+        "position": 25,
+        "name": "Лиан Фольк-Давид",
+        "bio": "Кандидатка; доступных проверяемых сведений пока мало.",
+        "source_ids": [
+          "lists"
+        ],
+        "verification": "verified",
+        "confidence": "medium",
+        "flags": []
+      }
+    ],
+    "together": [
+      {
+        "position": 1,
+        "name": "Нафтали Беннет",
+        "bio": "Бывший премьер-министр; лидер правого крыла объединения.",
+        "source_ids": [
+          "lists",
+          "together"
+        ],
+        "verification": "verified",
+        "confidence": "medium",
+        "flags": [
+          {
+            "color": "red",
+            "title": "Подписанное обещание",
+            "text": "В 2021 году исключал ротацию с Лапидом, затем сформировал с ним правительство.",
+            "source_ids": [
+              "bennett-pledge",
+              "coalition-2021"
+            ],
+            "kind": "assessment"
+          }
+        ]
+      },
+      {
+        "position": 2,
+        "name": "Яир Лапид",
+        "bio": "Бывший премьер-министр и министр финансов; лидер «Еш Атид».",
+        "source_ids": [
+          "lists",
+          "together"
+        ],
+        "verification": "verified",
+        "confidence": "medium",
+        "flags": []
+      },
+      {
+        "position": 3,
+        "name": "Керен Тернер-Эяль",
+        "bio": "Бывшая генеральная директорка министерств транспорта и финансов.",
+        "source_ids": [
+          "lists",
+          "together"
+        ],
+        "verification": "verified",
+        "confidence": "medium",
+        "flags": []
+      },
+      {
+        "position": 4,
+        "name": "Мерав Бен-Ари",
+        "bio": "Действующая депутатка «Еш Атид».",
+        "source_ids": [
+          "lists",
+          "together"
+        ],
+        "verification": "verified",
+        "confidence": "medium",
+        "flags": [
+          {
+            "color": "yellow",
+            "title": "Высказывание о детях Газы",
+            "text": "В беседе отмечалось резкое высказывание октября 2023 года; прямой источник будет добавлен в следующем обновлении.",
+            "source_ids": [],
+            "kind": "assessment"
+          }
+        ]
+      },
+      {
+        "position": 5,
+        "name": "Лиран Авишар Бен-Хорин",
+        "bio": "Бывшая генеральная директорка Министерства связи.",
+        "source_ids": [
+          "lists",
+          "together"
+        ],
+        "verification": "verified",
+        "confidence": "medium",
+        "flags": []
+      },
+      {
+        "position": 6,
+        "name": "Ноам Тибон",
+        "bio": "Генерал-майор запаса; 7 октября выехал на юг и участвовал в спасении людей.",
+        "source_ids": [
+          "lists",
+          "together"
+        ],
+        "verification": "verified",
+        "confidence": "medium",
+        "flags": []
+      },
+      {
+        "position": 7,
+        "name": "Михаль Хирш-Негри",
+        "bio": "Бывшая генеральная директорка муниципалитета Раананы.",
+        "source_ids": [
+          "lists",
+          "together"
+        ],
+        "verification": "verified",
+        "confidence": "medium",
+        "flags": []
+      },
+      {
+        "position": 8,
+        "name": "Эйтан Гинзбург",
+        "bio": "Бывший мэр Раананы и депутат; гражданская либеральная повестка.",
+        "source_ids": [
+          "lists",
+          "together"
+        ],
+        "verification": "verified",
+        "confidence": "medium",
+        "flags": []
+      },
+      {
+        "position": 9,
+        "name": "Мерав Коэн",
+        "bio": "Бывшая министр социального равенства.",
+        "source_ids": [
+          "lists",
+          "together"
+        ],
+        "verification": "verified",
+        "confidence": "medium",
+        "flags": []
+      },
+      {
+        "position": 10,
+        "name": "Йонатан Шалев",
+        "bio": "Лидер движения резервистов за равенство службы.",
+        "source_ids": [
+          "lists",
+          "shalev"
+        ],
+        "verification": "verified",
+        "confidence": "medium",
+        "flags": [
+          {
+            "color": "yellow",
+            "title": "Пожертвования движения",
+            "text": "N12 поставил вопрос о переходе медийных активов движения, собравшего более ₪500 тыс., в партийную кампанию. Сторона Беннета отрицала нарушение.",
+            "source_ids": [
+              "shalev"
+            ],
+            "kind": "assessment"
+          }
+        ]
+      },
+      {
+        "position": 11,
+        "name": "Брурия Наим-Арман",
+        "bio": "Партийный организатор; независимый национальный опыт ограничен.",
+        "source_ids": [
+          "lists"
+        ],
+        "verification": "verified",
+        "confidence": "medium",
+        "flags": []
+      },
+      {
+        "position": 12,
+        "name": "Рам Бен-Барак",
+        "bio": "Бывший заместитель главы Моссада и депутат.",
+        "source_ids": [
+          "lists",
+          "together"
+        ],
+        "verification": "verified",
+        "confidence": "medium",
+        "flags": []
+      },
+      {
+        "position": 13,
+        "name": "Амир Струго",
+        "bio": "Офицер запаса и общественный деятель «Ахарей!».",
+        "source_ids": [
+          "lists",
+          "together"
+        ],
+        "verification": "verified",
+        "confidence": "medium",
+        "flags": []
+      },
+      {
+        "position": 14,
+        "name": "Наор Шири",
+        "bio": "Действующий депутат «Еш Атид».",
+        "source_ids": [
+          "lists",
+          "together"
+        ],
+        "verification": "verified",
+        "confidence": "medium",
+        "flags": []
+      },
+      {
+        "position": 15,
+        "name": "Нисан Зеэви",
+        "bio": "Резервист и общественный активист по восстановлению севера.",
+        "source_ids": [
+          "lists",
+          "together"
+        ],
+        "verification": "verified",
+        "confidence": "medium",
+        "flags": []
+      }
+    ],
+    "beytenu": [
+      {
+        "position": 1,
+        "name": "Авигдор Либерман",
+        "bio": "Лидер НДИ; бывший министр обороны, финансов и иностранных дел.",
+        "source_ids": [
+          "lists",
+          "ndi-idi"
+        ],
+        "verification": "verified",
+        "confidence": "medium",
+        "flags": [
+          {
+            "color": "yellow",
+            "title": "Смешанный record",
+            "text": "Отказ от коалиции в 2019 году подтверждает принцип по призыву; в 2016 году он вернулся в правительство Нетаньяху.",
+            "source_ids": [
+              "lieberman-2019",
+              "lieberman-2016"
+            ],
+            "kind": "assessment"
+          }
+        ]
+      },
+      {
+        "position": 2,
+        "name": "Рафи Бен-Шитрит",
+        "bio": "Бывший мэр Бейт-Шеана; отец Эльроя Бен-Шитрита, погибшего 7 октября.",
+        "source_ids": [
+          "lists",
+          "ndi-list"
+        ],
+        "verification": "verified",
+        "confidence": "medium",
+        "flags": []
+      },
+      {
+        "position": 3,
+        "name": "Талия Ланкри",
+        "bio": "Полковник запаса; бывшая заместительница главы Совета нацбезопасности по внутренней безопасности и тылу.",
+        "source_ids": [
+          "lists",
+          "ndi-list"
+        ],
+        "verification": "verified",
+        "confidence": "medium",
+        "flags": []
+      },
+      {
+        "position": 4,
+        "name": "Одед Форер",
+        "bio": "Действующий депутат и бывший министр сельского хозяйства.",
+        "source_ids": [
+          "lists",
+          "ndi-list"
+        ],
+        "verification": "verified",
+        "confidence": "medium",
+        "flags": []
+      },
+      {
+        "position": 5,
+        "name": "Юлия Малиновски",
+        "bio": "Действующая депутатка, заметная в вопросах религии и государства.",
+        "source_ids": [
+          "lists",
+          "ndi-list"
+        ],
+        "verification": "verified",
+        "confidence": "medium",
+        "flags": []
+      },
+      {
+        "position": 6,
+        "name": "Шарон Шараби",
+        "bio": "Общественный кандидат, брат бывших заложников Эли и Йоси Шараби.",
+        "source_ids": [
+          "lists",
+          "ndi-list"
+        ],
+        "verification": "verified",
+        "confidence": "medium",
+        "flags": []
+      },
+      {
+        "position": 7,
+        "name": "Хамед Амар",
+        "bio": "Депутат-друз и бывший министр в Минфине.",
+        "source_ids": [
+          "lists",
+          "ndi-list"
+        ],
+        "verification": "verified",
+        "confidence": "medium",
+        "flags": []
+      },
+      {
+        "position": 8,
+        "name": "Евгений Сова",
+        "bio": "Депутат и журналист.",
+        "source_ids": [
+          "lists",
+          "ndi-list"
+        ],
+        "verification": "verified",
+        "confidence": "medium",
+        "flags": []
+      },
+      {
+        "position": 9,
+        "name": "Эльвира Колихман",
+        "bio": "Бывшая депутатка и муниципальный политик.",
+        "source_ids": [
+          "lists",
+          "ndi-list"
+        ],
+        "verification": "verified",
+        "confidence": "medium",
+        "flags": []
+      },
+      {
+        "position": 10,
+        "name": "Дан Илуз",
+        "bio": "Бывший депутат Ликуда; выступал против проекта освобождения харедим от службы.",
+        "source_ids": [
+          "lists",
+          "ndi-list"
+        ],
+        "verification": "verified",
+        "confidence": "medium",
+        "flags": [
+          {
+            "color": "yellow",
+            "title": "Не либеральный центрист",
+            "text": "Разрыв с Ликудом по службе не означает отказа от всех элементов судебной перестройки; голосования требуют отдельного аудита.",
+            "source_ids": [],
+            "kind": "assessment"
+          }
+        ]
+      }
+    ],
+    "democrats": [
+      {
+        "position": 1,
+        "name": "Яир Голан",
+        "bio": "Бывший заместитель начальника Генштаба; лидер Демократов.",
+        "source_ids": [
+          "lists",
+          "golan-interview"
+        ],
+        "verification": "verified",
+        "confidence": "medium",
+        "flags": []
+      },
+      {
+        "position": 2,
+        "name": "Наама Лазими",
+        "bio": "Депутатка с выраженной социально-демократической повесткой.",
+        "source_ids": [
+          "lists"
+        ],
+        "verification": "verified",
+        "confidence": "medium",
+        "flags": []
+      },
+      {
+        "position": 3,
+        "name": "Гилад Карив",
+        "bio": "Реформистский раввин и депутат; борется с ортодоксальной монополией.",
+        "source_ids": [
+          "lists"
+        ],
+        "verification": "verified",
+        "confidence": "medium",
+        "flags": []
+      },
+      {
+        "position": 4,
+        "name": "Эфрат Райтен",
+        "bio": "Юрист и депутатка; институциональная и правовая повестка.",
+        "source_ids": [
+          "lists"
+        ],
+        "verification": "verified",
+        "confidence": "medium",
+        "flags": []
+      },
+      {
+        "position": 5,
+        "name": "Яя Финк",
+        "bio": "Религиозно-либеральный активист и офицер резерва.",
+        "source_ids": [
+          "lists"
+        ],
+        "verification": "verified",
+        "confidence": "medium",
+        "flags": []
+      },
+      {
+        "position": 6,
+        "name": "Габи Ласки",
+        "bio": "Бывшая депутатка Meretz и правозащитный юрист.",
+        "source_ids": [
+          "lists",
+          "lasky"
+        ],
+        "verification": "verified",
+        "confidence": "medium",
+        "flags": [
+          {
+            "color": "red",
+            "title": "Выплаты семьям террористов",
+            "text": "В 2022 году защищала необходимость выплат по гуманитарным причинам, затем извинилась и назвала слова неуместными.",
+            "source_ids": [
+              "lasky"
+            ],
+            "kind": "assessment"
+          }
+        ]
+      },
+      {
+        "position": 7,
+        "name": "Омри Ронен",
+        "bio": "Офицер Маглана и активист протестного движения.",
+        "source_ids": [
+          "lists",
+          "ronen"
+        ],
+        "verification": "verified",
+        "confidence": "medium",
+        "flags": [
+          {
+            "color": "yellow",
+            "title": "Отказ от резервистской службы",
+            "text": "Министр обороны распорядился отстранить его после обвинения в призыве к политическому отказу от службы; партия защищала его боевой вклад.",
+            "source_ids": [
+              "ronen"
+            ],
+            "kind": "assessment"
+          }
+        ]
+      },
+      {
+        "position": 8,
+        "name": "Михаль Розин",
+        "bio": "Бывшая депутатка Meretz; последовательная двухгосударственная и правозащитная линия.",
+        "source_ids": [
+          "lists"
+        ],
+        "verification": "verified",
+        "confidence": "medium",
+        "flags": []
+      },
+      {
+        "position": 9,
+        "name": "Моше Радман",
+        "bio": "Один из лидеров протеста против судебной перестройки.",
+        "source_ids": [
+          "lists"
+        ],
+        "verification": "verified",
+        "confidence": "medium",
+        "flags": []
+      },
+      {
+        "position": 10,
+        "name": "Сумия Башир",
+        "bio": "Общественная деятельница; арабо-еврейская гражданская повестка.",
+        "source_ids": [
+          "lists"
+        ],
+        "verification": "verified",
+        "confidence": "medium",
+        "flags": []
+      },
+      {
+        "position": 11,
+        "name": "Нимрод Шефер",
+        "bio": "Генерал-майор ВВС в отставке.",
+        "source_ids": [
+          "lists"
+        ],
+        "verification": "verified",
+        "confidence": "medium",
+        "flags": []
+      }
+    ],
+    "reservists": [
+      {
+        "position": 1,
+        "name": "Йоаз Хендель",
+        "bio": "Бывший министр связи и офицер спецподразделения; продвигает равенство службы.",
+        "source_ids": [
+          "lists",
+          "hendel-union"
+        ],
+        "verification": "verified",
+        "confidence": "medium",
+        "flags": []
+      },
+      {
+        "position": 2,
+        "name": "Ярон Зелиха",
+        "bio": "Экономист, бывший генеральный бухгалтер Минфина.",
+        "source_ids": [
+          "lists",
+          "hendel-union"
+        ],
+        "verification": "verified",
+        "confidence": "medium",
+        "flags": []
+      },
+      {
+        "position": 3,
+        "name": "Эйнат Вильф",
+        "bio": "Бывшая депутатка Аводы; исследовательница конфликта, UNRWA и «права на возвращение».",
+        "source_ids": [
+          "lists",
+          "wilf"
+        ],
+        "verification": "verified",
+        "confidence": "medium",
+        "flags": []
+      },
+      {
+        "position": 4,
+        "name": "Хавив Вольвович",
+        "bio": "Кандидат; подробный публичный профиль ещё проверяется.",
+        "source_ids": [
+          "lists"
+        ],
+        "verification": "verified",
+        "confidence": "medium",
+        "flags": []
+      },
+      {
+        "position": 5,
+        "name": "Йоав Адоми",
+        "bio": "Кандидат; подробный публичный профиль ещё проверяется.",
+        "source_ids": [
+          "lists"
+        ],
+        "verification": "verified",
+        "confidence": "medium",
+        "flags": []
+      }
+    ],
+    "amcha": [
+      {
+        "position": 1,
+        "name": "Офер Винтер",
+        "bio": "Бригадный генерал запаса; лидер нового правого списка.",
+        "source_ids": [
+          "lists",
+          "winter"
+        ],
+        "verification": "verified",
+        "confidence": "medium",
+        "flags": []
+      },
+      {
+        "position": 2,
+        "name": "Йосеф Хаддад",
+        "bio": "Араб-христианин, ветеран бригады Голани и публичный защитник Израиля.",
+        "source_ids": [
+          "lists"
+        ],
+        "verification": "verified",
+        "confidence": "medium",
+        "flags": []
+      },
+      {
+        "position": 3,
+        "name": "Нетали Шем-Тов",
+        "bio": "Журналистка из Метулы.",
+        "source_ids": [
+          "lists"
+        ],
+        "verification": "verified",
+        "confidence": "medium",
+        "flags": []
+      },
+      {
+        "position": 4,
+        "name": "Эран Бен-Ари",
+        "bio": "Юрист, работал в прокуратуре и Министерстве обороны.",
+        "source_ids": [
+          "lists"
+        ],
+        "verification": "verified",
+        "confidence": "medium",
+        "flags": []
+      },
+      {
+        "position": 5,
+        "name": "Флер Хасан-Нахум",
+        "bio": "Бывшая заместительница мэра Иерусалима; международные связи.",
+        "source_ids": [
+          "lists"
+        ],
+        "verification": "verified",
+        "confidence": "medium",
+        "flags": []
+      }
+    ]
+  }
+}

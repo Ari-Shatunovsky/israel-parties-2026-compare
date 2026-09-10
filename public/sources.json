@@ -1,0 +1,362 @@
+[
+  {
+    "id": "lists",
+    "title": "Канал Кнессета · Поданные списки",
+    "url": "https://www.knesset.tv/main-articles/61384/94592/",
+    "published_at": "2026-09-09",
+    "type": "institutional_media",
+    "accessed_at": "2026-09-10",
+    "language": "he",
+    "date_note": null
+  },
+  {
+    "id": "lists-n12",
+    "title": "N12 · Кандидаты в Кнессет 26",
+    "url": "https://www.mako.co.il/news-israel-elections/2026/Article-3f95c8bd2df70a1027.htm",
+    "published_at": "2026-09-08",
+    "type": "media",
+    "accessed_at": "2026-09-10",
+    "language": "mixed",
+    "date_note": null
+  },
+  {
+    "id": "list-status",
+    "title": "Polimeter · Сроки утверждения списков",
+    "url": "https://polimeter.co.il/research/candidate-lists-2026",
+    "published_at": "2026-09-09",
+    "type": "analysis",
+    "accessed_at": "2026-09-10",
+    "language": "he",
+    "date_note": null
+  },
+  {
+    "id": "poll-n12",
+    "title": "N12 · Опрос 9 сентября",
+    "url": "https://www.mako.co.il/special-mako-news/Article-c27dc00e8c680a1026.htm",
+    "published_at": "2026-09-10",
+    "type": "poll",
+    "accessed_at": "2026-09-10",
+    "language": "he",
+    "date_note": null
+  },
+  {
+    "id": "poll-kan",
+    "title": "News1 · Опрос Kan/Kantar",
+    "url": "https://www.news1.co.il/Archive/001-D-523366-00.html",
+    "published_at": "2026-09-06",
+    "type": "poll",
+    "accessed_at": "2026-09-10",
+    "language": "he",
+    "date_note": null
+  },
+  {
+    "id": "poll-13",
+    "title": "Walla · Опросы 12 и 13 каналов",
+    "url": "https://news.walla.co.il/item/3866838",
+    "published_at": "2026-09-09",
+    "type": "poll",
+    "accessed_at": "2026-09-10",
+    "language": "he",
+    "date_note": null
+  },
+  {
+    "id": "yashar",
+    "title": "ישר · Десять шагов",
+    "url": "https://yasharwitheisenkot.com/",
+    "published_at": null,
+    "type": "party",
+    "accessed_at": "2026-09-10",
+    "language": "he",
+    "date_note": "Точная дата публикации не установлена; указана дата проверки."
+  },
+  {
+    "id": "yashar-team",
+    "title": "ישר · Команда",
+    "url": "https://yasharwitheisenkot.com/team-member/",
+    "published_at": null,
+    "type": "party",
+    "accessed_at": "2026-09-10",
+    "language": "he",
+    "date_note": "Точная дата публикации не установлена; указана дата проверки."
+  },
+  {
+    "id": "together",
+    "title": "ביחד · Программы",
+    "url": "https://be-yahad.org.il/",
+    "published_at": null,
+    "type": "party",
+    "accessed_at": "2026-09-10",
+    "language": "he",
+    "date_note": "Точная дата публикации не установлена; указана дата проверки."
+  },
+  {
+    "id": "together-idi",
+    "title": "IDI · Структура объединения ביחד",
+    "url": "https://www.idi.org.il/policy/parties-and-elections/parties/beyachad/",
+    "published_at": null,
+    "type": "research",
+    "accessed_at": "2026-09-10",
+    "language": "he",
+    "date_note": "Точная дата публикации не установлена; указана дата проверки."
+  },
+  {
+    "id": "bennett-civil",
+    "title": "Jerusalem Post · Беннет о браке и шаббате",
+    "url": "https://www.jpost.com/israel-news/politics-and-diplomacy/article-893632",
+    "published_at": "2026-04-20",
+    "type": "media",
+    "accessed_at": "2026-09-10",
+    "language": "mixed",
+    "date_note": null
+  },
+  {
+    "id": "bennett-coalition",
+    "title": "N12 · Интервью Беннета о коалиции",
+    "url": "https://www.mako.co.il/news-israel-elections/2026/Article-2a12c25fcaabf91026.htm",
+    "published_at": null,
+    "type": "interview",
+    "accessed_at": "2026-09-10",
+    "language": "he",
+    "date_note": "Точная дата публикации не установлена; указана дата проверки."
+  },
+  {
+    "id": "bennett-pledge",
+    "title": "Times of Israel · Подписанное обещание Беннета",
+    "url": "https://www.timesofisrael.com/bennett-signs-pledge-not-to-join-government-with-yair-lapid-as-prime-minister/amp/",
+    "published_at": "2021-03-21",
+    "type": "media",
+    "accessed_at": "2026-09-10",
+    "language": "mixed",
+    "date_note": null
+  },
+  {
+    "id": "coalition-2021",
+    "title": "Jerusalem Post · Соглашение коалиции 2021",
+    "url": "https://www.jpost.com/israel-news/politics-and-diplomacy/raam-and-yisrael-beytenu-signed-coalition-agreement-with-yesh-atid-670753",
+    "published_at": "2021-06-11",
+    "type": "media",
+    "accessed_at": "2026-09-10",
+    "language": "mixed",
+    "date_note": null
+  },
+  {
+    "id": "ndi",
+    "title": "НДИ · Программа",
+    "url": "https://beytenu.org.il/party-platform/",
+    "published_at": null,
+    "type": "party",
+    "accessed_at": "2026-09-10",
+    "language": "he",
+    "date_note": "Точная дата публикации не установлена; указана дата проверки."
+  },
+  {
+    "id": "ndi-idi",
+    "title": "IDI · История НДИ",
+    "url": "https://www.idi.org.il/policy/parties-and-elections/parties/yisrael-beytenu/",
+    "published_at": null,
+    "type": "research",
+    "accessed_at": "2026-09-10",
+    "language": "he",
+    "date_note": "Точная дата публикации не установлена; указана дата проверки."
+  },
+  {
+    "id": "ndi-list",
+    "title": "N12 · Новая первая десятка НДИ",
+    "url": "https://www.mako.co.il/news-israel-elections/2026/Article-ae558f5ff3670a1027.htm",
+    "published_at": "2026-09-06",
+    "type": "media",
+    "accessed_at": "2026-09-10",
+    "language": "mixed",
+    "date_note": null
+  },
+  {
+    "id": "lieberman-2019",
+    "title": "Time · Коалиционный кризис 2019",
+    "url": "https://time.com/5598156/israel-lieberman-netanyahu-elections/",
+    "published_at": "2019-05-31",
+    "type": "media",
+    "accessed_at": "2026-09-10",
+    "language": "mixed",
+    "date_note": null
+  },
+  {
+    "id": "lieberman-2016",
+    "title": "Time · Вхождение Либермана в правительство",
+    "url": "https://time.com/4348162/avigdor-lieberman-defense-minister-israel/",
+    "published_at": "2016-05-25",
+    "type": "media",
+    "accessed_at": "2026-09-10",
+    "language": "mixed",
+    "date_note": null
+  },
+  {
+    "id": "lieberman-2015",
+    "title": "Time · Правительство без Либермана",
+    "url": "https://time.com/3850047/netanyahu-new-government/",
+    "published_at": null,
+    "type": "media",
+    "accessed_at": "2026-09-10",
+    "language": "mixed",
+    "date_note": "Точная дата публикации не установлена; указана дата проверки."
+  },
+  {
+    "id": "democrats",
+    "title": "Демократы · Планы работы",
+    "url": "https://yes.democrats.org.il/",
+    "published_at": null,
+    "type": "party",
+    "accessed_at": "2026-09-10",
+    "language": "he",
+    "date_note": "Точная дата публикации не установлена; указана дата проверки."
+  },
+  {
+    "id": "democrats-plan",
+    "title": "Демократы · Программа пяти пунктов",
+    "url": "https://democrats.org.il/wp-content/uploads/2025/09/agenda2025.pdf",
+    "published_at": null,
+    "type": "party",
+    "accessed_at": "2026-09-10",
+    "language": "he",
+    "date_note": "Точная дата публикации не установлена; указана дата проверки."
+  },
+  {
+    "id": "democrats-site",
+    "title": "Демократы · Официальный сайт",
+    "url": "https://democrats.org.il/",
+    "published_at": null,
+    "type": "party",
+    "accessed_at": "2026-09-10",
+    "language": "he",
+    "date_note": "Точная дата публикации не установлена; указана дата проверки."
+  },
+  {
+    "id": "golan-interview",
+    "title": "Chatham House · Интервью Голана",
+    "url": "https://www.chathamhouse.org/publications/the-world-today/2025-03/yair-golan-israel-must-not-annex-millions-palestinians",
+    "published_at": "2025-03",
+    "type": "interview",
+    "accessed_at": "2026-09-10",
+    "language": "he",
+    "date_note": null
+  },
+  {
+    "id": "lasky",
+    "title": "Times of Israel · Высказывание Ласки и извинение",
+    "url": "https://www.timesofisrael.com/meretz-mk-apologizes-for-justifying-palestinian-authoritys-pay-to-slay-stipends/amp/",
+    "published_at": "2022-04-08",
+    "type": "media",
+    "accessed_at": "2026-09-10",
+    "language": "mixed",
+    "date_note": null
+  },
+  {
+    "id": "ronen",
+    "title": "Israel Hayom · Кац распорядился отстранить Ронена",
+    "url": "https://www.israelhayom.co.il/news/politics/article/21013646?amp=1",
+    "published_at": "2026-07-19",
+    "type": "media",
+    "accessed_at": "2026-09-10",
+    "language": "mixed",
+    "date_note": null
+  },
+  {
+    "id": "hendel-union",
+    "title": "JDN · Объединение Хенделя и Зелихи",
+    "url": "https://www.jdn.co.il/news/2724045/",
+    "published_at": "2026-09-06",
+    "type": "media",
+    "accessed_at": "2026-09-10",
+    "language": "mixed",
+    "date_note": null
+  },
+  {
+    "id": "wilf",
+    "title": "Kipa · Вильф присоединилась к списку",
+    "url": "https://www.kipa.co.il/חדשות/פוליטי/1231200-0/?amp=1",
+    "published_at": "2026-09-07",
+    "type": "media",
+    "accessed_at": "2026-09-10",
+    "language": "mixed",
+    "date_note": null
+  },
+  {
+    "id": "winter",
+    "title": "Ynet · Винтер рекомендует Нетаньяху",
+    "url": "https://www.ynet.co.il/news/elections2026/article/bjolf0avmx",
+    "published_at": null,
+    "type": "media",
+    "accessed_at": "2026-09-10",
+    "language": "mixed",
+    "date_note": "Точная дата публикации не установлена; указана дата проверки."
+  },
+  {
+    "id": "winter-platform",
+    "title": "C14 · Заявления Винтера",
+    "url": "https://www.c14.co.il/article/1681003",
+    "published_at": null,
+    "type": "media",
+    "accessed_at": "2026-09-10",
+    "language": "mixed",
+    "date_note": "Точная дата публикации не установлена; указана дата проверки."
+  },
+  {
+    "id": "winter-interview",
+    "title": "N12 · Интервью Винтера после создания партии",
+    "url": "https://www.mako.co.il/news-politics/2026_q3/Article-b7dcb1d0a1860a1026.htm",
+    "published_at": null,
+    "type": "interview",
+    "accessed_at": "2026-09-10",
+    "language": "he",
+    "date_note": "Точная дата публикации не установлена; указана дата проверки."
+  },
+  {
+    "id": "stern",
+    "title": "Ynetnews · Штерн снял кандидатуру",
+    "url": "https://www.ynetnews.com/article/syrdlmxrt",
+    "published_at": "2021-10-12",
+    "type": "media",
+    "accessed_at": "2026-09-10",
+    "language": "mixed",
+    "date_note": null
+  },
+  {
+    "id": "stern-response",
+    "title": "Israel National News · Ответ Штерна",
+    "url": "https://www.israelnationalnews.com/news/314917",
+    "published_at": "2021-10-12",
+    "type": "media",
+    "accessed_at": "2026-09-10",
+    "language": "mixed",
+    "date_note": null
+  },
+  {
+    "id": "shalev",
+    "title": "N12 · Пожертвования движения Шалева",
+    "url": "https://www.mako.co.il/news-politics/2026_q2/Article-1558b964f70ed91026.htm",
+    "published_at": null,
+    "type": "investigation",
+    "accessed_at": "2026-09-10",
+    "language": "he",
+    "date_note": "Точная дата публикации не установлена; указана дата проверки."
+  },
+  {
+    "id": "folkman",
+    "title": "Zman Israel · Изменение позиции Фолькмана",
+    "url": "https://www.zman.co.il/7837/",
+    "published_at": "2019-05-23",
+    "type": "media",
+    "accessed_at": "2026-09-10",
+    "language": "mixed",
+    "date_note": null
+  },
+  {
+    "id": "draft-yashar",
+    "title": "Israel Hayom · Спор Беннета с Эйзенкотом о квоте",
+    "url": "https://www.israelhayom.co.il/news/politics/article/21141919?amp=1",
+    "published_at": null,
+    "type": "media",
+    "accessed_at": "2026-09-10",
+    "language": "mixed",
+    "date_note": "Точная дата публикации не установлена; указана дата проверки."
+  }
+]
