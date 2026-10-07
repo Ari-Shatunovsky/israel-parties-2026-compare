@@ -10,6 +10,10 @@ const isCodexSeatbeltSandbox = process.env.CODEX_SANDBOX === 'seatbelt';
 const localBindingConfig = {
   main: 'vinext/server/fetch-handler',
   compatibility_flags: ['nodejs_compat'],
+  // Свой поддомен: часть фильтров у операторов и в iOS режет *.workers.dev
+  // целиком. Адрес на workers.dev оставляем — по нему уже разошлись ссылки.
+  routes: [{ pattern: 'elections2026.shatunovsky.ai', custom_domain: true }],
+  workers_dev: true,
 };
 
 export default defineConfig(async () => {
